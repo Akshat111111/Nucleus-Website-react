@@ -1,0 +1,11 @@
+# Clean URLs: serve /about from /about.html, redirect .html -> extensionless
+RewriteEngine On
+
+# 1) Externally redirect any direct .html request to the clean URL (301, preserves query string)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html([?\s]) [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2) Internally map extensionless URL to the .html file when it exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
