@@ -137,7 +137,7 @@ export default function Contact() {
                     <div className="ctc-radio-group">
                       <label className="ctc-radio">
                         <input type="radio" name="inquiry" value="security-assessment" required checked={formData.inquiry === 'security-assessment'} onChange={handleChange} />
-                        Cybersecurity Maturity Assessment (NS-CMMF)
+                        Cybersecurity Maturity Assessment
                       </label>
                       <label className="ctc-radio">
                         <input type="radio" name="inquiry" value="ai-governance" checked={formData.inquiry === 'ai-governance'} onChange={handleChange} />

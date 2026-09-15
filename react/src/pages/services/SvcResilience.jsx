@@ -34,7 +34,7 @@ export default function SvcResilience() {
               { num: '02', title: 'Incident Response Playbook Development', desc: 'Structured incident response playbooks covering ransomware, data breach, DDoS, insider threat, supply chain compromise and AI-specific scenarios — tested through tabletop exercises before a real incident occurs.' },
               { num: '03', title: 'Tabletop Exercises &amp; Simulation', desc: 'Facilitated tabletop exercises and red team simulations that test whether your response plans work under realistic attack conditions — not as documented procedures, but as lived experience.' },
               { num: '04', title: 'Business Continuity &amp; Disaster Recovery', desc: 'BCP and DR programme review, RTO/RPO validation, tested recovery programme design and cyber insurance alignment — building demonstrable recovery capability for regulators and insurers.' },
-              { num: '05', title: 'Managed Detection &amp; Response (MDR)', desc: '24/7 MDR delivered in partnership with specialist MSSP partners — threat detection, investigation and response with cybersecurity maturity context built in. Selecting, configuring and governing your MDR provider.' },
+              { num: '05', title: 'Managed Detection &amp; Response (MDR)', desc: '24/7 threat detection, investigation and response delivered through our specialist MSSP partnership with CyberOne — with detection findings contextualised against your security maturity programme, not treated as isolated tickets.' },
               { num: '06', title: 'SOC Advisory &amp; Improvement', desc: 'SOC capability maturity assessment, technology stack review, detection engineering improvement, SIEM optimisation, UEBA configuration and threat hunting programme development.' },
             ].map((s, i) => (
               <div className="svc-what-card reveal" key={i}>
@@ -43,6 +43,56 @@ export default function SvcResilience() {
                 <p className="svc-what-desc">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MDR DEEP-DIVE ── */}
+      <section className="svc-problem section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
+            <span className="eyebrow">Managed Detection &amp; Response</span>
+            <h2>24/7 MDR that connects detection to security improvement.</h2>
+            <p>Delivered through our specialist MSSP partnership with CyberOne — detection events are contextualised against your security posture, so incidents become evidence in your improvement programme rather than isolated closed tickets.</p>
+          </div>
+          <div className="svc-what-grid">
+            {[
+              { num: '01', title: '24/7 Managed SOC', desc: 'Round-the-clock security operations centre coverage. Trained analysts monitor, triage and escalate alerts across your environment — no after-hours blind spots, no analyst fatigue gaps.' },
+              { num: '02', title: 'Threat Detection &amp; Correlation', desc: 'SIEM/SOAR-driven detection with cross-source correlation. Alerts are enriched with threat intelligence and MITRE ATT&CK context before reaching the analyst queue — reducing noise and improving response quality.' },
+              { num: '03', title: 'Endpoint Detection &amp; Response (EDR/XDR)', desc: 'EDR/XDR deployment and management across endpoints, servers and cloud workloads. Behavioural detection, lateral movement identification and automated containment of confirmed threats.' },
+              { num: '04', title: 'Threat Hunting', desc: 'Proactive, hypothesis-driven hunting for threats that evade automated detection. Hunting cadence aligned to your sector-specific threat model and the areas of your environment carrying the most material exposure.' },
+              { num: '05', title: 'Incident Management &amp; Response', desc: 'Structured incident response from initial triage through containment, eradication and recovery. Post-incident reviews identify control gaps — closing the loop between detection and security improvement.' },
+              { num: '06', title: 'Vulnerability Management', desc: 'Continuous vulnerability scanning, risk-based prioritisation and remediation tracking — prioritised by exploitability, asset criticality and business impact, not just raw CVSS score.' },
+              { num: '07', title: 'Threat Intelligence Integration', desc: 'Curated threat intelligence feeds mapped to your sector and geography. Intelligence is operationalised into detection rules, hunting hypotheses and client-facing threat briefings — not raw feeds sitting unused in a portal.' },
+              { num: '08', title: 'Monthly Threat &amp; Posture Reporting', desc: 'Monthly reporting covering threats detected, incidents investigated and vulnerabilities remediated — in board-ready format with trend indicators designed to feed directly into governance and risk reporting cycles.' },
+            ].map((s, i) => (
+              <div className="svc-what-card reveal" key={i}>
+                <div className="svc-what-num">{s.num}</div>
+                <h3 className="svc-what-title" dangerouslySetInnerHTML={{ __html: s.title }} />
+                <p className="svc-what-desc">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="svc-problem-grid" style={{ marginTop: '48px' }}>
+            <div className="svc-problem-left reveal">
+              <span className="eyebrow" style={{ color: 'var(--orange)' }}>The Partnership</span>
+              <h2>CyberOne MSSP · Nucleus Systems delivery</h2>
+              <p>CyberOne brings deep SOC operations, SIEM/SOAR infrastructure, EDR/XDR tooling and 24/7 analyst coverage. Nucleus Systems provides the security programme layer — connecting detection events to security improvement, and ensuring MDR output feeds directly into your board and regulator reporting.</p>
+              <p style={{ marginTop: '12px' }}>Detection rules, alert triage and threat hunting playbooks are mapped to MITRE ATT&CK tactics and techniques — giving you visibility into which adversary techniques are actively being used against your environment, not just which alerts fired.</p>
+            </div>
+            <div className="svc-problem-right">
+              {[
+                { title: 'Incidents become improvement evidence', desc: 'Every investigated incident generates findings mapped back to security control gaps — over time building a continuously updated picture of posture, not a once-a-year snapshot.' },
+                { title: 'MITRE ATT&CK aligned', desc: 'All detection content maps to ATT&CK tactics and techniques. Threat reporting shows which adversary TTPs are active against your environment.' },
+                { title: 'Maturity-informed prioritisation', desc: 'Vulnerability remediation, threat hunting priorities and detection rule tuning concentrate where your organisation carries the most material exposure.' },
+                { title: 'Board reporting integration', desc: 'Monthly MDR reports formatted to feed directly into board and audit committee cycles — threat and incident data alongside security posture trend data.' },
+              ].map((p, i) => (
+                <div className="svc-prob-item reveal" key={i}>
+                  <h4>{p.title}</h4>
+                  <p>{p.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -57,7 +57,7 @@ export default function Team() {
                 <span className="tlc-cert">CompTIA Pentest+</span>
               </div>
               <p className="tlc-bio">
-                Founder and CEO of Nucleus Systems. 20+ years of hands-on experience designing, attacking, and securing mission-critical financial infrastructure, national telecom systems, and enterprise ecosystems across Africa, Europe, and North America. Author of Nucleus Systems' proprietary frameworks — NS-CMMF, NS-AIGF, NS-AISCA, and NS-CTAF — and lead practitioner across cybersecurity, AI governance, and post-quantum cryptography advisory engagements.
+                Founder and CEO of Nucleus Systems. 20+ years of hands-on experience designing, attacking, and securing mission-critical financial infrastructure, national telecom systems, and enterprise ecosystems across Africa, Europe, and North America. Architect of Nucleus Systems' delivery methodology across cybersecurity maturity, AI governance, AI security and secure software — and practitioner lead across M&amp;A cyber due diligence, DPI security and post-quantum cryptography advisory engagements globally.
               </p>
               <div className="tlc-focus">
                 <div className="tlc-focus-item">

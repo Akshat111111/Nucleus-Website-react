@@ -10,14 +10,14 @@ export default function Paxley() {
       <section className="pax-hero">
         <div className="wrap px-top">
           <div className="px-left">
-            <div className="px-eyebrow">A Nucleus Systems Platform</div>
+            <div className="px-eyebrow">A Related Venture</div>
             <div className="px-brandrow">
               <div className="px-logo-img"></div>
               <div className="px-name">Paxley</div>
             </div>
             <h1 className="px-h2">Continuous, unified code <span className="hl">trust assurance.</span></h1>
             <p className="px-lede">
-              Paxley is an engineering-first DevSecOps platform that unifies SAST, SCA, container scanning, and IaC security into a single pipeline. We built Paxley to automate our own Code Trust Assurance Framework (NS-CTAF).
+              Paxley is an engineering-first DevSecOps platform that unifies SAST, SCA, container scanning, and IaC security into a single pipeline. Built to support our own secure software delivery practice, Paxley is now an independent software product available at paxleysoftware.com.
             </p>
             <div className="px-cta">
               <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" className="btn px-btn-primary">
