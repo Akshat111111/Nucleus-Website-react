@@ -33,14 +33,31 @@ export default function Footer() {
 
           <div className="fcol">
             <h4>Services</h4>
+            <Link to="/services/fractional-ciso">Fractional / Interim CISO</Link>
             <Link to="/services/cybersecurity-advisory">Cybersecurity Strategy &amp; Leadership</Link>
+            <Link to="/services/penetration-testing">Penetration Testing</Link>
+            <Link to="/services/operational-resilience">Operational Resilience</Link>
+          </div>
+
+          <div className="fcol">
+            <h4>Solutions</h4>
             <Link to="/services/ai-governance">AI Governance &amp; Regulatory Readiness</Link>
             <Link to="/services/ai-security">AI Security &amp; Agentic AI</Link>
             <Link to="/services/secure-software">Secure Software &amp; DevSecOps</Link>
-            <Link to="/services/penetration-testing">Penetration Testing</Link>
-            <Link to="/services/operational-resilience">Operational Resilience</Link>
             <Link to="/services/digital-infrastructure">Digital Infrastructure</Link>
             <Link to="/services/post-quantum">Post-Quantum Security</Link>
+          </div>
+
+          <div className="fcol">
+            <h4>Industries</h4>
+            <Link to="/industries/financial-services">Financial Services</Link>
+            <Link to="/industries/government-public-sector">Government &amp; Public Sector</Link>
+            <Link to="/industries/dpi-digital-public-goods">Digital Public Infrastructure</Link>
+            <Link to="/industries/private-equity">Private Equity</Link>
+            <Link to="/industries/technology-saas">Technology &amp; SaaS</Link>
+            <Link to="/industries/fintech-payments">Fintech &amp; Payments</Link>
+            <Link to="/industries/ai-product-companies">AI Product Companies</Link>
+            <Link to="/industries/critical-infrastructure">Critical Infrastructure</Link>
           </div>
 
           <div className="fcol">
@@ -50,6 +67,15 @@ export default function Footer() {
             <Link to="/ma/sell-side">Sell-Side &amp; Exit Readiness</Link>
             <Link to="/ma/post-deal">Post-Deal Cybersecurity</Link>
             <Link to="/ma/portfolio">Portfolio Cybersecurity</Link>
+            <Link to="/ma/startup-growth">Start-up &amp; Growth Readiness</Link>
+          </div>
+
+          <div className="fcol">
+            <h4>Experience</h4>
+            <Link to="/experience/engagements">Selected Engagements</Link>
+            <Link to="/experience/ma">M&amp;A Experience</Link>
+            <Link to="/experience/dpi-dpg">DPI &amp; Digital Public Goods</Link>
+            <Link to="/experience/global-delivery">Global Delivery</Link>
           </div>
 
           <div className="fcol">

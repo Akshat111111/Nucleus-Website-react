@@ -107,7 +107,7 @@ export default function About() {
                   <td>Frameworks & IP</td>
                   <td className="col-mgmt">Generic applications of ISO/NIST, often requiring high adaptation effort</td>
                   <td className="col-boutique">Ad-hoc methodologies relying on individual consultant expertise</td>
-                  <td className="col-ns">Proprietary NS-CMMF and AIGF frameworks designed for rapid, measurable maturity scoring</td>
+                  <td className="col-ns">Structured delivery methodology designed for rapid, measurable maturity scoring — aligned to NIST, ISO and DORA without requiring framework translation by the client</td>
                 </tr>
                 <tr>
                   <td>Speed of Execution</td>

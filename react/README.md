@@ -11,13 +11,12 @@
 | Layer | Technology |
 |---|---|
 | Framework | [React 18](https://react.dev) |
-| Build tool | [Vite](https://vite.dev) (with Oxlint) |
+| Build tool | [Vite](https://vite.dev) |
 | Routing | `react-router-dom` v6 — `HashRouter` |
 | Styling | Vanilla CSS (`index.css`, `styles.css`, `styles-gtm.css`) |
 | 3D / Globe | Custom `Globe` component (canvas-based) |
 | PDF rendering | [`pdfjs-dist`](https://www.npmjs.com/package/pdfjs-dist) — renders PDF page 1 as canvas thumbnails |
 | Linting | [Oxlint](https://oxc.rs) |
-
 
 No Tailwind. No component library. No TypeScript (plain JSX).
 
@@ -28,8 +27,8 @@ No Tailwind. No component library. No TypeScript (plain JSX).
 ```bash
 # From the react/ directory
 npm install
-npm run dev       # dev server → http://localhost:5173/
-npm run build     # production build → dist/
+npm run dev       # dev server -> http://localhost:5173/
+npm run build     # production build -> dist/
 npm run preview   # preview production build locally
 ```
 
@@ -40,17 +39,17 @@ npm run preview   # preview production build locally
 ```
 react/
 ├── src/
-│   ├── App.jsx                  # Router — all routes defined here
+│   ├── App.jsx                  # Router — all 37 routes defined here
 │   ├── main.jsx                 # Entry point — imports CSS in order
-│   ├── index.css                # Primary design system & component styles
+│   ├── index.css                # Design tokens, base reset, component styles
 │   ├── styles.css               # Additional global styles
 │   ├── styles-gtm.css           # GTM repositioning styles (Aug 2026)
 │   │
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Navbar.jsx       # Desktop nav — Services / M&A / About dropdowns
+│   │   │   ├── Navbar.jsx       # Desktop nav — Services / Solutions / M&A / Industries / Experience / About
 │   │   │   ├── MobileMenu.jsx   # Mobile nav — accordion groups
-│   │   │   └── Footer.jsx       # 4-column footer
+│   │   │   └── Footer.jsx       # Multi-column footer
 │   │   └── common/
 │   │       ├── Globe.jsx        # Interactive 3D globe
 │   │       ├── ScrollTopBtn.jsx
@@ -60,43 +59,57 @@ react/
 │   │   └── useReveal.js         # IntersectionObserver fade-in animations
 │   │
 │   └── pages/
-│       ├── Home.jsx             # Homepage
+│       ├── Home.jsx
 │       ├── About.jsx
 │       ├── Team.jsx
 │       ├── Careers.jsx
 │       ├── Contact.jsx
-│       ├── Insights.jsx         # Articles & research hub
+│       ├── Insights.jsx
 │       ├── Paxley.jsx           # Related venture (footer access only)
 │       │
-│       ├── services/            # Service pages (8)
-│       │   ├── SvcCybersecurity.jsx   → /services/cybersecurity-advisory
-│       │   ├── SvcAIGovernance.jsx    → /services/ai-governance
-│       │   ├── SvcAISecurity.jsx      → /services/ai-security
-│       │   ├── SvcSecureSoftware.jsx  → /services/secure-software
-│       │   ├── SvcPenTest.jsx         → /services/penetration-testing
-│       │   ├── SvcResilience.jsx      → /services/operational-resilience
-│       │   ├── SvcDigitalInfra.jsx    → /services/digital-infrastructure
-│       │   └── SvcPQC.jsx             → /services/post-quantum
+│       ├── services/            # Service + Solution pages (9 total)
+│       │   ├── SvcFractionalCISO.jsx  -> /services/fractional-ciso
+│       │   ├── SvcCybersecurity.jsx   -> /services/cybersecurity-advisory
+│       │   ├── SvcPenTest.jsx         -> /services/penetration-testing
+│       │   ├── SvcResilience.jsx      -> /services/operational-resilience
+│       │   ├── SvcAIGovernance.jsx    -> /services/ai-governance
+│       │   ├── SvcAISecurity.jsx      -> /services/ai-security
+│       │   ├── SvcSecureSoftware.jsx  -> /services/secure-software
+│       │   ├── SvcDigitalInfra.jsx    -> /services/digital-infrastructure
+│       │   └── SvcPQC.jsx             -> /services/post-quantum
 │       │
-│       ├── ma/                  # M&A & Investors pages (5)
-│       │   ├── MaOverview.jsx         → /ma
-│       │   ├── MaDueDiligence.jsx     → /ma/due-diligence
-│       │   ├── MaSellSide.jsx         → /ma/sell-side
-│       │   ├── MaPostDeal.jsx         → /ma/post-deal
-│       │   └── MaPortfolio.jsx        → /ma/portfolio
+│       ├── ma/                  # M&A & Investors pages (6)
+│       │   ├── MaOverview.jsx         -> /ma
+│       │   ├── MaDueDiligence.jsx     -> /ma/due-diligence
+│       │   ├── MaSellSide.jsx         -> /ma/sell-side
+│       │   ├── MaPostDeal.jsx         -> /ma/post-deal
+│       │   ├── MaPortfolio.jsx        -> /ma/portfolio
+│       │   └── MaStartup.jsx          -> /ma/startup-growth
 │       │
-│       └── solutions/           # Deep-dive solution pages (direct URL only)
-│           ├── SolMdr.jsx
-│           ├── SolPayments.jsx
-│           ├── SolIdentity.jsx
-│           ├── SolFintech.jsx
-│           └── SolPqc.jsx
+│       ├── industries/          # Industry pages (9)
+│       │   ├── Industries.jsx         -> /industries
+│       │   ├── IndFinancial.jsx       -> /industries/financial-services
+│       │   ├── IndGovt.jsx            -> /industries/government-public-sector
+│       │   ├── IndDPI.jsx             -> /industries/dpi-digital-public-goods
+│       │   ├── IndPE.jsx              -> /industries/private-equity
+│       │   ├── IndTech.jsx            -> /industries/technology-saas
+│       │   ├── IndFintech.jsx         -> /industries/fintech-payments
+│       │   ├── IndAI.jsx              -> /industries/ai-product-companies
+│       │   └── IndCritical.jsx        -> /industries/critical-infrastructure
+│       │
+│       └── experience/          # Experience pages (5)
+│           ├── Experience.jsx         -> /experience
+│           ├── ExpEngagements.jsx     -> /experience/engagements
+│           ├── ExpMA.jsx              -> /experience/ma
+│           ├── ExpDPI.jsx             -> /experience/dpi-dpg
+│           └── ExpGlobal.jsx          -> /experience/global-delivery
 │
 ├── public/
-│   ├── images/                  # Static images (team photos, logos)
-│   └── pdfs/                    # Insight publications (PDF)
+│   ├── images/                  # Static images (team photos)
+│   ├── pdfs/                    # Insight publications (PDF)
+│   └── favicon-ns.png           # Nucleus Systems shield favicon
 │
-├── index.html
+├── index.html                   # Title: "Nucleus Systems | Digital Trust Assurance"
 ├── vite.config.js
 └── package.json
 ```
@@ -105,9 +118,9 @@ react/
 
 ## Routing
 
-All routes are defined in [`src/App.jsx`](src/App.jsx) using `HashRouter`. URL hash routing (`/#/path`) is used to support static hosting without server-side rewrites.
+All routes are in [`src/App.jsx`](src/App.jsx) using `HashRouter`. All routing is client-side via the URL hash — no server-side rewrites needed.
 
-### Active Routes
+### Core Pages
 
 | Path | Page |
 |---|---|
@@ -117,32 +130,71 @@ All routes are defined in [`src/App.jsx`](src/App.jsx) using `HashRouter`. URL h
 | `/careers` | Careers |
 | `/contact` | Contact |
 | `/insights` | Insights hub |
-| `/paxley` | Paxley (related venture) |
+| `/paxley` | Paxley Software (related venture) |
+
+### Services (nav: Services)
+
+| Path | Page |
+|---|---|
+| `/services/fractional-ciso` | Fractional / Interim CISO |
 | `/services/cybersecurity-advisory` | Cybersecurity Strategy & Leadership |
-| `/services/ai-governance` | AI Governance & Regulatory Readiness |
-| `/services/ai-security` | AI Security, LLM, RAG & Agentic AI |
-| `/services/secure-software` | Secure Software & DevSecOps |
-| `/services/penetration-testing` | Penetration Testing & Technical Assurance |
+| `/services/penetration-testing` | Penetration Testing |
 | `/services/operational-resilience` | Operational Resilience & Managed Security |
+
+### Solutions (nav: Solutions)
+
+| Path | Page |
+|---|---|
+| `/services/ai-governance` | AI Governance & Regulatory Readiness |
+| `/services/ai-security` | AI Security & Agentic AI |
+| `/services/secure-software` | Secure Software & DevSecOps |
 | `/services/digital-infrastructure` | Digital Infrastructure & Critical Systems |
 | `/services/post-quantum` | Post-Quantum & Emerging Technology |
-| `/ma` | M&A & Investors overview |
+
+### M&A & Investors
+
+| Path | Page |
+|---|---|
+| `/ma` | M&A Overview |
 | `/ma/due-diligence` | Cyber Due Diligence |
 | `/ma/sell-side` | Sell-Side & Exit Readiness |
 | `/ma/post-deal` | Post-Deal Cybersecurity |
 | `/ma/portfolio` | Portfolio Cybersecurity |
-| `/sol-mdr` | Managed Detection & Response (deep-dive) |
-| `/sol-payments` | Payments Security (deep-dive) |
-| `/sol-identity` | Identity Security (deep-dive) |
-| `/sol-fintech` | Fintech Security (deep-dive) |
-| `/sol-pqc` | Post-Quantum (deep-dive) |
+| `/ma/startup-growth` | Start-up & Growth Readiness |
+
+### Industries
+
+| Path | Page |
+|---|---|
+| `/industries` | Industries Overview |
+| `/industries/financial-services` | Financial Services |
+| `/industries/government-public-sector` | Government & Public Sector |
+| `/industries/dpi-digital-public-goods` | Digital Public Infrastructure |
+| `/industries/private-equity` | Private Equity & Investment |
+| `/industries/technology-saas` | Technology & SaaS |
+| `/industries/fintech-payments` | Fintech & Payments |
+| `/industries/ai-product-companies` | AI Product Companies |
+| `/industries/critical-infrastructure` | Critical Infrastructure |
+
+### Experience
+
+| Path | Page |
+|---|---|
+| `/experience` | Experience Overview |
+| `/experience/engagements` | Selected Engagements |
+| `/experience/ma` | M&A Experience |
+| `/experience/dpi-dpg` | DPI & Digital Public Goods Experience |
+| `/experience/global-delivery` | Global Delivery |
 
 ### Legacy Redirects
 
-Old URLs from the previous pillar/framework/platform architecture are redirected via `<Navigate replace>`:
-
 | Old path | Redirects to |
 |---|---|
+| `/sol-mdr` | `/services/operational-resilience` |
+| `/sol-payments` | `/services/digital-infrastructure` |
+| `/sol-identity` | `/services/digital-infrastructure` |
+| `/sol-fintech` | `/services/digital-infrastructure` |
+| `/sol-pqc` | `/services/post-quantum` |
 | `/pillar-cyber` | `/services/cybersecurity-advisory` |
 | `/pillar-aigov` | `/services/ai-governance` |
 | `/pillar-aisec` | `/services/ai-security` |
@@ -160,30 +212,51 @@ Old URLs from the previous pillar/framework/platform architecture are redirected
 
 ```
 Services ▾
+  ├─ Fractional / Interim CISO
   ├─ Cybersecurity Strategy & Leadership
+  ├─ Penetration Testing
+  └─ Operational Resilience
+
+Solutions ▾
   ├─ AI Governance & Regulatory Readiness
-  ├─ AI Security, LLM, RAG & Agentic AI
+  ├─ AI Security & Agentic AI
   ├─ Secure Software & DevSecOps
-  ├─ ─────────────────────────
-  ├─ Penetration Testing & Vulnerability Assessment
-  ├─ Operational Resilience & Managed Security
-  ├─ Digital Infrastructure & Critical Systems
-  └─ Post-Quantum & Emerging Technology
+  ├─ Digital Infrastructure
+  └─ Post-Quantum Security
 
 M&A & Investors ▾
   ├─ M&A Cyber Due Diligence
   ├─ Sell-Side & Exit Readiness
   ├─ Post-Deal Cybersecurity
   ├─ Portfolio Cybersecurity
+  ├─ Start-up & Growth Readiness
   └─ M&A Overview
+
+Industries ▾
+  ├─ Financial Services
+  ├─ Government & Public Sector
+  ├─ Digital Public Infrastructure
+  ├─ Private Equity & Investment
+  ├─ Technology & SaaS
+  ├─ Fintech & Payments
+  ├─ AI Product Companies
+  ├─ Critical Infrastructure
+  └─ All Industries
+
+Experience ▾
+  ├─ Selected Engagements
+  ├─ M&A Experience
+  ├─ DPI & Digital Public Goods
+  ├─ Global Delivery
+  └─ Experience Overview
 
 About ▾
   ├─ Nucleus Systems
   ├─ Leadership & Team
   └─ Careers
 
-Insights     (direct link)
-Contact      (direct link)
+Insights        (direct link)
+Contact         (direct link)
 [Book a Briefing]  (CTA button)
 ```
 
@@ -191,13 +264,11 @@ Contact      (direct link)
 
 ## CSS Architecture
 
-Styles are split across three files, imported in order in `main.jsx`:
-
 | File | Purpose |
 |---|---|
-| `index.css` | Design tokens (CSS variables), base reset, primary component styles, legacy sections |
-| `styles.css` | Additional global styles — cards, animations, page-specific components |
-| `styles-gtm.css` | New GTM components — service page templates, homepage sections, M&A layouts |
+| `index.css` | Design tokens, base reset, primary component styles |
+| `styles.css` | Additional global styles — cards, animations, page-specific |
+| `styles-gtm.css` | Service page templates, homepage sections, M&A layouts |
 
 ### Key Design Tokens
 
@@ -206,104 +277,59 @@ Styles are split across three files, imported in order in `main.jsx`:
 --blue:   #0B50C8   /* Primary accent */
 --orange: #EA580C   /* Secondary accent / CTA */
 --slate:  #64748B   /* Body text */
+--grey:   #F8FAFC   /* Light section background */
 --line:   #E2E8F0   /* Border / divider */
 --mono:   'JetBrains Mono', monospace
---pad:    clamp(20px, 4vw, 80px)  /* Responsive horizontal padding */
+--pad:    clamp(20px, 4vw, 80px)
 ```
 
 ---
 
-## Service Page Template
+## Page Template
 
-All 8 service pages and 5 M&A pages follow a consistent section structure:
+All 9 service/solution pages and 6 M&A pages follow a consistent section structure:
 
-1. **Hero** — eyebrow label, H1, lede, dual CTA
+1. **Hero** — eyebrow, H1, lede, dual CTA
 2. **Client Problem** — 2-col grid: framing text + 4 problem cards
-3. **What We Do** — 3-col card grid of service offerings
+3. **What We Do** — numbered card grid
 4. **Scope / Deliverables / Outcomes** — 3-col list columns
-5. **Buying Triggers** — 2-col trigger grid
+5. **Buying Triggers** — trigger grid
 6. **Relevant Standards** — pill badges
 7. **Related Services** — 3-col link cards
 8. **Closing CTA band**
-
-CSS classes: `svc-hero`, `svc-problem`, `svc-what`, `svc-scope`, `svc-triggers`, `svc-standards`, `svc-related`
 
 ---
 
 ## Insights
 
-`Insights.jsx` manages all publications in a single `INSIGHTS` array (no CMS). Each article has:
+`Insights.jsx` manages all publications in a single `INSIGHTS` array (no CMS).
 
-```js
-{
-  id: 'unique-slug',
-  file: 'pdfs/filename.pdf',
-  title: '...',
-  author: '...',
-  role: '...',
-  date: 'DD Month YYYY',
-  pages: 12,
-  readMins: 15,
-  category: 'thought-leadership',   // see categories below
-  categoryLabel: 'Cybersecurity Leadership',
-  description: '...',
-}
-```
+To add a new article: prepend an entry to the `INSIGHTS` array and drop the PDF into `public/pdfs/`.
 
 **Categories:** `thought-leadership` · `ai-trust` · `digital-infra` · `regulation` · `services` · `framework` · `product`
 
-To add a new article: add an entry to the top of the `INSIGHTS` array (newest first) and drop the PDF into `public/pdfs/`.
-
-### PDF Thumbnails
-
-Card and featured-article thumbnails render the **actual first page** of each PDF as a `<canvas>` element using `pdfjs-dist`. This is handled by the `PdfThumb` component inside `Insights.jsx`.
-
-**How it works:**
-- An `IntersectionObserver` triggers rendering only when the card enters the viewport (lazy — no wasted work off-screen).
-- A gradient placeholder (`.thumb-ph`) is shown while the PDF loads, then fades out.
-- The canvas fades in via `opacity: 0 → 1` CSS transition once page 1 is rendered.
-- The PDF.js worker is resolved at build time using `import.meta.url` — Vite bundles `pdf.worker.mjs` automatically, so **no manual worker file copying is needed**.
-
-```jsx
-// Worker setup at top of Insights.jsx
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.mjs',
-  import.meta.url,
-).toString()
-```
+PDF thumbnails render the first page of each PDF lazily (only when in viewport) via `pdfjs-dist`.
 
 ---
 
 ## Animations
 
-The `useReveal` hook (`src/hooks/useReveal.js`) uses `IntersectionObserver` to add the `in` class to any element with `className="reveal"`, triggering a CSS fade-up animation.
+`useReveal` hook — add `className="reveal"` to any element for scroll-triggered fade-up:
 
 ```jsx
-// In any page component:
 useReveal()
-
-// In JSX:
 <div className="reveal">Fades in when scrolled into view</div>
 ```
 
 ---
 
-## Deployment
-
-The site is deployed as a static build. Run:
-
-```bash
-npm run build
-```
-
-Output goes to `dist/`. Because `HashRouter` is used, no server-side URL rewriting is needed — all routing is handled client-side via the URL hash.
-
----
-
 ## Key Content Decisions (August 2026 GTM Repositioning)
 
-- **Core Pillars, Frameworks, and Platforms** are not exposed in navigation, homepage, or page headings. They exist as internal delivery methodology only.
-- **Client outcomes first** — every service page leads with the client's problem, not Nucleus Systems' methodology.
-- **Paxley Software** is positioned as a related venture (footer link) — not a Nucleus Systems product or service category.
-- **M&A** is a first-class commercial section with its own nav group and 5 dedicated pages.
-- The site organising structure is: **Services → M&A & Investors → Industries → Insights → About → Contact**.
+- **Services vs Solutions split:** Advisory engagements (Fractional CISO, Cybersecurity Strategy, Pen Testing, Operational Resilience) live under **Services**. Technology-area solutions (AI Governance, AI Security, Secure Software, Digital Infrastructure, Post-Quantum) live under **Solutions**.
+- **No proprietary acronyms on commercial surfaces.** NS-CMMF, NS-AIGF, NS-AISCA, NS-CTAF appear only within Insights article titles (reflecting published PDF titles).
+- **Client outcomes first** — service pages lead with the client's problem, not methodology.
+- **Paxley Software** is positioned as a related venture (footer link only).
+- **M&A** is a first-class commercial section with 6 dedicated pages.
+- **Industries** section: 9 pages covering 8 sectors with dedicated content per sector.
+- **Experience** section: 5 pages (engagements, M&A track record, DPI/DPG expertise, global delivery).
+- **All pages** are fully routed, building clean at `npm run build`.

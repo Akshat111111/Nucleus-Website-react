@@ -65,7 +65,7 @@ export default function MaOverview() {
               { num: '03', title: 'Sell-Side &amp; Exit Readiness', desc: 'Find and reduce material cyber debt before buyer diligence begins. Preparing the cybersecurity position, evidence pack and regulatory compliance documentation that sophisticated buyers will require.', link: '/ma/sell-side' },
               { num: '04', title: 'Post-Deal Cybersecurity', desc: '30/90/180-day improvement and value-creation programme implementing the deal findings and building a defensible cybersecurity posture aligned to the new ownership structure and growth plan.', link: '/ma/post-deal' },
               { num: '05', title: 'Portfolio Cybersecurity', desc: 'Repeatable portfolio-company baselining and improvement — consistent maturity assessment methodology, comparative scoring across the portfolio and systematic improvement governance.', link: '/ma/portfolio' },
-              { num: '06', title: 'Start-up &amp; Growth Readiness', desc: 'Seed-to-Series C cybersecurity readiness — preparing early-stage companies for enterprise sales security requirements, investor due diligence questions and future exit preparation.', link: '/contact' },
+              { num: '06', title: 'Start-up &amp; Growth Readiness', desc: 'Seed-to-Series C cybersecurity readiness — preparing early-stage companies for enterprise sales security requirements, investor due diligence questions and future exit preparation.', link: '/ma/startup-growth' },
             ].map((s, i) => (
               <Link className="svc-what-card reveal" to={s.link} key={i} style={{ textDecoration: 'none', cursor: 'pointer' }}>
                 <div className="svc-what-num">{s.num}</div>

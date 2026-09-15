@@ -73,6 +73,82 @@ export default function SvcDigitalInfra() {
         </div>
       </section>
 
+      {/* ── PAYMENT SECURITY DEEP-DIVE ── */}
+      <section className="svc-problem section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
+            <span className="eyebrow">Payment Security</span>
+            <h2>Infrastructure-layer expertise — not just application security.</h2>
+            <p>Most payment security engagements focus on PCI DSS and API penetration testing. Our practitioners have worked inside the real-time settlement rails, open-source DPI payment stacks and central bank digital infrastructure where systemic risk actually lives — Mojaloop, Tazama, COMESA, SWIFT CSP, CBDC programmes.</p>
+          </div>
+          <div className="svc-what-grid">
+            {[
+              { num: '01', title: 'Payment System Security Assessment', desc: 'Comprehensive security assessment of payment system architecture against PCI DSS v4, ISO 20022 security requirements, and applicable regulatory frameworks. Covers application, API, infrastructure and governance layers.' },
+              { num: '02', title: 'Mojaloop Platform Security Review', desc: 'Purpose-built security assessment for Mojaloop deployments — covering the switch architecture, participant API security, settlement layer, account lookup service, and operator governance controls. Based on direct platform expertise.' },
+              { num: '03', title: 'Tazama Transaction Monitoring Security', desc: 'Security assessment of Tazama deployments for financial crime detection infrastructure — covering data ingestion pipelines, rule engine security, alert management, and integration with core payment platforms.' },
+              { num: '04', title: 'Real-Time Payment Security Architecture', desc: 'Security architecture review and design for real-time payment systems — settlement finality controls, fraud detection integration, participant onboarding security, and API gateway hardening for high-throughput payment rails.' },
+              { num: '05', title: 'SWIFT Customer Security Programme (CSP)', desc: 'Assessment and advisory for SWIFT CSP compliance — all mandatory and advisory controls in the CSCF. Self-attestation evidence packages and gap remediation roadmaps for banks and payment operators.' },
+              { num: '06', title: 'Central Bank Digital Currency (CBDC) Security Advisory', desc: 'Security architecture and risk advisory for CBDC programmes — wholesale and retail CBDC models, distributed ledger security, participant access controls, privacy-preserving design, and BIS/IMF CBDC security guidance alignment.' },
+              { num: '07', title: 'Financial Crime &amp; Fraud Risk Assessment', desc: 'Risk assessment of financial crime controls — AML transaction monitoring effectiveness, fraud detection coverage gaps, sanctions screening, and correspondent banking risk aligned to FATF recommendations.' },
+              { num: '08', title: 'Digital Public Infrastructure Security Advisory', desc: 'Security advisory for DPI payment programmes — payment rails, interoperability frameworks, and data exchange infrastructure for government and central bank DPI deployments across Africa, Asia and the Middle East.' },
+            ].map((s, i) => (
+              <div className="svc-what-card reveal" key={i}>
+                <div className="svc-what-num">{s.num}</div>
+                <h3 className="svc-what-title" dangerouslySetInnerHTML={{ __html: s.title }} />
+                <p className="svc-what-desc">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DIGITAL IDENTITY DEEP-DIVE ── */}
+      <section className="svc-problem section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
+            <span className="eyebrow">Digital Identity &amp; Verifiable Credentials</span>
+            <h2>The highest-stakes DPI programme any government runs.</h2>
+            <p>National digital identity consolidates biometrics, demographic records and financial account linkages into a single foundational infrastructure. A breach is not a data incident — it can undermine public trust in the entire programme. Our practitioners have worked inside MOSIP, OpenG2P and GovStack deployments, not assessed them from the outside.</p>
+          </div>
+          <div className="svc-what-grid">
+            {[
+              { num: '01', title: 'Digital Identity Security Architecture Review', desc: 'End-to-end security architecture assessment covering registration, biometric capture, deduplication, authentication, credential issuance, and relying party integration. Threat model built to the specific programme context and deployment environment.' },
+              { num: '02', title: 'MOSIP Platform Security Assessment', desc: 'Purpose-built security assessment for MOSIP deployments — registration client, kernel services, ID repository, authentication server, resident portal, and partner management. Based on direct platform expertise covering MOSIP-specific threat classes.' },
+              { num: '03', title: 'OpenG2P Security Review', desc: 'Security assessment of OpenG2P deployments for social protection delivery — beneficiary registry security, payment disbursement controls, ID-to-payment linkage integrity, and fraud and exclusion risks in social protection digital delivery.' },
+              { num: '04', title: 'Verifiable Credential System Assessment', desc: 'Security assessment of VC issuance, presentation and verification infrastructure — W3C VC data model, DID resolution and key management, credential status mechanisms, selective disclosure (SD-JWT, BBS+), and holder binding security.' },
+              { num: '05', title: 'eIDAS 2.0 &amp; European Digital Identity Wallet', desc: 'Advisory for EUDIW implementation — wallet security architecture, issuer/verifier integration, attribute attestation, selective disclosure, and eIDAS 2.0 technical compliance requirements.' },
+              { num: '06', title: 'Biometric Security Assessment', desc: 'Security assessment of biometric subsystems — capture device security, template protection, liveness detection, deduplication engine integrity, and the specific fraud attacks on biometric-based identity proofing at population scale.' },
+            ].map((s, i) => (
+              <div className="svc-what-card reveal" key={i}>
+                <div className="svc-what-num">{s.num}</div>
+                <h3 className="svc-what-title" dangerouslySetInnerHTML={{ __html: s.title }} />
+                <p className="svc-what-desc">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="svc-problem-grid" style={{ marginTop: '48px' }}>
+            <div className="svc-problem-left reveal">
+              <span className="eyebrow" style={{ color: 'var(--orange)' }}>Platform Coverage</span>
+              <h2>MOSIP · OpenG2P · GovStack · W3C VC · DID · eIDAS 2.0</h2>
+              <p>We advise issuers, verifiers and wallet providers on secure implementation of verifiable credential ecosystems — including privacy-preserving design that builds accountability without creating surveillance infrastructure. Aligned to GDPR, POPIA and regional data protection frameworks across Africa and Asia.</p>
+            </div>
+            <div className="svc-problem-right">
+              {[
+                { title: 'Open-source DPI platforms — inside knowledge', desc: 'MOSIP, OpenG2P, GovStack, Inji, OpenCRVS, eSignet — we know their architecture, trust boundaries, and specific threat model from working in and around these deployments.' },
+                { title: 'Privacy by design — not surveillance infrastructure', desc: 'Identity systems without privacy controls become surveillance infrastructure. We advise on minimal disclosure, biometric data protection, and audit trail design that supports accountability.' },
+                { title: 'Standards: W3C VC · DID · OpenID Connect · eIDAS 2.0 · ISO 18013-5', desc: 'Full coverage of the emerging digital identity standards stack across both government and commercial identity ecosystems.' },
+                { title: 'World Bank ID4D · UNDP Digital Identity aligned', desc: 'Aligned to leading development community frameworks and the DPGA privacy expert guidance for DPI identity deployments.' },
+              ].map((p, i) => (
+                <div className="svc-prob-item reveal" key={i}>
+                  <h4>{p.title}</h4>
+                  <p>{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="svc-scope section">
         <div className="wrap svc-scope-grid">
           <div className="svc-scope-col reveal">
