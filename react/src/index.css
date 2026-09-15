@@ -1,4 +1,4 @@
-﻿
+
   :root{
     --blue:#0B50C8;
     --blue-bright:#1565E0;
@@ -2160,6 +2160,122 @@
 @media(max-width:860px){.ns-about-grid{grid-template-columns:1fr;gap:52px}.ns-fw-grid{grid-template-columns:1fr 1fr}.home-globe-wrap{max-width:340px;order:-1}}
 @media(max-width:460px){.ns-fw-grid{grid-template-columns:1fr}.home-globe-wrap{max-width:260px}}
 /* END NS About v2 */
+
+/* ===== SERVICES MEGA-MENU ===== */
+.nav-item--mega{position:static}
+.nav-item--mega>.mega-panel{
+  position:fixed;top:70px;left:50%;transform:translateX(-50%);
+  width:min(1060px,96vw);
+  background:#fff;
+  border:1px solid var(--line);
+  border-top:none;
+  border-radius:0 0 16px 16px;
+  box-shadow:0 16px 48px rgba(10,25,47,.14);
+  padding:28px 28px 24px;
+  z-index:400;
+  opacity:0;pointer-events:none;
+  transform:translateX(-50%) translateY(-6px);
+  transition:opacity .2s,transform .2s
+}
+.nav-item--mega.open>.mega-panel{
+  opacity:1;pointer-events:all;
+  transform:translateX(-50%) translateY(0)
+}
+.mega-cols{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0 20px
+}
+.mega-col{
+  border-top:3px solid #ccc;
+  padding-top:14px
+}
+.mega-col-title{
+  font-size:11.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;
+  line-height:1.4;margin-bottom:14px
+}
+.mega-col-links{
+  display:flex;flex-direction:column;gap:1px
+}
+.mega-col-links a{
+  display:block;
+  font-size:13px;font-weight:500;
+  color:var(--ink);
+  padding:7px 10px;
+  border-radius:7px;
+  transition:background .15s,color .15s;
+  line-height:1.35
+}
+.mega-col-links a:hover{
+  background:rgba(11,80,200,.07);
+  color:var(--blue)
+}
+
+/* Mobile menu pillar sub-groups */
+.mm-pillar-group{margin-bottom:6px}
+.mm-pillar-label{
+  font-size:10.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.07em;
+  color:var(--slate);
+  padding:10px 20px 4px;
+  pointer-events:none
+}
+.mm-group-body .mm-pillar-group+.mm-pillar-group{border-top:1px solid var(--line);margin-top:4px;padding-top:4px}
+
+/* Footer pillar category labels */
+.fcol-pillar{
+  display:block;
+  font-size:10.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.07em;
+  color:var(--blue);
+  margin-bottom:4px;
+  pointer-events:none
+}
+/* END Services Mega-Menu */
+
+/* ===== FRAMEWORKS PAGE ===== */
+.fw-hero{background:var(--navy);padding:80px 0 64px;position:relative;overflow:hidden}
+.fw-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(11,80,200,.18),transparent);pointer-events:none}
+.fw-hero-inner{position:relative;z-index:1;max-width:760px}
+.fw-hero-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:16px}
+.fw-hero-h1{font-size:clamp(32px,5vw,52px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px}
+.fw-hero-lede{font-size:17px;color:var(--slate);line-height:1.65;margin-bottom:32px;max-width:640px}
+.fw-hero-meta{display:flex;flex-wrap:wrap;gap:10px 24px}
+.fw-hero-meta span{font-size:13px;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px}
+.fw-hero-meta span::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0}
+
+.fw-group{padding:60px 0}
+.fw-group:nth-child(even){background:rgba(11,80,200,.03)}
+.fw-group-header{border-left:4px solid var(--blue);padding-left:18px;margin-bottom:36px}
+.fw-group-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.fw-group-title{font-size:clamp(18px,2.5vw,24px);font-weight:700;color:var(--ink);line-height:1.3}
+
+.fw-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.fw-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.fw-card:hover{box-shadow:0 8px 32px rgba(10,25,47,.1);transform:translateY(-2px)}
+.fw-card-accent{height:4px;width:100%;flex-shrink:0}
+.fw-card-body{padding:24px 24px 16px;flex:1}
+.fw-card-name{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.3}
+.fw-card-tagline{font-size:14px;color:var(--slate);line-height:1.6;margin-bottom:16px}
+.fw-card-stats{font-size:12px;font-weight:600;color:var(--ink);opacity:.6;margin-bottom:14px;letter-spacing:.01em}
+.fw-card-standards{display:flex;flex-wrap:wrap;gap:6px}
+.fw-std-tag{font-size:11px;font-weight:600;background:rgba(11,80,200,.08);color:var(--blue);border-radius:5px;padding:3px 9px;letter-spacing:.02em;white-space:nowrap}
+.fw-card-foot{padding:14px 24px 20px;border-top:1px solid var(--line)}
+.fw-card-link{font-size:13px;font-weight:600;text-decoration:none;transition:opacity .15s}
+.fw-card-link:hover{opacity:.75}
+
+.fw-cta-band{background:var(--navy)}
+.fw-cta-inner{text-align:center;max-width:600px;margin:0 auto;padding:20px 0}
+.fw-cta-h2{font-size:clamp(22px,3vw,30px);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.25}
+.fw-cta-sub{font-size:16px;color:var(--slate);line-height:1.6;margin-bottom:28px}
+
+@media(max-width:640px){
+  .fw-cards{grid-template-columns:1fr}
+  .fw-hero{padding:60px 0 48px}
+  .fw-hero-meta{flex-direction:column;gap:8px}
+}
+/* END Frameworks Page */
 
 
 
