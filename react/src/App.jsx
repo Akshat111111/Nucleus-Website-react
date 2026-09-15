@@ -13,6 +13,7 @@ import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 import Insights from './pages/Insights'
 import Paxley from './pages/Paxley'
+import Frameworks from './pages/Frameworks'
 
 // New service pages
 import SvcFractionalCISO from './pages/services/SvcFractionalCISO'
@@ -88,6 +89,7 @@ function AppLayout() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/paxley" element={<Paxley />} />
+          <Route path="/frameworks" element={<Frameworks />} />
 
           {/* Services */}
           <Route path="/services/cybersecurity-advisory" element={<SvcCybersecurity />} />

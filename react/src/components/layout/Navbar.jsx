@@ -1,40 +1,53 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const NAV_ITEMS = [
+const PILLARS = [
   {
-    id: 'services',
-    label: 'Services',
-    children: [
-      { label: 'Fractional / Interim CISO', to: '/services/fractional-ciso' },
-      { label: 'Cybersecurity Strategy \u0026 Leadership', to: '/services/cybersecurity-advisory' },
-      { label: 'Penetration Testing', to: '/services/penetration-testing' },
-      { label: 'Operational Resilience', to: '/services/operational-resilience' },
-    ],
-  },
-  {
-    id: 'solutions',
-    label: 'Solutions',
-    children: [
+    title: 'AI Governance and Security Services',
+    accent: '#22c55e',
+    links: [
       { label: 'AI Governance \u0026 Regulatory Readiness', to: '/services/ai-governance' },
-      { label: 'AI Security \u0026 Agentic AI', to: '/services/ai-security' },
-      { label: 'Secure Software \u0026 DevSecOps', to: '/services/secure-software' },
-      { label: 'Digital Infrastructure', to: '/services/digital-infrastructure' },
-      { label: 'Post-Quantum Security', to: '/services/post-quantum' },
+      { label: 'AI Security, LLM, RAG \u0026 Agentic AI', to: '/services/ai-security' },
     ],
   },
   {
-    id: 'ma',
-    label: 'M\u0026A \u0026 Investors',
-    children: [
+    title: 'Digital Platform Trust and Security Assurance',
+    accent: '#4f8ef7',
+    links: [
+      { label: 'Secure Software \u0026 DevSecOps', to: '/services/secure-software' },
+      { label: 'Digital Infrastructure \u0026 Critical Systems', to: '/services/digital-infrastructure' },
+      { label: 'Post-Quantum \u0026 Emerging Technology', to: '/services/post-quantum' },
+      { label: 'Paxley — DevSecOps Platform', to: '/paxley' },
+    ],
+  },
+  {
+    title: 'Cybersecurity and Compliance Maturity Management',
+    accent: '#f97316',
+    links: [
+      { label: 'Cybersecurity Strategy \u0026 Leadership', to: '/services/cybersecurity-advisory' },
+      { label: 'Fractional / Interim CISO', to: '/services/fractional-ciso' },
+      { label: 'Penetration Testing \u0026 Technical Assurance', to: '/services/penetration-testing' },
+      { label: 'Operational Resilience \u0026 Managed Security', to: '/services/operational-resilience' },
+    ],
+  },
+  {
+    title: 'Cyber and Compliance M\u0026A Risk Advisory',
+    accent: '#a78bfa',
+    links: [
       { label: 'M\u0026A Cyber Due Diligence', to: '/ma/due-diligence' },
       { label: 'Sell-Side \u0026 Exit Readiness', to: '/ma/sell-side' },
       { label: 'Post-Deal Cybersecurity', to: '/ma/post-deal' },
       { label: 'Portfolio Cybersecurity', to: '/ma/portfolio' },
       { label: 'Start-up \u0026 Growth Readiness', to: '/ma/startup-growth' },
-      { isDivider: true },
-      { label: 'M\u0026A Overview', to: '/ma' },
     ],
+  },
+]
+
+const NAV_ITEMS = [
+  {
+    id: 'services',
+    label: 'Services',
+    isMega: true,
   },
   {
     id: 'industries',
@@ -70,6 +83,7 @@ const NAV_ITEMS = [
     children: [
       { label: 'Nucleus Systems', to: '/about' },
       { label: 'Leadership \u0026 Team', to: '/team' },
+      { label: 'Our Frameworks', to: '/frameworks' },
       { label: 'Careers', to: '/careers' },
     ],
   },
@@ -88,7 +102,7 @@ export default function Navbar({ onMenuOpen }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close dropdown when clicking outside
+  // Close on outside click
   useEffect(() => {
     const handler = () => setOpenId(null)
     document.addEventListener('click', handler)
@@ -124,7 +138,7 @@ export default function Navbar({ onMenuOpen }) {
           {NAV_ITEMS.map(item => (
             <div
               key={item.id}
-              className={`nav-item${openId === item.id ? ' open' : ''}`}
+              className={`nav-item${item.isMega ? ' nav-item--mega' : ''}${openId === item.id ? ' open' : ''}`}
               id={`dd-${item.id}`}
               onMouseEnter={() => openItem(item.id)}
               onMouseLeave={() => closeItem(item.id)}
@@ -135,21 +149,56 @@ export default function Navbar({ onMenuOpen }) {
               >
                 {item.label} <span className="dd-arrow">▾</span>
               </span>
-              <div className="dropdown-menu">
-                {item.children.map((child, idx) => {
-                  if (child.isDivider) return <div key={idx} className="dd-div" />
-                  if (child.isLabel) return <div key={idx} className="dd-label">{child.label}</div>
-                  return (
-                    <Link
-                      key={idx}
-                      to={child.to}
-                      onClick={() => setOpenId(null)}
-                    >
-                      {child.label}
-                    </Link>
-                  )
-                })}
-              </div>
+
+              {item.isMega ? (
+                /* ── MEGA-MENU PANEL ── */
+                <div className="mega-panel" onClick={e => e.stopPropagation()}>
+                  <div className="mega-cols">
+                    {PILLARS.map((pillar, pi) => (
+                      <div
+                        className="mega-col"
+                        key={pi}
+                        style={{ borderTopColor: pillar.accent }}
+                      >
+                        <div
+                          className="mega-col-title"
+                          style={{ color: pillar.accent }}
+                        >
+                          {pillar.title}
+                        </div>
+                        <div className="mega-col-links">
+                          {pillar.links.map((link, li) => (
+                            <Link
+                              key={li}
+                              to={link.to}
+                              onClick={() => setOpenId(null)}
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                /* ── REGULAR DROPDOWN ── */
+                <div className="dropdown-menu">
+                  {item.children.map((child, idx) => {
+                    if (child.isDivider) return <div key={idx} className="dd-div" />
+                    if (child.isLabel) return <div key={idx} className="dd-label">{child.label}</div>
+                    return (
+                      <Link
+                        key={idx}
+                        to={child.to}
+                        onClick={() => setOpenId(null)}
+                      >
+                        {child.label}
+                      </Link>
+                    )
+                  })}
+                </div>
+              )}
             </div>
           ))}
           <Link className="nav-direct" to="/insights">Insights</Link>

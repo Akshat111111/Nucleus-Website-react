@@ -31,21 +31,32 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* ── Unified Services — Pillars 1 & 2 ── */}
           <div className="fcol">
             <h4>Services</h4>
-            <Link to="/services/fractional-ciso">Fractional / Interim CISO</Link>
-            <Link to="/services/cybersecurity-advisory">Cybersecurity Strategy &amp; Leadership</Link>
-            <Link to="/services/penetration-testing">Penetration Testing</Link>
-            <Link to="/services/operational-resilience">Operational Resilience</Link>
-          </div>
-
-          <div className="fcol">
-            <h4>Solutions</h4>
+            <span className="fcol-pillar">AI Governance &amp; Security</span>
             <Link to="/services/ai-governance">AI Governance &amp; Regulatory Readiness</Link>
-            <Link to="/services/ai-security">AI Security &amp; Agentic AI</Link>
+            <Link to="/services/ai-security">AI Security, LLM, RAG &amp; Agentic AI</Link>
+            <span className="fcol-pillar" style={{ marginTop: '10px' }}>Digital Platform Trust</span>
             <Link to="/services/secure-software">Secure Software &amp; DevSecOps</Link>
             <Link to="/services/digital-infrastructure">Digital Infrastructure</Link>
             <Link to="/services/post-quantum">Post-Quantum Security</Link>
+            <Link to="/paxley">Paxley — DevSecOps Platform</Link>
+          </div>
+
+          {/* ── Unified Services — Pillars 3 & 4 ── */}
+          <div className="fcol">
+            <h4>&nbsp;</h4>
+            <span className="fcol-pillar">Cybersecurity Maturity</span>
+            <Link to="/services/cybersecurity-advisory">Cybersecurity Strategy &amp; Leadership</Link>
+            <Link to="/services/fractional-ciso">Fractional / Interim CISO</Link>
+            <Link to="/services/penetration-testing">Penetration Testing</Link>
+            <Link to="/services/operational-resilience">Operational Resilience</Link>
+            <span className="fcol-pillar" style={{ marginTop: '10px' }}>M&amp;A Risk Advisory</span>
+            <Link to="/ma/due-diligence">M&amp;A Cyber Due Diligence</Link>
+            <Link to="/ma/sell-side">Sell-Side &amp; Exit Readiness</Link>
+            <Link to="/ma/post-deal">Post-Deal Cybersecurity</Link>
+            <Link to="/ma/portfolio">Portfolio Cybersecurity</Link>
           </div>
 
           <div className="fcol">
@@ -82,6 +93,7 @@ export default function Footer() {
             <h4>Company</h4>
             <Link to="/about">About Nucleus Systems</Link>
             <Link to="/team">Leadership &amp; Team</Link>
+            <Link to="/frameworks">Our Frameworks</Link>
             <Link to="/insights">Insights</Link>
             <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
