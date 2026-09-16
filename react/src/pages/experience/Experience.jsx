@@ -40,28 +40,23 @@ export default function Experience() {
         <div className="wrap">
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
             <span className="eyebrow">Experience by Category</span>
-            <h2>Four dimensions of practitioner depth.</h2>
+            <h2>Three dimensions of practitioner depth.</h2>
             <p>Our track record spans engagement types, sectors, platforms and geographies. Each section below details one dimension of that depth.</p>
           </div>
           <div className="svc-what-grid">
             {[
               {
-                num: '01', title: 'Selected Engagements',
-                desc: 'Anonymised engagement summaries from across 600+ client relationships — structured by sector, challenge and outcome. The evidence behind the positioning.',
-                link: '/experience/engagements',
-              },
-              {
-                num: '02', title: 'M&A Experience',
+                num: '01', title: 'M&A Experience',
                 desc: '250+ transactions across private equity, strategic M&A and growth-stage investment. Buy-side, sell-side, post-deal and portfolio — in 13+ years of specialist M&A cyber advisory.',
                 link: '/experience/ma',
               },
               {
-                num: '03', title: 'DPI &amp; Digital Public Goods Experience',
+                num: '02', title: 'DPI &amp; Digital Public Goods Experience',
                 desc: 'Practitioner contributions to Mojaloop, MOSIP, OpenG2P, Tazama, COMESA and GovStack deployments across Africa, Asia and the Middle East. Inside knowledge — not outside assessment.',
                 link: '/experience/dpi-dpg',
               },
               {
-                num: '04', title: 'Global Delivery',
+                num: '03', title: 'Global Delivery',
                 desc: '40+ countries across six continents. The regional expertise, regulatory knowledge and on-the-ground network that enables delivery in markets where most advisors have no footprint.',
                 link: '/experience/global-delivery',
               },
