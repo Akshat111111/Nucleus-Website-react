@@ -50,7 +50,6 @@ import IndCritical from './pages/industries/IndCritical'
 
 // Experience pages
 import Experience from './pages/experience/Experience'
-import ExpEngagements from './pages/experience/ExpEngagements'
 import ExpMA from './pages/experience/ExpMA'
 import ExpDPI from './pages/experience/ExpDPI'
 import ExpGlobal from './pages/experience/ExpGlobal'
@@ -123,7 +122,6 @@ function AppLayout() {
 
           {/* Experience */}
           <Route path="/experience" element={<Experience />} />
-          <Route path="/experience/engagements" element={<ExpEngagements />} />
           <Route path="/experience/ma" element={<ExpMA />} />
           <Route path="/experience/dpi-dpg" element={<ExpDPI />} />
           <Route path="/experience/global-delivery" element={<ExpGlobal />} />

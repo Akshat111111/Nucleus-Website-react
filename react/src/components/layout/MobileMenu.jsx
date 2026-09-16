@@ -58,7 +58,6 @@ const OTHER_GROUPS = [
     id: 'experience',
     label: 'Experience',
     links: [
-      { label: 'Selected Engagements', to: '/experience/engagements' },
       { label: 'M\u0026A Experience', to: '/experience/ma' },
       { label: 'DPI \u0026 Digital Public Goods', to: '/experience/dpi-dpg' },
       { label: 'Global Delivery', to: '/experience/global-delivery' },
