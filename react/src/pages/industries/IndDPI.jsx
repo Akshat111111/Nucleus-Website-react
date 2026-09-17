@@ -15,7 +15,7 @@ export default function IndDPI() {
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries <span className="arr">→</span></Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors <span className="arr">→</span></Link>
             </div>
           </div>
         </div>

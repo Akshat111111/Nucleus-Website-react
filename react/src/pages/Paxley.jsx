@@ -88,46 +88,38 @@ export default function Paxley() {
       {/* Comparison */}
       <div className="pg-section" id="pax-compare">
         <div className="wrap">
-          <div className="section-head reveal">
-            <h2>Compare Paxley</h2>
-            <p>How we stack up against traditional application security testing tools.</p>
+          <div className="section-head reveal" style={{ maxWidth: '800px', textAlign: 'left' }}>
+            <h2 style={{ color: '#fff' }}>Compare Paxley</h2>
+            <p style={{ color: 'rgba(255,255,255,0.8)' }}>How we stack up against traditional application security testing tools.</p>
           </div>
-          <div className="reveal" style={{ overflowX: 'auto' }}>
-            <table className="spec-table" style={{ minWidth: '700px', border: '1px solid rgba(86,240,160,0.3)' }}>
+          <div className="reveal" style={{ overflowX: 'auto', marginTop: '32px' }}>
+            <table style={{ width: '100%', minWidth: '700px', borderCollapse: 'collapse' }}>
               <thead>
-                <tr style={{ background: 'var(--pax-dark)' }}>
-                  <th style={{ width: '30%', color: '#fff', borderBottom: '1px solid rgba(86,240,160,0.3)' }}>Tool Category</th>
-                  <th style={{ width: '70%', color: 'var(--pax-lime)', borderBottom: '1px solid rgba(86,240,160,0.3)' }}>The Paxley Difference</th>
+                <tr style={{ borderBottom: '1px solid rgba(86,240,160,0.3)' }}>
+                  <th style={{ width: '30%', color: '#fff', padding: '0 16px 16px 0', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '.05em', textAlign: 'left' }}>Tool Category</th>
+                  <th style={{ width: '70%', color: 'var(--pax-lime)', padding: '0 16px 16px 0', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '.05em', textAlign: 'left' }}>The Paxley Difference</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Native SCM security</td>
-                  <td>Competes on price; shares some engine overlap — Paxley adds significantly more scanning engines</td>
-                </tr>
-                <tr>
-                  <td>SAST-focused tools</td>
-                  <td>Broader scope; overlaps on static analysis — Paxley unifies across all 8 capability areas</td>
-                </tr>
-                <tr>
-                  <td>Enterprise SAST platforms</td>
-                  <td>Below their enterprise tier — Paxley is the mid-market alternative</td>
-                </tr>
-                <tr>
-                  <td>Legacy SAST vendors</td>
-                  <td>Complementary — Paxley is faster to deploy and more cost-efficient for modern teams</td>
-                </tr>
-                <tr>
-                  <td>Code health tools</td>
-                  <td>Differentiated focus — Paxley adds supply chain, secrets, IaC, and container coverage</td>
-                </tr>
+                {[
+                  { cat: 'Native SCM security', diff: 'Competes on price; shares some engine overlap — Paxley adds significantly more scanning engines.' },
+                  { cat: 'SAST-focused tools', diff: 'Broader scope; overlaps on static analysis — Paxley unifies across all 8 capability areas.' },
+                  { cat: 'Enterprise SAST platforms', diff: 'Below their enterprise tier — Paxley is the mid-market alternative.' },
+                  { cat: 'Legacy SAST vendors', diff: 'Complementary — Paxley is faster to deploy and more cost-efficient for modern teams.' },
+                  { cat: 'Code health tools', diff: 'Differentiated focus — Paxley adds supply chain, secrets, IaC, and container coverage.' },
+                ].map((row, i) => (
+                  <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                    <td style={{ padding: '20px 16px 20px 0', color: '#fff', fontWeight: 600, fontSize: '15px', verticalAlign: 'top' }}>{row.cat}</td>
+                    <td style={{ padding: '20px 16px 20px 0', color: 'rgba(255,255,255,0.7)', fontSize: '15px', verticalAlign: 'top', lineHeight: '1.6' }}>{row.diff}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
-          <div style={{ marginTop: '24px', padding: '20px 24px', background: 'rgba(0,194,129,.07)', border: '1px solid rgba(86,240,160,.25)', borderRadius: '12px' }} className="reveal">
-            <div style={{ fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: '700', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--pax-green)', marginBottom: '8px' }}>Example savings</div>
-            <div style={{ fontSize: '15px', color: 'var(--navy)', fontWeight: '600' }}>
-              50 devs / 10 repos = <span style={{ color: 'var(--pax-green)' }}>$990/mo</span> vs <span style={{ color: '#ff6b6b', textDecoration: 'line-through' }}>$4,750/mo</span> on per-seat tools — 79% saving.
+          <div style={{ marginTop: '32px', padding: '24px 0', borderTop: '1px solid rgba(86,240,160,0.2)' }} className="reveal">
+            <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: '700', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--pax-green)', marginBottom: '8px' }}>Example savings</div>
+            <div style={{ fontSize: '16px', color: '#fff', fontWeight: '400' }}>
+              50 devs / 10 repos = <span style={{ color: 'var(--pax-green)', fontWeight: '700' }}>$990/mo</span> vs <span style={{ color: '#ff6b6b', textDecoration: 'line-through', fontWeight: '700' }}>$4,750/mo</span> on per-seat tools — <span style={{ color: '#fff', fontWeight: '700' }}>79% saving.</span>
             </div>
           </div>
         </div>
@@ -174,6 +166,21 @@ export default function Paxley() {
           </div>
         </div>
       </div>
+
+      {/* Related */}
+      <section className="svc-related section">
+        <div className="wrap">
+          <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
+            <span className="eyebrow">Related Services</span>
+            <h2>Connected Platform Services</h2>
+          </div>
+          <div className="related-grid">
+            <Link className="related-card reveal" to="/what-we-do/platform/code-trust"><h4>Code Trust &amp; Supply Chain</h4><p>The strategic framework (N3-CTAF) that Paxley operationalises in software.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/platform/paxley"><h4>Paxley Advisory</h4><p>Advisory services surrounding the Paxley product and continuous trust scoring.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/platform/devsecops"><h4>DevSecOps Transformation</h4><p>Integrating Paxley scanning directly into developer workflows and CI/CD pipelines.</p><span className="arr-link">Learn more →</span></Link>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <div className="page-cta-band">

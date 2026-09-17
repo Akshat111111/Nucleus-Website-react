@@ -2161,55 +2161,96 @@
 @media(max-width:460px){.ns-fw-grid{grid-template-columns:1fr}.home-globe-wrap{max-width:260px}}
 /* END NS About v2 */
 
-/* ===== SERVICES MEGA-MENU ===== */
+/* ===== WHAT WE DO — 3-PILLAR MEGA-MENU ===== */
 .nav-item--mega{position:static}
 .nav-item--mega>.mega-panel{
-  position:fixed;top:70px;left:50%;transform:translateX(-50%);
-  width:min(1060px,96vw);
+  position:fixed;top:68px;left:50%;transform:translateX(-50%);
+  width:min(1120px,98vw);
   background:#fff;
   border:1px solid var(--line);
   border-top:none;
-  border-radius:0 0 16px 16px;
-  box-shadow:0 16px 48px rgba(10,25,47,.14);
-  padding:28px 28px 24px;
+  border-radius:0 0 18px 18px;
+  box-shadow:0 20px 60px rgba(10,25,47,.16);
+  padding:0 0 0;
   z-index:400;
   opacity:0;pointer-events:none;
-  transform:translateX(-50%) translateY(-6px);
-  transition:opacity .2s,transform .2s
+  transform:translateX(-50%) translateY(-8px);
+  transition:opacity .22s,transform .22s
 }
 .nav-item--mega.open>.mega-panel{
   opacity:1;pointer-events:all;
   transform:translateX(-50%) translateY(0)
 }
+/* Tagline banner at top of mega */
+.mega-panel-header{
+  background:var(--navy);
+  padding:10px 28px;
+  border-radius:0
+}
+.mega-panel-tagline{
+  font-size:10px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.45);margin:0
+}
+/* 3-column grid */
 .mega-cols{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:0 20px
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  padding:0
 }
 .mega-col{
   border-top:3px solid #ccc;
-  padding-top:14px
+  padding:22px 24px 24px;
+  border-right:1px solid var(--line)
+}
+.mega-col:last-child{border-right:none}
+/* Pillar header link inside mega */
+.mega-col-header{
+  display:flex;align-items:flex-start;gap:10px;
+  text-decoration:none;
+  margin-bottom:18px;
+  padding:10px 12px;
+  border-radius:9px;
+  transition:background .15s;
+  background:transparent
+}
+.mega-col-header:hover{background:rgba(0,0,0,.04)}
+.mega-col-num{
+  font-size:22px;font-weight:800;
+  line-height:1;flex-shrink:0;
+  margin-top:2px
 }
 .mega-col-title{
-  font-size:11.5px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.06em;
-  line-height:1.4;margin-bottom:14px
+  font-size:13px;font-weight:700;
+  color:var(--ink);line-height:1.35;
+  flex:1
 }
+.mega-col-arrow{
+  font-size:16px;font-weight:600;
+  flex-shrink:0;margin-top:2px;
+  transition:transform .15s
+}
+.mega-col-header:hover .mega-col-arrow{transform:translateX(3px)}
+/* Sub-service links */
 .mega-col-links{
   display:flex;flex-direction:column;gap:1px
 }
-.mega-col-links a{
-  display:block;
+.mega-col-link{
+  display:flex;align-items:center;gap:9px;
   font-size:13px;font-weight:500;
-  color:var(--ink);
+  color:var(--ink);text-decoration:none;
   padding:7px 10px;
   border-radius:7px;
-  transition:background .15s,color .15s;
+  transition:background .14s,color .14s;
   line-height:1.35
 }
-.mega-col-links a:hover{
-  background:rgba(11,80,200,.07);
-  color:var(--blue)
+.mega-col-link:hover{
+  background:rgba(0,0,0,.05);
+  color:var(--ink)
+}
+.mega-link-dot{
+  width:5px;height:5px;border-radius:50%;
+  flex-shrink:0;opacity:.7
 }
 
 /* Mobile menu pillar sub-groups */
@@ -2232,7 +2273,212 @@
   margin-bottom:4px;
   pointer-events:none
 }
-/* END Services Mega-Menu */
+/* END What We Do Mega-Menu */
+
+/* ===== HOMEPAGE — THREE CAPABILITY CARDS ===== */
+.capability-section{padding:80px 0;background:var(--navy)}
+.capability-intro{max-width:680px;margin:0 auto 52px;text-align:center}
+.capability-intro p{font-size:17px;color:var(--slate);line-height:1.7}
+.capability-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden}
+.cap-card{
+  background:rgba(255,255,255,.03);
+  padding:36px 30px 32px;
+  display:flex;flex-direction:column;
+  transition:background .2s;
+  border-right:1px solid rgba(255,255,255,.07);
+  text-decoration:none
+}
+.cap-card:last-child{border-right:none}
+.cap-card:hover{background:rgba(255,255,255,.06)}
+.cap-card-num{
+  font-size:40px;font-weight:800;line-height:1;
+  margin-bottom:18px;font-variant-numeric:tabular-nums
+}
+.cap-card-title{
+  font-size:18px;font-weight:700;color:#fff;
+  line-height:1.3;margin-bottom:14px
+}
+.cap-card-desc{
+  font-size:14px;color:var(--slate);
+  line-height:1.65;flex:1;margin-bottom:24px
+}
+.cap-card-cta{
+  font-size:13px;font-weight:600;
+  display:flex;align-items:center;gap:6px;
+  transition:gap .15s
+}
+.cap-card:hover .cap-card-cta{gap:10px}
+@media(max-width:860px){
+  .capability-cards{grid-template-columns:1fr;border-radius:12px}
+  .cap-card{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .cap-card:last-child{border-bottom:none}
+}
+
+/* ===== INTERCONNECT STRIP ===== */
+.interconnect-strip{
+  background:linear-gradient(135deg,#0b0f1a 0%,#0d1a2e 100%);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:28px 0;text-align:center
+}
+.interconnect-tagline{
+  font-size:12px;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.35);
+  margin-bottom:14px
+}
+.interconnect-pillars{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:0
+}
+.ic-pillar{
+  font-size:13px;font-weight:600;
+  color:rgba(255,255,255,.7);
+  padding:6px 16px
+}
+.ic-arrow{
+  color:rgba(255,255,255,.25);font-size:16px
+}
+.lifecycle-chain{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:0;margin-top:14px
+}
+.lc-step{
+  font-size:11px;font-weight:600;
+  color:rgba(255,255,255,.35);
+  letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 10px
+}
+.lc-sep{color:rgba(255,255,255,.18);font-size:12px}
+
+/* ===== SECTORS STRIP ===== */
+.sectors-strip{padding:48px 0;background:#fafbfd;border-top:1px solid var(--line)}
+.sectors-strip-title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);text-align:center;margin-bottom:24px}
+.sectors-links{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:12px
+}
+.sector-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:600;color:var(--ink);
+  background:#fff;border:1px solid var(--line);
+  border-radius:100px;padding:8px 18px;
+  text-decoration:none;transition:border-color .15s,box-shadow .15s
+}
+.sector-pill:hover{border-color:var(--blue);box-shadow:0 2px 12px rgba(11,80,200,.1)}
+
+/* ===== PILLAR HUB PAGES ===== */
+.pillar-hub-hero{
+  background:var(--navy);padding:80px 0 64px;
+  position:relative;overflow:hidden
+}
+.pillar-hub-hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 90% at 80% 40%,rgba(124,58,237,.12),transparent);
+  pointer-events:none
+}
+.pillar-hub-num{
+  font-size:64px;font-weight:900;
+  line-height:1;margin-bottom:8px;
+  font-variant-numeric:tabular-nums
+}
+.pillar-hub-eyebrow{
+  font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  opacity:.5;color:#fff;margin-bottom:20px
+}
+.pillar-hub-h1{
+  font-size:clamp(28px,4vw,46px);
+  font-weight:800;color:#fff;line-height:1.12;
+  max-width:700px;margin-bottom:18px
+}
+.pillar-hub-sub{
+  font-size:17px;color:var(--slate);
+  line-height:1.65;max-width:600px;margin-bottom:32px
+}
+.pillar-lifecycle{
+  display:flex;flex-wrap:wrap;align-items:center;gap:0
+}
+.pl-step{
+  font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.07em;
+  padding:5px 12px;border-radius:100px;
+  border:1px solid rgba(255,255,255,.15);
+  color:rgba(255,255,255,.6);margin:4px 0
+}
+.pl-arrow{color:rgba(255,255,255,.25);padding:0 6px;font-size:14px}
+
+/* Service domain grid on pillar hub pages */
+.service-domain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:64px 0}
+.sd-card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:28px;display:flex;
+  flex-direction:column;transition:box-shadow .2s,transform .2s
+}
+.sd-card:hover{box-shadow:0 8px 32px rgba(10,25,47,.09);transform:translateY(-2px)}
+.sd-card-label{
+  font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;
+  margin-bottom:8px
+}
+.sd-card-title{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:12px;line-height:1.3}
+.sd-card-links{display:flex;flex-direction:column;gap:2px;flex:1}
+.sd-card-links a{
+  font-size:13px;color:var(--ink);text-decoration:none;
+  padding:5px 8px;border-radius:6px;
+  transition:background .12s;line-height:1.4
+}
+.sd-card-links a:hover{background:rgba(0,0,0,.05)}
+@media(max-width:860px){.service-domain-grid{grid-template-columns:1fr;gap:16px}}
+
+/* ===== SECTOR PAGES ===== */
+.sector-chain{
+  display:flex;flex-wrap:wrap;align-items:center;
+  gap:0;margin-top:24px
+}
+.sc-step{
+  font-size:11.5px;font-weight:600;
+  padding:6px 14px;
+  background:rgba(11,80,200,.07);
+  color:var(--blue);border-radius:100px;
+  white-space:nowrap;margin:4px 0
+}
+.sc-arrow{color:var(--slate);padding:0 6px;font-size:13px}
+
+/* ===== HOW WE DO IT — FRAMEWORK CHAINS ===== */
+.fw-chain-section{padding:64px 0}
+.fw-chain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.fw-chain-col{
+  background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:28px 24px;
+  display:flex;flex-direction:column;align-items:flex-start
+}
+.fw-chain-col-label{
+  font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  margin-bottom:20px
+}
+.fw-chain-item{
+  width:100%
+}
+.fw-chain-fw{
+  display:block;font-size:14px;font-weight:700;
+  color:var(--ink);padding:10px 14px;
+  background:rgba(0,0,0,.03);border-radius:8px;
+  border-left:3px solid;
+  margin-bottom:4px;text-decoration:none;
+  transition:background .14s
+}
+.fw-chain-fw:hover{background:rgba(0,0,0,.06)}
+.fw-chain-desc{
+  font-size:12px;color:var(--slate);
+  padding-left:18px;margin-bottom:2px
+}
+.fw-chain-arrow{
+  font-size:18px;color:var(--slate);
+  padding:4px 0 4px 8px;display:block;opacity:.4
+}
+.fw-chain-fw:last-of-type+.fw-chain-arrow{display:none}
+@media(max-width:860px){.fw-chain-grid{grid-template-columns:1fr}}
+/* END New Components */
 
 /* ===== FRAMEWORKS PAGE ===== */
 .fw-hero{background:var(--navy);padding:80px 0 64px;position:relative;overflow:hidden}

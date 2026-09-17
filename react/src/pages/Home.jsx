@@ -26,7 +26,7 @@ export default function Home() {
             </p>
             <div className="hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/services/cybersecurity-advisory">Explore Services <span className="arr">→</span></Link>
+              <Link className="btn btn-ghost" to="/what-we-do/ai-governance-security">Explore What We Do <span className="arr">→</span></Link>
             </div>
           </div>
         </div>
@@ -60,75 +60,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHAT CAN WE HELP YOU SOLVE ── */}
-      <section className="solve-section section" id="solve">
+      {/* ── THREE INTEGRATED DIGITAL TRUST CAPABILITIES ── */}
+      <section className="capability-section" id="what-we-do">
         <div className="wrap">
-          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow" style={{ color: 'var(--orange)' }}>What We Solve</span>
-            <h2 style={{ color: '#fff' }}>What can we help you solve?</h2>
-            <p style={{ color: 'var(--slate)', maxWidth: '520px' }}>
-              We help organisations, investors and public institutions identify, reduce and independently validate cybersecurity, AI and technology risk.
+          <div className="capability-intro reveal">
+            <p>
+              Nucleus Systems helps organisations govern emerging technology, secure the digital
+              platforms they build and operate, and continuously measure cybersecurity, compliance and resilience.
             </p>
           </div>
-          <div className="solve-grid">
+          <div className="capability-cards">
 
-            <Link className="solve-card reveal" to="/services/cybersecurity-advisory">
-              <div className="solve-ico">
-                <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 8 8 8 8s8-3 8-8V6z"/></svg>
-              </div>
-              <h3 className="solve-title">Strengthen Cybersecurity</h3>
-              <p className="solve-desc">Assess maturity, prioritise risk and build a defensible improvement programme aligned to your board and regulator.</p>
-              <span className="solve-cta">Cybersecurity Strategy &amp; Leadership <span className="arr">→</span></span>
+            {/* 01 — AI Governance & Security */}
+            <Link className="cap-card reveal" to="/what-we-do/ai-governance-security">
+              <span className="cap-card-num" style={{ color: '#7c3aed' }}>01</span>
+              <h2 className="cap-card-title">AI Governance &amp; Security</h2>
+              <p className="cap-card-desc">
+                Govern, secure and continuously assure AI across its lifecycle.
+              </p>
+              <span className="cap-card-cta" style={{ color: '#7c3aed' }}>
+                Explore AI Governance &amp; Security <span>→</span>
+              </span>
             </Link>
 
-            <Link className="solve-card reveal" to="/ma">
-              <div className="solve-ico">
-                <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-              </div>
-              <h3 className="solve-title">Navigate an M&amp;A Transaction</h3>
-              <p className="solve-desc">Identify cyber, AI, privacy, cloud and software risks before they affect deal value — from buy-side through to exit.</p>
-              <span className="solve-cta">M&amp;A Cyber &amp; Compliance <span className="arr">→</span></span>
+            {/* 02 — Digital Platform Trust & Assurance */}
+            <Link className="cap-card reveal" to="/what-we-do/digital-platform-trust">
+              <span className="cap-card-num" style={{ color: '#0891b2' }}>02</span>
+              <h2 className="cap-card-title">Digital Platform Trust &amp; Assurance</h2>
+              <p className="cap-card-desc">
+                Engineer trust into software, cloud platforms, digital infrastructure and the software supply chain.
+              </p>
+              <span className="cap-card-cta" style={{ color: '#0891b2' }}>
+                Explore Digital Platform Trust <span>→</span>
+              </span>
             </Link>
 
-            <Link className="solve-card reveal" to="/services/ai-governance">
-              <div className="solve-ico">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-              </div>
-              <h3 className="solve-title">Govern &amp; Secure AI</h3>
-              <p className="solve-desc">Establish accountable AI governance and protect LLM, RAG, agentic and ML environments from evolving threats.</p>
-              <span className="solve-cta">AI Governance &amp; Security <span className="arr">→</span></span>
-            </Link>
-
-            <Link className="solve-card reveal" to="/services/secure-software">
-              <div className="solve-ico">
-                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </div>
-              <h3 className="solve-title">Secure Software Delivery</h3>
-              <p className="solve-desc">Build secure SDLC, DevSecOps and software supply-chain assurance into engineering from code commit to deployment.</p>
-              <span className="solve-cta">Secure Software &amp; DevSecOps <span className="arr">→</span></span>
-            </Link>
-
-            <Link className="solve-card reveal" to="/services/penetration-testing">
-              <div className="solve-ico">
-                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v3m0 0v3m0-3h3m-3 0H8"/></svg>
-              </div>
-              <h3 className="solve-title">Validate Security Technically</h3>
-              <p className="solve-desc">Penetration testing, vulnerability assessment, exposure assessment and independent technical validation.</p>
-              <span className="solve-cta">Penetration Testing &amp; Technical Assurance <span className="arr">→</span></span>
-            </Link>
-
-            <Link className="solve-card reveal" to="/services/digital-infrastructure">
-              <div className="solve-ico">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18"/></svg>
-              </div>
-              <h3 className="solve-title">Build Resilient Digital Infrastructure</h3>
-              <p className="solve-desc">Secure DPI, digital identity, payments and critical digital ecosystems at national scale.</p>
-              <span className="solve-cta">Digital Infrastructure &amp; Critical Systems <span className="arr">→</span></span>
+            {/* 03 — Cybersecurity & Compliance Maturity Management */}
+            <Link className="cap-card reveal" to="/what-we-do/cybersecurity-compliance">
+              <span className="cap-card-num" style={{ color: '#059669' }}>03</span>
+              <h2 className="cap-card-title">Cybersecurity &amp; Compliance Maturity Management</h2>
+              <p className="cap-card-desc">
+                Measure, improve and continuously demonstrate cybersecurity, compliance and operational resilience.
+              </p>
+              <span className="cap-card-cta" style={{ color: '#059669' }}>
+                Explore Cybersecurity &amp; Compliance <span>→</span>
+              </span>
             </Link>
 
           </div>
         </div>
       </section>
+
+      {/* ── INTERCONNECT STRIP ── */}
+      <div className="interconnect-strip">
+        <div className="interconnect-tagline">GOVERN THE AI · TRUST THE PLATFORM · PROVE THE ENTERPRISE</div>
+        <div className="interconnect-pillars">
+          <span className="ic-pillar" style={{ color: '#a78bfa' }}>AI Governance &amp; Security</span>
+          <span className="ic-arrow">→</span>
+          <span className="ic-pillar" style={{ color: '#67e8f9' }}>Digital Platform Trust &amp; Assurance</span>
+          <span className="ic-arrow">→</span>
+          <span className="ic-pillar" style={{ color: '#6ee7b7' }}>Cybersecurity &amp; Compliance Maturity</span>
+        </div>
+        <div className="lifecycle-chain">
+          {['Strategy','Architecture','Engineering','Validation','Operations','Evidence','Continuous Assurance'].map((step, i, arr) => (
+            <span key={step}>
+              <span className="lc-step">{step}</span>
+              {i < arr.length - 1 && <span className="lc-sep">·</span>}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── SECTORS STRIP ── */}
+      <div className="sectors-strip">
+        <div className="wrap">
+          <p className="sectors-strip-title">Who we serve</p>
+          <div className="sectors-links">
+            {[
+              { label: 'Large Enterprises',          to: '/sectors/large-enterprises' },
+              { label: 'Financial Services',          to: '/sectors/financial-services' },
+              { label: 'Government & Public Sector',  to: '/sectors/government-public-sector' },
+              { label: 'Software / SaaS',             to: '/sectors/software-saas' },
+              { label: 'Digital Platforms',           to: '/sectors/digital-platforms' },
+              { label: 'Private Equity / Investors',  to: '/sectors/private-equity' },
+            ].map(s => (
+              <Link key={s.to} className="sector-pill" to={s.to}>{s.label}</Link>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ── TICKER ── */}
       <div className="ticker-wrap" aria-hidden="true">
