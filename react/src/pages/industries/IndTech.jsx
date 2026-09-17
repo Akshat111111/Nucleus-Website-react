@@ -15,7 +15,7 @@ export default function IndTech() {
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries <span className="arr">→</span></Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors <span className="arr">→</span></Link>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function IndTech() {
             <p>Speak with a practitioner who understands the commercial reality of building security into a technology business at scale.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries</Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors</Link>
             </div>
           </div>
         </div>

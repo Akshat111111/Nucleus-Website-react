@@ -1,98 +1,103 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const PILLARS = [
-  {
-    title: 'AI Governance and Security Services',
-    accent: '#22c55e',
-    links: [
-      { label: 'AI Governance \u0026 Regulatory Readiness', to: '/services/ai-governance' },
-      { label: 'AI Security, LLM, RAG \u0026 Agentic AI', to: '/services/ai-security' },
-    ],
-  },
-  {
-    title: 'Digital Platform Trust and Security Assurance',
-    accent: '#4f8ef7',
-    links: [
-      { label: 'Secure Software \u0026 DevSecOps', to: '/services/secure-software' },
-      { label: 'Digital Infrastructure \u0026 Critical Systems', to: '/services/digital-infrastructure' },
-      { label: 'Post-Quantum \u0026 Emerging Technology', to: '/services/post-quantum' },
-      { label: 'Paxley — DevSecOps Platform', to: '/paxley' },
-    ],
-  },
-  {
-    title: 'Cybersecurity and Compliance Maturity Management',
-    accent: '#f97316',
-    links: [
-      { label: 'Cybersecurity Strategy \u0026 Leadership', to: '/services/cybersecurity-advisory' },
-      { label: 'Fractional / Interim CISO', to: '/services/fractional-ciso' },
-      { label: 'Penetration Testing \u0026 Technical Assurance', to: '/services/penetration-testing' },
-      { label: 'Operational Resilience \u0026 Managed Security', to: '/services/operational-resilience' },
-    ],
-  },
-  {
-    title: 'Cyber and Compliance M\u0026A Risk Advisory',
-    accent: '#a78bfa',
-    links: [
-      { label: 'M\u0026A Cyber Due Diligence', to: '/ma/due-diligence' },
-      { label: 'Sell-Side \u0026 Exit Readiness', to: '/ma/sell-side' },
-      { label: 'Post-Deal Cybersecurity', to: '/ma/post-deal' },
-      { label: 'Portfolio Cybersecurity', to: '/ma/portfolio' },
-      { label: 'Start-up \u0026 Growth Readiness', to: '/ma/startup-growth' },
-    ],
-  },
+// ── 01 AI Governance & Security — 9 sub-services ─────────────────────────────
+const PILLAR_AI = {
+  num: '01',
+  title: 'AI Governance & Security',
+  subtitle: 'Govern, secure and continuously assure AI across its lifecycle.',
+  accent: '#7c3aed',
+  hub: '/what-we-do/ai-governance-security',
+  links: [
+    { label: 'AI Governance & Responsible AI',          to: '/what-we-do/ai/governance' },
+    { label: 'AI Regulatory & Compliance Readiness',    to: '/what-we-do/ai/regulatory' },
+    { label: 'AI Usage Assurance',                      to: '/what-we-do/ai/usage-assurance' },
+    { label: 'AI Security Architecture',                to: '/what-we-do/ai/security-architecture' },
+    { label: 'GenAI, LLM, RAG & Agentic AI Security',  to: '/what-we-do/ai/genai-security' },
+    { label: 'AI Supply Chain & MLSecOps',              to: '/what-we-do/ai/supply-chain' },
+    { label: 'Physical AI & Safety Assurance',          to: '/what-we-do/ai/physical-ai' },
+    { label: 'AI Security Operations',                  to: '/what-we-do/ai/secops' },
+    { label: 'AI Assurance, Red Teaming & Trust',       to: '/what-we-do/ai/assurance' },
+  ],
+}
+
+// ── 02 Digital Platform Trust & Assurance — 9 sub-services ───────────────────
+const PILLAR_DIGITAL = {
+  num: '02',
+  title: 'Digital Platform Trust & Assurance',
+  subtitle: 'Engineer trust into software, cloud platforms, digital infrastructure and the software supply chain.',
+  accent: '#0891b2',
+  hub: '/what-we-do/digital-platform-trust',
+  links: [
+    { label: 'Secure Architecture & Trust-by-Design',   to: '/what-we-do/platform/secure-architecture' },
+    { label: 'Secure SDLC & DevSecOps',                 to: '/what-we-do/platform/devsecops' },
+    { label: 'Code Trust Assurance',                    to: '/what-we-do/platform/code-trust' },
+    { label: 'Software Supply Chain & SBOM',            to: '/what-we-do/platform/supply-chain' },
+    { label: 'Application & Platform Security Testing', to: '/what-we-do/platform/security-testing' },
+    { label: 'Secure Deployment & Platform Operations', to: '/what-we-do/platform/deployment' },
+    { label: 'Cloud & Infrastructure Security',         to: '/what-we-do/platform/cloud-infra' },
+    { label: 'DPI, Payments & Digital Infrastructure',  to: '/what-we-do/platform/dpi-security' },
+    { label: 'Continuous Platform Trust — Paxley',      to: '/what-we-do/platform/paxley' },
+  ],
+}
+
+// ── 03 Cybersecurity & Compliance Maturity Management — 9 sub-services ────────
+const PILLAR_CYBER = {
+  num: '03',
+  title: 'Cybersecurity & Compliance Maturity Management',
+  subtitle: 'Measure, improve and continuously demonstrate cybersecurity, compliance and operational resilience.',
+  accent: '#059669',
+  hub: '/what-we-do/cybersecurity-compliance',
+  links: [
+    { label: 'Cybersecurity Maturity Assessment',       to: '/what-we-do/cyber/maturity' },
+    { label: 'Cybersecurity Governance & Strategy',     to: '/what-we-do/cyber/governance' },
+    { label: 'Fractional / Virtual CISO',               to: '/what-we-do/cyber/fractional-ciso' },
+    { label: 'Cybersecurity Compliance & Regulatory',   to: '/what-we-do/cyber/compliance' },
+    { label: 'Operational Resilience & Incident Readiness', to: '/what-we-do/cyber/resilience' },
+    { label: 'Threat, Vulnerability & Exposure Mgmt',  to: '/what-we-do/cyber/tvem' },
+    { label: 'Managed Security / MDR / SOC',            to: '/what-we-do/cyber/managed-security' },
+    { label: 'Post-Quantum Cryptography Readiness',     to: '/what-we-do/cyber/pqc' },
+    { label: 'M&A Cyber & Compliance Assurance',        to: '/what-we-do/cyber/ma' },
+  ],
+}
+
+const PILLARS = [PILLAR_AI, PILLAR_DIGITAL, PILLAR_CYBER]
+
+// ── Sectors dropdown ──────────────────────────────────────────────────────────
+const SECTORS = [
+  { label: 'Large Enterprises',         to: '/sectors/large-enterprises' },
+  { label: 'Financial Services',        to: '/sectors/financial-services' },
+  { label: 'Government & Public Sector',to: '/sectors/government-public-sector' },
+  { label: 'Software Companies / SaaS', to: '/sectors/software-saas' },
+  { label: 'Digital Platform Providers',to: '/sectors/digital-platforms' },
+  { label: 'Private Equity / Investors',to: '/sectors/private-equity' },
+  { isDivider: true },
+  { label: 'All Sectors',               to: '/sectors' },
+]
+
+// ── About dropdown ────────────────────────────────────────────────────────────
+const ABOUT = [
+  { label: 'Nucleus Systems',          to: '/about' },
+  { label: 'Leadership & Team',        to: '/team' },
+  { label: 'Careers',                  to: '/careers' },
+  { isDivider: true },
+  { label: 'Our Frameworks',           to: '/how-we-do-it' },
+  { isDivider: true },
+  { label: 'Experience',               to: '/experience' },
+  { label: 'M&A Experience',          to: '/experience/ma' },
+  { label: 'DPI / DPG Experience',     to: '/experience/dpi-dpg' },
 ]
 
 const NAV_ITEMS = [
-  {
-    id: 'services',
-    label: 'Services',
-    isMega: true,
-  },
-  {
-    id: 'industries',
-    label: 'Industries',
-    children: [
-      { label: 'Financial Services', to: '/industries/financial-services' },
-      { label: 'Government \u0026 Public Sector', to: '/industries/government-public-sector' },
-      { label: 'Digital Public Infrastructure', to: '/industries/dpi-digital-public-goods' },
-      { label: 'Private Equity \u0026 Investment', to: '/industries/private-equity' },
-      { label: 'Technology \u0026 SaaS', to: '/industries/technology-saas' },
-      { label: 'Fintech \u0026 Payments', to: '/industries/fintech-payments' },
-      { label: 'AI Product Companies', to: '/industries/ai-product-companies' },
-      { label: 'Critical Infrastructure', to: '/industries/critical-infrastructure' },
-      { isDivider: true },
-      { label: 'All Industries', to: '/industries' },
-    ],
-  },
-  {
-    id: 'experience',
-    label: 'Experience',
-    children: [
-      { label: 'M\u0026A Experience', to: '/experience/ma' },
-      { label: 'DPI \u0026 Digital Public Goods', to: '/experience/dpi-dpg' },
-      { label: 'Global Delivery', to: '/experience/global-delivery' },
-      { isDivider: true },
-      { label: 'Experience Overview', to: '/experience' },
-    ],
-  },
-  {
-    id: 'about',
-    label: 'About',
-    children: [
-      { label: 'Nucleus Systems', to: '/about' },
-      { label: 'Leadership \u0026 Team', to: '/team' },
-      { label: 'Our Frameworks', to: '/frameworks' },
-      { label: 'Careers', to: '/careers' },
-    ],
-  },
+  { id: 'what-we-do', label: 'What We Do', isMega: true },
+  { id: 'sectors',    label: 'Sectors',    children: SECTORS },
+  { id: 'about',      label: 'About',      children: ABOUT },
 ]
 
 export default function Navbar({ onMenuOpen }) {
   const [scrolled, setScrolled] = useState(false)
   const [openId, setOpenId] = useState(null)
   const closeTimers = useRef({})
-  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -101,7 +106,6 @@ export default function Navbar({ onMenuOpen }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close on outside click
   useEffect(() => {
     const handler = () => setOpenId(null)
     document.addEventListener('click', handler)
@@ -116,7 +120,7 @@ export default function Navbar({ onMenuOpen }) {
   const closeItem = (id) => {
     closeTimers.current[id] = setTimeout(() => {
       setOpenId(prev => (prev === id ? null : prev))
-    }, 120)
+    }, 150)
   }
 
   const handleParentClick = (e, id) => {
@@ -142,16 +146,16 @@ export default function Navbar({ onMenuOpen }) {
               onMouseEnter={() => openItem(item.id)}
               onMouseLeave={() => closeItem(item.id)}
             >
-              <span
-                className="nav-parent"
-                onClick={(e) => handleParentClick(e, item.id)}
-              >
+              <span className="nav-parent" onClick={(e) => handleParentClick(e, item.id)}>
                 {item.label} <span className="dd-arrow">▾</span>
               </span>
 
               {item.isMega ? (
-                /* ── MEGA-MENU PANEL ── */
-                <div className="mega-panel" onClick={e => e.stopPropagation()}>
+                /* ── THREE-PILLAR MEGA-MENU ── */
+                <div className="mega-panel mega-panel--3col" onClick={e => e.stopPropagation()}>
+                  <div className="mega-panel-header">
+                    <p className="mega-panel-tagline">GOVERN THE AI · TRUST THE PLATFORM · PROVE THE ENTERPRISE</p>
+                  </div>
                   <div className="mega-cols">
                     {PILLARS.map((pillar, pi) => (
                       <div
@@ -159,19 +163,24 @@ export default function Navbar({ onMenuOpen }) {
                         key={pi}
                         style={{ borderTopColor: pillar.accent }}
                       >
-                        <div
-                          className="mega-col-title"
-                          style={{ color: pillar.accent }}
+                        <Link
+                          className="mega-col-header"
+                          to={pillar.hub}
+                          onClick={() => setOpenId(null)}
                         >
-                          {pillar.title}
-                        </div>
+                          <span className="mega-col-num" style={{ color: pillar.accent }}>{pillar.num}</span>
+                          <span className="mega-col-title">{pillar.title}</span>
+                          <span className="mega-col-arrow" style={{ color: pillar.accent }}>→</span>
+                        </Link>
                         <div className="mega-col-links">
                           {pillar.links.map((link, li) => (
                             <Link
                               key={li}
                               to={link.to}
                               onClick={() => setOpenId(null)}
+                              className="mega-col-link"
                             >
+                              <span className="mega-link-dot" style={{ background: pillar.accent }} />
                               {link.label}
                             </Link>
                           ))}
@@ -182,10 +191,9 @@ export default function Navbar({ onMenuOpen }) {
                 </div>
               ) : (
                 /* ── REGULAR DROPDOWN ── */
-                <div className="dropdown-menu">
+                <div className="dropdown-menu" onClick={e => e.stopPropagation()}>
                   {item.children.map((child, idx) => {
                     if (child.isDivider) return <div key={idx} className="dd-div" />
-                    if (child.isLabel) return <div key={idx} className="dd-label">{child.label}</div>
                     return (
                       <Link
                         key={idx}
@@ -200,6 +208,10 @@ export default function Navbar({ onMenuOpen }) {
               )}
             </div>
           ))}
+
+          {/* Direct links */}
+          <Link className="nav-direct" to="/how-we-do-it">How We Do It</Link>
+          <Link className="nav-direct" to="/paxley">Technology</Link>
           <Link className="nav-direct" to="/insights">Insights</Link>
           <Link className="nav-direct" to="/contact">Contact</Link>
         </nav>

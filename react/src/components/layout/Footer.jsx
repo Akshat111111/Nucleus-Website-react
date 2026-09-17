@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap">
-        <div className="foot-grid">
+        <div className="foot-grid" style={{ gridTemplateColumns: '1.2fr 1fr 1fr 1fr 1fr 1fr' }}>
           <div className="foot-brand">
             <div className="logo-stack">
               <span className="brand-logo nuc-l foot" role="img" aria-label="Nucleus Systems" />
@@ -31,80 +31,64 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ── Unified Services — Pillars 1 & 2 ── */}
           <div className="fcol">
-            <h4>Services</h4>
-            <span className="fcol-pillar">AI Governance &amp; Security</span>
-            <Link to="/services/ai-governance">AI Governance &amp; Regulatory Readiness</Link>
-            <Link to="/services/ai-security">AI Security, LLM, RAG &amp; Agentic AI</Link>
-            <span className="fcol-pillar" style={{ marginTop: '10px' }}>Digital Platform Trust</span>
-            <Link to="/services/secure-software">Secure Software &amp; DevSecOps</Link>
-            <Link to="/services/digital-infrastructure">Digital Infrastructure</Link>
-            <Link to="/services/post-quantum">Post-Quantum Security</Link>
-            <Link to="/paxley">Paxley — DevSecOps Platform</Link>
-          </div>
-
-          {/* ── Unified Services — Pillars 3 & 4 ── */}
-          <div className="fcol">
-            <h4>&nbsp;</h4>
-            <span className="fcol-pillar">Cybersecurity Maturity</span>
-            <Link to="/services/cybersecurity-advisory">Cybersecurity Strategy &amp; Leadership</Link>
-            <Link to="/services/fractional-ciso">Fractional / Interim CISO</Link>
-            <Link to="/services/penetration-testing">Penetration Testing</Link>
-            <Link to="/services/operational-resilience">Operational Resilience</Link>
-            <span className="fcol-pillar" style={{ marginTop: '10px' }}>M&amp;A Risk Advisory</span>
-            <Link to="/ma/due-diligence">M&amp;A Cyber Due Diligence</Link>
-            <Link to="/ma/sell-side">Sell-Side &amp; Exit Readiness</Link>
-            <Link to="/ma/post-deal">Post-Deal Cybersecurity</Link>
-            <Link to="/ma/portfolio">Portfolio Cybersecurity</Link>
+            <h4>AI Governance</h4>
+            <Link to="/what-we-do/ai/governance">Strategy &amp; Regulatory</Link>
+            <Link to="/what-we-do/ai/security-architecture">AI Security Architecture</Link>
+            <Link to="/what-we-do/ai/usage-assurance">Usage &amp; Policy</Link>
+            <Link to="/what-we-do/ai/genai-security">GenAI &amp; LLM Security</Link>
+            <Link to="/what-we-do/ai/secops">AI Security Operations</Link>
+            <Link to="/what-we-do/ai/assurance">AI Assurance &amp; Audit</Link>
           </div>
 
           <div className="fcol">
-            <h4>Industries</h4>
-            <Link to="/industries/financial-services">Financial Services</Link>
-            <Link to="/industries/government-public-sector">Government &amp; Public Sector</Link>
-            <Link to="/industries/dpi-digital-public-goods">Digital Public Infrastructure</Link>
-            <Link to="/industries/private-equity">Private Equity</Link>
-            <Link to="/industries/technology-saas">Technology &amp; SaaS</Link>
-            <Link to="/industries/fintech-payments">Fintech &amp; Payments</Link>
-            <Link to="/industries/ai-product-companies">AI Product Companies</Link>
-            <Link to="/industries/critical-infrastructure">Critical Infrastructure</Link>
+            <h4>Platform Trust</h4>
+            <Link to="/what-we-do/platform/secure-architecture">Secure Architecture</Link>
+            <Link to="/what-we-do/platform/devsecops">DevSecOps Transformation</Link>
+            <Link to="/what-we-do/platform/code-trust">Code Trust &amp; Supply Chain</Link>
+            <Link to="/what-we-do/platform/cloud-infra">Cloud Infrastructure</Link>
+            <Link to="/what-we-do/platform/security-testing">Continuous Testing</Link>
+            <Link to="/what-we-do/platform/paxley">Paxley Advisory</Link>
           </div>
 
           <div className="fcol">
-            <h4>M&amp;A &amp; Investors</h4>
-            <Link to="/ma">M&amp;A Overview</Link>
-            <Link to="/ma/due-diligence">Cyber Due Diligence</Link>
-            <Link to="/ma/sell-side">Sell-Side &amp; Exit Readiness</Link>
-            <Link to="/ma/post-deal">Post-Deal Cybersecurity</Link>
-            <Link to="/ma/portfolio">Portfolio Cybersecurity</Link>
-            <Link to="/ma/startup-growth">Start-up &amp; Growth Readiness</Link>
+            <h4>Cyber &amp; Compliance</h4>
+            <Link to="/what-we-do/cyber/maturity">Maturity Management</Link>
+            <Link to="/what-we-do/cyber/fractional-ciso">Fractional CISO</Link>
+            <Link to="/what-we-do/cyber/compliance">Compliance Programmes</Link>
+            <Link to="/what-we-do/cyber/resilience">Operational Resilience</Link>
+            <Link to="/what-we-do/cyber/managed-security">Managed Security &amp; MDR</Link>
+            <Link to="/what-we-do/cyber/ma">M&amp;A Due Diligence</Link>
           </div>
 
           <div className="fcol">
-            <h4>Experience</h4>
-            <Link to="/experience/ma">M&amp;A Experience</Link>
-            <Link to="/experience/dpi-dpg">DPI &amp; Digital Public Goods</Link>
-            <Link to="/experience/global-delivery">Global Delivery</Link>
+            <h4>Sectors</h4>
+            <Link to="/sectors/large-enterprises">Large Enterprises</Link>
+            <Link to="/sectors/financial-services">Financial Services</Link>
+            <Link to="/sectors/government-public-sector">Government &amp; Public Sector</Link>
+            <Link to="/sectors/digital-platforms">Digital Public Infrastructure</Link>
+            <Link to="/sectors/private-equity">Private Equity</Link>
+            <Link to="/sectors/software-saas">Software &amp; SaaS</Link>
           </div>
 
           <div className="fcol">
-            <h4>Company</h4>
-            <Link to="/about">About Nucleus Systems</Link>
+            <h4>Nucleus Systems</h4>
+            <Link to="/about">About Us</Link>
             <Link to="/team">Leadership &amp; Team</Link>
-            <Link to="/frameworks">Our Frameworks</Link>
+            <Link to="/how-we-do-it">Our Frameworks</Link>
+            <Link to="/experience">Experience</Link>
+            <Link to="/experience/engagements">Selected Engagements</Link>
             <Link to="/insights">Insights</Link>
             <Link to="/careers">Careers</Link>
             <Link to="/contact">Contact</Link>
-            <a href="https://www.paxleysoftware.com" target="_blank" rel="noopener noreferrer">Paxley Software ↗</a>
           </div>
         </div>
 
         <div className="foot-bottom">
           <div className="thesis">
-            Cybersecurity, AI trust and technology risk — <b>assessed, improved and independently validated.</b>
+            Engineering digital trust. <b>Securing the technology that runs the world.</b>
           </div>
-          <small>© 2026 Nucleus Systems · Digital Trust Assurance · <a href="https://www.paxleysoftware.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', opacity: 0.6 }}>Paxley Software</a> is a related venture</small>
+          <small>© 2026 Nucleus Systems · Digital Trust Assurance Architecture · <a href="https://www.paxleysoftware.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', opacity: 0.6 }}>Paxley</a> is an independent technology partner</small>
         </div>
       </div>
     </footer>

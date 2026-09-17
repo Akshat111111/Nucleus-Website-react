@@ -15,7 +15,7 @@ export default function IndGovt() {
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries <span className="arr">→</span></Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors <span className="arr">→</span></Link>
             </div>
           </div>
         </div>
@@ -90,9 +90,9 @@ export default function IndGovt() {
             <h2>Adjacent to government</h2>
           </div>
           <div className="related-grid">
-            <Link className="related-card reveal" to="/industries/dpi-digital-public-goods"><h4>Digital Public Infrastructure</h4><p>National DPI deployment security — the platforms governments are building.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/industries/critical-infrastructure"><h4>Critical Infrastructure</h4><p>Government-regulated critical systems — energy, water, transport, telecoms.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/industries/financial-services"><h4>Financial Services</h4><p>Central banks and public financial management systems.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/dpi-digital-public-goods"><h4>Digital Public Infrastructure</h4><p>National DPI deployment security — the platforms governments are building.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/critical-infrastructure"><h4>Critical Infrastructure</h4><p>Government-regulated critical systems — energy, water, transport, telecoms.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/financial-services"><h4>Financial Services</h4><p>Central banks and public financial management systems.</p><span className="arr-link">Learn more →</span></Link>
           </div>
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function IndGovt() {
             <p>Speak with a practitioner who has delivered security advisory across national digital transformation programmes.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries</Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors</Link>
             </div>
           </div>
         </div>

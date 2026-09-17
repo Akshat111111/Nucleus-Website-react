@@ -1,37 +1,37 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
 
-export default function Industries() {
+export default function Sectors() {
   useReveal()
   const sectors = [
     {
       num: '01', title: 'Financial Services', sub: 'Banks · Insurers · Asset Managers · Central Banks',
       desc: 'Banks, insurers and asset managers where a trust failure triggers systemic regulatory action. Tier-one banking, insurance capital modelling, asset management operational resilience and central bank digital infrastructure.',
-      link: '/industries/financial-services',
+      link: '/sectors/financial-services',
       icon: <svg viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="1"/><path d="M3 10l9-7 9 7"/><path d="M9 21V13h6v8"/></svg>,
     },
     {
       num: '02', title: 'Government & Public Sector', sub: 'Ministries · Agencies · Multilaterals · Development Banks',
       desc: 'Public institutions where digital trust is foundational to governance and citizen confidence. National digital transformation, cross-agency data governance and multilateral programme security.',
-      link: '/industries/government-public-sector',
+      link: '/sectors/government-public-sector',
       icon: <svg viewBox="0 0 24 24"><path d="M3 21h18M4 18V9.5M20 18V9.5M12 3l9 6.5H3L12 3z"/><rect x="9" y="13" width="6" height="5"/></svg>,
     },
     {
       num: '03', title: 'Digital Public Infrastructure', sub: 'National Identity · Payment Rails · DPGs · Open-Source Platforms',
       desc: 'National payment rails, digital identity programmes and open-source Digital Public Goods that underpin entire economies. Mojaloop, MOSIP, OpenG2P, Tazama, COMESA — built by our practitioners.',
-      link: '/industries/dpi-digital-public-goods',
+      link: '/sectors/digital-platforms',
       icon: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18"/></svg>,
     },
     {
       num: '04', title: 'Private Equity & Investment', sub: 'PE Houses · Family Offices · Deal Teams · Portfolio Companies',
       desc: 'Deal teams and portfolio companies managing cyber risk through M&A and ownership cycles. 250+ transactions — buy-side diligence, sell-side preparation, post-deal improvement and portfolio governance.',
-      link: '/industries/private-equity',
+      link: '/sectors/private-equity',
       icon: <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>,
     },
     {
       num: '05', title: 'Technology & SaaS', sub: 'Platforms · SaaS · Scale-ups · Enterprise Software',
       desc: 'Platforms, SaaS and technology companies proving security posture to enterprise buyers, boards and investors. Enterprise sales unblocked, ISO 27001 achieved, board-level accountability established.',
-      link: '/industries/technology-saas',
+      link: '/sectors/software-saas',
       icon: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 4.93 4.93M4.93 19.07A10 10 0 0 0 19.07 19.07M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>,
     },
     {
@@ -59,10 +59,10 @@ export default function Industries() {
       <section className="svc-hero">
         <div className="wrap">
           <div className="svc-hero-inner">
-            <div className="svc-eyebrow reveal">Industries</div>
-            <h1 className="svc-h1 reveal">Practitioner depth in the sectors that demand it most.</h1>
+            <div className="svc-eyebrow reveal">Sector Experience</div>
+            <h1 className="svc-h1 reveal">Securing the most demanding sectors.</h1>
             <p className="svc-lede reveal">
-              Nucleus Systems works across financial services, government, DPI, private equity, technology, fintech, AI and critical infrastructure — with practitioners who have operated inside these sectors, not advisors who assess them from the outside.
+              Different sectors face fundamentally different threat profiles and regulatory mandates. We tailor our AI governance, platform trust, and cybersecurity capabilities to the specific operational realities of the industries we serve.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -115,17 +115,17 @@ export default function Industries() {
             <h2>Services applied across all sectors</h2>
           </div>
           <div className="related-grid">
-            <Link className="related-card reveal" to="/services/cybersecurity-advisory">
+            <Link className="related-card reveal" to="/what-we-do/cyber/maturity">
               <h4>Cybersecurity Strategy &amp; Leadership</h4>
               <p>Sector-specific maturity assessment and security improvement programmes.</p>
               <span className="arr-link">Learn more →</span>
             </Link>
-            <Link className="related-card reveal" to="/ma">
+            <Link className="related-card reveal" to="/what-we-do/cyber/ma">
               <h4>M&amp;A &amp; Investor Services</h4>
               <p>Cyber due diligence, sell-side preparation and portfolio programmes across all sectors.</p>
               <span className="arr-link">Learn more →</span>
             </Link>
-            <Link className="related-card reveal" to="/services/fractional-ciso">
+            <Link className="related-card reveal" to="/what-we-do/cyber/fractional-ciso">
               <h4>Fractional / Interim CISO</h4>
               <p>Senior security leadership for regulated organisations at every stage.</p>
               <span className="arr-link">Learn more →</span>

@@ -15,7 +15,7 @@ export default function IndFinancial() {
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries <span className="arr">→</span></Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors <span className="arr">→</span></Link>
             </div>
           </div>
         </div>
@@ -90,9 +90,9 @@ export default function IndFinancial() {
             <h2>Adjacent to financial services</h2>
           </div>
           <div className="related-grid">
-            <Link className="related-card reveal" to="/industries/fintech-payments"><h4>Fintech &amp; Payments</h4><p>Regulated disruptors and payment operators in the financial services ecosystem.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/industries/private-equity"><h4>Private Equity &amp; Investment</h4><p>Deal teams and portfolio companies managing cyber risk through investment cycles.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/industries/dpi-digital-public-goods"><h4>Digital Public Infrastructure</h4><p>Central bank payment infrastructure and national digital financial systems.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/fintech-payments"><h4>Fintech &amp; Payments</h4><p>Regulated disruptors and payment operators in the financial services ecosystem.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/private-equity"><h4>Private Equity &amp; Investment</h4><p>Deal teams and portfolio companies managing cyber risk through investment cycles.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/dpi-digital-public-goods"><h4>Digital Public Infrastructure</h4><p>Central bank payment infrastructure and national digital financial systems.</p><span className="arr-link">Learn more →</span></Link>
           </div>
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function IndFinancial() {
             <p>Book a briefing to discuss your DORA obligations, FCA/PRA expectations, or security maturity programme.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/industries">All Industries</Link>
+              <Link className="btn btn-ghost" to="/sectors">All Sectors</Link>
             </div>
           </div>
         </div>
