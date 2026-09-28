@@ -11,7 +11,7 @@ export default function PlatSecArch() {
             <div className="svc-eyebrow reveal">Digital Platform Trust · 01</div>
             <h1 className="svc-h1 reveal">Secure Architecture Review</h1>
             <p className="svc-lede reveal">
-              Security debt incurred during the design phase is the most expensive to remediate in production. We deliver threat-informed architecture reviews and security design advisory using our N3-SSAF framework — ensuring your platforms are built on zero-trust principles, resilient by design, and aligned with enterprise security standards before a single line of code is written.
+              Security debt incurred during the design phase is the most expensive to remediate in production. We deliver threat-informed architecture reviews and security design advisory using our NS-SSAF framework — ensuring your platforms are built on zero-trust principles, resilient by design, and aligned with enterprise security standards before a single line of code is written.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -52,7 +52,7 @@ export default function PlatSecArch() {
           <div className="svc-what-grid">
             {[
               { num: '01', title: 'Threat Modelling', desc: 'Structured threat modelling (e.g., STRIDE) conducted during the design phase to identify potential attack vectors, enumerate threats, and define required security controls before development begins.' },
-              { num: '02', title: 'Architecture Security Review', desc: 'Comprehensive review of existing or proposed architectures against the N3-SSAF framework. Evaluating authentication flows, network segmentation, data protection, and resilience.' },
+              { num: '02', title: 'Architecture Security Review', desc: 'Comprehensive review of existing or proposed architectures against the NS-SSAF framework. Evaluating authentication flows, network segmentation, data protection, and resilience.' },
               { num: '03', title: 'Zero Trust Design Advisory', desc: 'Designing architectures based on Zero Trust principles — implementing least privilege, continuous authentication, micro-segmentation, and secure service-to-service communication.' },
               { num: '04', title: 'Cloud-Native Security Architecture', desc: 'Specialist advisory for securing cloud-native architectures (containers, Kubernetes, serverless) across AWS, Azure, and GCP, ensuring the infrastructure aligns with the application\'s security needs.' },
               { num: '05', title: 'Identity & Access Architecture', desc: 'Designing robust identity fabrics — integrating SSO, MFA, OAuth 2.0/OIDC, and RBAC/ABAC models to ensure secure access for users, APIs, and microservices.' },
@@ -71,7 +71,7 @@ export default function PlatSecArch() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3-SSAF v1.0</span>
+            <span className="eyebrow">Framework: NS-SSAF v1.0</span>
             <h2>The Nucleus Secure Software Architecture Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>End-to-end architecture assurance · Design patterns · Risk scoring · Threat-informed</p>
           </div>
@@ -104,7 +104,7 @@ export default function PlatSecArch() {
             <p>Speak with an architect who designs platforms resilient to both current threats and future scale.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3-SSAF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS-SSAF Framework</Link>
             </div>
           </div>
         </div>

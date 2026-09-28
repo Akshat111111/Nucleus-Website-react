@@ -13,17 +13,17 @@ export default function Paxley() {
             <div className="px-eyebrow">A Related Venture</div>
             <div className="px-brandrow">
               <div className="px-logo-img"></div>
-              <div className="px-name">Paxley</div>
+              <div className="px-name">Paxley Code Security Platform</div>
             </div>
             <h1 className="px-h2">Continuous, unified code <span className="hl">trust assurance.</span></h1>
             <p className="px-lede">
-              Paxley is an engineering-first DevSecOps platform that unifies SAST, SCA, container scanning, and IaC security into a single pipeline. Built to support our own secure software delivery practice, Paxley is now an independent software product available at paxleysoftware.com.
+              Paxley Code Security Platform is an engineering-first DevSecOps platform that unifies SAST, SCA, container scanning, and IaC security into a single pipeline. Built to support our own secure software delivery practice, Paxley Code Security Platform is now an independent software product available at paxleysoftware.com.
             </p>
             <div className="px-cta">
               <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" className="btn px-btn-primary">
                 Visit Paxley Software <span>→</span>
               </a>
-              <a href="#pax-compare" className="btn px-btn-ghost">Compare alternatives</a>
+              <a href="#pax-compare" className="btn px-btn-ghost">View differentiators</a>
             </div>
             <div className="px-strip">
               <div className="pxs"><b>8</b><span>Scanning Engines</span></div>
@@ -47,7 +47,7 @@ export default function Paxley() {
                 During our technical due diligence engagements, we consistently found engineering teams struggling with security tool sprawl. SAST from one vendor, SCA from another, secrets scanning via open source, and IaC checks bolted on as an afterthought.
               </p>
               <p className="pg-sub" style={{ marginTop: '16px' }}>
-                Paxley consolidates eight critical security capabilities into a single lightweight runner that executes directly in your CI/CD pipeline, reporting unified results straight to the developer.
+                Paxley Code Security Platform consolidates eight critical security capabilities into a single lightweight runner that executes directly in your CI/CD pipeline, reporting unified results straight to the developer.
               </p>
             </div>
             <div className="reveal">
@@ -85,42 +85,59 @@ export default function Paxley() {
         </div>
       </section>
 
-      {/* Comparison */}
+      {/* Six Strategic Differentiators */}
       <div className="pg-section" id="pax-compare">
         <div className="wrap">
-          <div className="section-head reveal" style={{ maxWidth: '800px', textAlign: 'left' }}>
-            <h2 style={{ color: '#fff' }}>Compare Paxley</h2>
-            <p style={{ color: 'rgba(255,255,255,0.8)' }}>How we stack up against traditional application security testing tools.</p>
+          <div className="section-head reveal" style={{ maxWidth: '760px', textAlign: 'left' }}>
+            <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--pax-green)', marginBottom: '12px' }}>Why Paxley Code Security Platform</div>
+            <h2 style={{ color: '#fff', marginBottom: '12px' }}>Six strategic differentiators.</h2>
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '15px', lineHeight: 1.7 }}>Designed with the benefit of hindsight — meeting the demands of continuous security, software supply chain risk and demonstrable assurance.</p>
           </div>
-          <div className="reveal" style={{ overflowX: 'auto', marginTop: '32px' }}>
-            <table style={{ width: '100%', minWidth: '700px', borderCollapse: 'collapse' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid rgba(86,240,160,0.3)' }}>
-                  <th style={{ width: '30%', color: '#fff', padding: '0 16px 16px 0', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '.05em', textAlign: 'left' }}>Tool Category</th>
-                  <th style={{ width: '70%', color: 'var(--pax-lime)', padding: '0 16px 16px 0', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '.05em', textAlign: 'left' }}>The Paxley Difference</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { cat: 'Native SCM security', diff: 'Competes on price; shares some engine overlap — Paxley adds significantly more scanning engines.' },
-                  { cat: 'SAST-focused tools', diff: 'Broader scope; overlaps on static analysis — Paxley unifies across all 8 capability areas.' },
-                  { cat: 'Enterprise SAST platforms', diff: 'Below their enterprise tier — Paxley is the mid-market alternative.' },
-                  { cat: 'Legacy SAST vendors', diff: 'Complementary — Paxley is faster to deploy and more cost-efficient for modern teams.' },
-                  { cat: 'Code health tools', diff: 'Differentiated focus — Paxley adds supply chain, secrets, IaC, and container coverage.' },
-                ].map((row, i) => (
-                  <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                    <td style={{ padding: '20px 16px 20px 0', color: '#fff', fontWeight: 600, fontSize: '15px', verticalAlign: 'top' }}>{row.cat}</td>
-                    <td style={{ padding: '20px 16px 20px 0', color: 'rgba(255,255,255,0.7)', fontSize: '15px', verticalAlign: 'top', lineHeight: '1.6' }}>{row.diff}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div style={{ marginTop: '32px', padding: '24px 0', borderTop: '1px solid rgba(86,240,160,0.2)' }} className="reveal">
-            <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: '700', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--pax-green)', marginBottom: '8px' }}>Example savings</div>
-            <div style={{ fontSize: '16px', color: '#fff', fontWeight: '400' }}>
-              50 devs / 10 repos = <span style={{ color: 'var(--pax-green)', fontWeight: '700' }}>$990/mo</span> vs <span style={{ color: '#ff6b6b', textDecoration: 'line-through', fontWeight: '700' }}>$4,750/mo</span> on per-seat tools — <span style={{ color: '#fff', fontWeight: '700' }}>79% saving.</span>
-            </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '24px', marginTop: '48px' }}>
+            {[
+              {
+                num: '01',
+                title: 'Built at the right time',
+                body: 'Paxley Code Security Platform was designed with the benefit of lessons learned from traditional AppSec tools and today\'s clearer regulatory, security and software-supply-chain requirements, including the EU Cyber Resilience Act (CRA). Its architecture meets the need for continuous security, traceability, and demonstrable software assurance — rather than isolated vulnerability scanning.',
+              },
+              {
+                num: '02',
+                title: 'Software supply chain at the centre',
+                body: 'Paxley Code Security Platform treats the software supply chain as a fundamental security priority, not an optional add-on. It connects code, open-source dependencies, credentials, infrastructure, containers, software components and SBOM evidence to expose risks across the entire software delivery chain.',
+              },
+              {
+                num: '03',
+                title: 'A cryptographic trust-evidence vision',
+                body: 'Paxley Code Security Platform is designed as the technology and evidence layer supporting Nucleus Systems\' Code Trust Assurance Framework (NS-CTAF). The objective is to move beyond scanner findings towards verifiable evidence of software integrity, provenance, control effectiveness and trusted delivery.',
+              },
+              {
+                num: '04',
+                title: 'Zero Trust and source-code protection by design',
+                body: 'Paxley Code Security Platform is architected around Zero Trust principles, minimising unnecessary exposure of customer source code. Customer-controlled scanning and self-hosted deployment options support stronger control over sensitive intellectual property and reduce reliance on transferring code into third-party environments.',
+              },
+              {
+                num: '05',
+                title: 'Broad coverage without tool sprawl',
+                body: 'Paxley Code Security Platform consolidates SAST, SCA, secrets detection, IaC security, container security, licence analysis, SBOM and code quality into a single platform. This reduces overlapping tools, procurement complexity, integration effort, and adoption friction across engineering teams.',
+              },
+              {
+                num: '06',
+                title: 'Better outcomes — not another scanning engine',
+                body: 'Paxley Code Security Platform leverages established open-source security engines rather than rebuilding existing capabilities. Its differentiation lies in unifying results, improving developer experience, using AI to support remediation, simplifying risk prioritisation and presenting findings in intuitive reports — including code, software-IP and M&A technology-risk assessments.',
+              },
+            ].map((d, i) => (
+              <div key={i} className="reveal" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(86,240,160,0.15)', borderRadius: '16px', padding: '32px', display: 'flex', flexDirection: 'column', gap: '14px', transition: 'border-color 0.2s', cursor: 'default' }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(86,240,160,0.45)'}
+                onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(86,240,160,0.15)'}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, letterSpacing: '.1em', color: 'var(--pax-green)', background: 'rgba(86,240,160,0.1)', border: '1px solid rgba(86,240,160,0.3)', borderRadius: '6px', padding: '4px 10px', flexShrink: 0 }}>{d.num}</div>
+                  <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#fff', margin: 0, lineHeight: 1.3 }}>{d.title}</h3>
+                </div>
+                <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.75, margin: 0 }}>{d.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -130,37 +147,87 @@ export default function Paxley() {
         <div className="wrap">
           <div className="reveal">
             <h2 className="pg-sh" style={{ textAlign: 'center', marginBottom: '8px' }}>Pricing &amp; plans</h2>
-            <p className="pg-sub" style={{ textAlign: 'center' }}>Per repository, not per developer. Security costs scale with your codebase.</p>
+            <p className="pg-sub" style={{ textAlign: 'center' }}>Per product or repository — not per developer. Security costs scale with your codebase.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginTop: '48px' }} className="reveal">
-            
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '20px', marginTop: '48px', alignItems: 'start' }} className="reveal">
+
+            {/* Community */}
             <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: '16px', padding: '32px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '18px', fontWeight: '700', color: 'var(--navy)' }}>Community</div>
-              <div style={{ fontSize: '32px', fontWeight: '800', color: 'var(--navy)', margin: '12px 0' }}>Free <span style={{ fontSize: '14px', color: 'var(--slate)', fontWeight: '500' }}>/ always</span></div>
-              <div style={{ fontSize: '14px', color: 'var(--slate)', marginBottom: '24px', flex: 1 }}>Open-source projects and solo developers</div>
-              <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Get started</a>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: '12px' }}>Community</div>
+              <div style={{ fontSize: '40px', fontWeight: '800', color: 'var(--navy)', lineHeight: 1 }}>Free</div>
+              <div style={{ fontSize: '13px', color: 'var(--slate)', marginTop: '10px', marginBottom: '20px', lineHeight: 1.6 }}>Open source, solo developers, and initial evaluation</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
+                {['3 repositories', '5 scans per month', 'SAST, SCA and secrets', 'PR guard with inline comments', 'Community support'].map((f, i) => (
+                  <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: 'var(--slate)', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--pax-green)', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://paxleysoftware.com/pricing" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Get started</a>
             </div>
 
+            {/* Starter */}
             <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: '16px', padding: '32px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '18px', fontWeight: '700', color: 'var(--navy)' }}>Starter</div>
-              <div style={{ fontSize: '32px', fontWeight: '800', color: 'var(--navy)', margin: '12px 0' }}>$99 <span style={{ fontSize: '14px', color: 'var(--slate)', fontWeight: '500' }}>/ repo / mo</span></div>
-              <div style={{ fontSize: '14px', color: 'var(--slate)', marginBottom: '24px', flex: 1 }}>Funded startups and small engineering teams</div>
-              <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Start trial</a>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: '12px' }}>Starter</div>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '4px', lineHeight: 1 }}>
+                <span style={{ fontSize: '40px', fontWeight: '800', color: 'var(--navy)' }}>$199</span>
+                <span style={{ fontSize: '14px', color: 'var(--slate)', fontWeight: '500', paddingBottom: '5px' }}>/month</span>
+              </div>
+              <div style={{ marginTop: '10px', marginBottom: '12px' }}>
+                <span style={{ fontSize: '12px', fontWeight: 600, color: '#3a7d44', background: '#e8f5e9', borderRadius: '20px', padding: '3px 12px' }}>3, 6 or 12-month terms</span>
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--slate)', marginBottom: '20px', lineHeight: 1.6 }}>Small teams with fewer than 5 products or main repositories</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
+                {['Up to 5 products or main repos', '150 MB source processing per repo', 'Full scanning stack: SAST, SCA, secrets, IaC, containers', 'SBOM and license governance', 'Self-hosted: code stays with you'].map((f, i) => (
+                  <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: 'var(--slate)', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--pax-green)', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://paxleysoftware.com/pricing" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Start trial</a>
             </div>
 
+            {/* Growth — Most Popular */}
             <div style={{ background: '#fff', border: '2px solid var(--pax-green)', borderRadius: '16px', padding: '32px', display: 'flex', flexDirection: 'column', position: 'relative' }}>
-              <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'var(--pax-green)', color: '#fff', fontSize: '11px', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: '12px' }}>Most Popular</div>
-              <div style={{ fontSize: '18px', fontWeight: '700', color: 'var(--navy)' }}>Growth</div>
-              <div style={{ fontSize: '32px', fontWeight: '800', color: 'var(--navy)', margin: '12px 0' }}>$149 <span style={{ fontSize: '14px', color: 'var(--slate)', fontWeight: '500' }}>/ repo / mo</span></div>
-              <div style={{ fontSize: '14px', color: 'var(--slate)', marginBottom: '24px', flex: 1 }}>Scaling teams with multiple repositories</div>
-              <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" className="btn px-btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Start trial</a>
+              <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: '#1a3d2b', color: '#fff', fontSize: '10px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 14px', borderRadius: '20px', whiteSpace: 'nowrap' }}>Most Popular</div>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: '12px' }}>Growth</div>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '4px', lineHeight: 1 }}>
+                <span style={{ fontSize: '40px', fontWeight: '800', color: 'var(--navy)' }}>$499</span>
+                <span style={{ fontSize: '14px', color: 'var(--slate)', fontWeight: '500', paddingBottom: '5px' }}>/month</span>
+              </div>
+              <div style={{ marginTop: '10px', marginBottom: '12px' }}>
+                <span style={{ fontSize: '12px', fontWeight: 600, color: '#3a7d44', background: '#e8f5e9', borderRadius: '20px', padding: '3px 12px' }}>6-month minimum</span>
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--slate)', marginBottom: '20px', lineHeight: 1.6 }}>Medium teams with 5 to under 10 products or repositories</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
+                {['5 to 10 products or main repos', '500 MB source processing per repo', 'Everything in Starter', 'Governance and assurance reporting', 'Priority support'].map((f, i) => (
+                  <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: 'var(--slate)', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--pax-green)', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://paxleysoftware.com/pricing" target="_blank" rel="noopener noreferrer" className="btn px-btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Start trial</a>
             </div>
 
+            {/* Large Enterprise */}
             <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: '16px', padding: '32px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '18px', fontWeight: '700', color: 'var(--navy)' }}>Enterprise</div>
-              <div style={{ fontSize: '32px', fontWeight: '800', color: 'var(--navy)', margin: '12px 0' }}>Custom</div>
-              <div style={{ fontSize: '14px', color: 'var(--slate)', marginBottom: '24px', flex: 1 }}>Self-hosted needs, custom runners, advanced compliance</div>
-              <Link to="/contact" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Talk to us</Link>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: '12px' }}>Large Enterprise</div>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '4px', lineHeight: 1 }}>
+                <span style={{ fontSize: '40px', fontWeight: '800', color: 'var(--navy)' }}>$999</span>
+                <span style={{ fontSize: '14px', color: 'var(--slate)', fontWeight: '500', paddingBottom: '5px' }}>/month</span>
+              </div>
+              <div style={{ marginTop: '10px', marginBottom: '12px' }}>
+                <span style={{ fontSize: '12px', fontWeight: 600, color: '#3a7d44', background: '#e8f5e9', borderRadius: '20px', padding: '3px 12px' }}>12-month minimum</span>
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--slate)', marginBottom: '20px', lineHeight: 1.6 }}>Unlimited usage across large teams and broader estates</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
+                {['Unlimited products and repositories', 'Unlimited source processing', 'Everything in Growth', 'M&A and diligence evidence outputs', 'Dedicated support'].map((f, i) => (
+                  <li key={i} style={{ display: 'flex', gap: '10px', fontSize: '13.5px', color: 'var(--slate)', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--pax-green)', fontWeight: 700, flexShrink: 0 }}>&#10003;</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://paxleysoftware.com/pricing" target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Get in touch</a>
             </div>
 
           </div>
@@ -175,9 +242,9 @@ export default function Paxley() {
             <h2>Connected Platform Services</h2>
           </div>
           <div className="related-grid">
-            <Link className="related-card reveal" to="/what-we-do/platform/code-trust"><h4>Code Trust &amp; Supply Chain</h4><p>The strategic framework (N3-CTAF) that Paxley operationalises in software.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/what-we-do/platform/paxley"><h4>Paxley Advisory</h4><p>Advisory services surrounding the Paxley product and continuous trust scoring.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/what-we-do/platform/devsecops"><h4>DevSecOps Transformation</h4><p>Integrating Paxley scanning directly into developer workflows and CI/CD pipelines.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/platform/code-trust"><h4>Code Trust &amp; Supply Chain</h4><p>The strategic framework (NS-CTAF) that Paxley Code Security Platform operationalises in software.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/platform/paxley"><h4>Paxley Advisory</h4><p>Advisory services surrounding the Paxley Code Security Platform and continuous trust scoring.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/platform/devsecops"><h4>DevSecOps Transformation</h4><p>Integrating Paxley Code Security Platform scanning directly into developer workflows and CI/CD pipelines.</p><span className="arr-link">Learn more →</span></Link>
           </div>
         </div>
       </section>
@@ -185,10 +252,10 @@ export default function Paxley() {
       {/* CTA */}
       <div className="page-cta-band">
         <div className="wrap pcb-inner">
-          <h2>Ready to see Paxley in action?</h2>
-          <p>Book a 30-minute demo with a Nucleus Systems practitioner — or go straight to Paxley and start a free trial today.</p>
+          <h2>Ready to see Paxley Code Security Platform in action?</h2>
+          <p>Book a 30-minute demo with a Nucleus Systems practitioner — or go straight to Paxley Code Security Platform and start a free trial today.</p>
           <div className="pcb-row">
-            <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 28px', background: 'var(--pax-green)', color: '#04231a', fontWeight: '700', fontSize: '15px', borderRadius: '8px', textDecoration: 'none' }}>Visit Paxley <span>→</span></a>
+            <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 28px', background: 'var(--pax-green)', color: '#04231a', fontWeight: '700', fontSize: '15px', borderRadius: '8px', textDecoration: 'none' }}>Visit Paxley Code Security Platform <span>→</span></a>
             <Link className="btn btn-primary" to="/contact">Book a demo <span className="arr">→</span></Link>
           </div>
         </div>

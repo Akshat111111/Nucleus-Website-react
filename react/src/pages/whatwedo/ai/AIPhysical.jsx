@@ -11,7 +11,7 @@ export default function AIPhysical() {
             <div className="svc-eyebrow reveal">AI Governance &amp; Security · 07</div>
             <h1 className="svc-h1 reveal">Physical AI &amp; Safety Assurance</h1>
             <p className="svc-lede reveal">
-              When AI systems control physical environments — robotics, autonomous vehicles, manufacturing OT, and safety-critical infrastructure — the consequence of compromise shifts from data loss to physical harm. We deliver security and safety assurance for cyber-physical AI systems using our N3 PAISAF framework, ensuring resilience against both adversarial attack and systemic failure.
+              When AI systems control physical environments — robotics, autonomous vehicles, manufacturing OT, and safety-critical infrastructure — the consequence of compromise shifts from data loss to physical harm. We deliver security and safety assurance for cyber-physical AI systems using our NS PAISAF framework, ensuring resilience against both adversarial attack and systemic failure.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -71,12 +71,12 @@ export default function AIPhysical() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3 PAISAF v1.0</span>
+            <span className="eyebrow">Framework: NS PAISAF v1.0</span>
             <h2>The Nucleus Physical AI &amp; Safety Assurance Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>Physical safety · TrustOps · Sensor Integrity · Failsafe Architecture</p>
           </div>
           <div className="standards-grid">
-            {['IEC 61508 (Functional Safety)', 'ISO/SAE 21434 (Automotive Security)', 'IEC 62443 (ICS Security)', 'EU Machinery Regulation', 'EU AI Act (Annex II)', 'N3 PAISAF'].map(s => (
+            {['IEC 61508 (Functional Safety)', 'ISO/SAE 21434 (Automotive Security)', 'IEC 62443 (ICS Security)', 'EU Machinery Regulation', 'EU AI Act (Annex II)', 'NS PAISAF'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>
@@ -104,7 +104,7 @@ export default function AIPhysical() {
             <p>Speak with specialists who bridge the gap between machine learning security and functional safety engineering.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3 PAISAF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS PAISAF Framework</Link>
             </div>
           </div>
         </div>

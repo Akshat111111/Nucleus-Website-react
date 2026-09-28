@@ -11,7 +11,7 @@ export default function PlatDeployment() {
             <div className="svc-eyebrow reveal">Digital Platform Trust · 06</div>
             <h1 className="svc-h1 reveal">Secure Deployment &amp; Operations</h1>
             <p className="svc-lede reveal">
-              Secure code deployed into an insecure environment is insecure software. We bridge the gap between development and operations using the Nucleus Secure Software Deployment &amp; Operations Framework (N3-SSDOF). We deliver infrastructure-as-code (IaC) security, container hardening, Kubernetes security architecture, and runtime controls that ensure your deployment environments maintain the security posture established during development.
+              Secure code deployed into an insecure environment is insecure software. We bridge the gap between development and operations using the Nucleus Secure Software Deployment &amp; Operations Framework (NS-SSDOF). We deliver infrastructure-as-code (IaC) security, container hardening, Kubernetes security architecture, and runtime controls that ensure your deployment environments maintain the security posture established during development.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -56,7 +56,7 @@ export default function PlatDeployment() {
               { num: '03', title: 'Kubernetes Security Architecture', desc: 'Designing and implementing secure Kubernetes environments. Configuring RBAC, defining strict network policies (micro-segmentation), and deploying admission controllers (e.g., OPA Gatekeeper).' },
               { num: '04', title: 'Runtime Security Monitoring', desc: 'Deploying eBPF-based runtime security tools to monitor container and host behaviour, detecting anomalous system calls, file modifications, and network connections in real-time.' },
               { num: '05', title: 'Secrets Management Integration', desc: 'Architecting secure secrets management solutions (e.g., HashiCorp Vault, cloud-native KMS) to eliminate hardcoded credentials and ensure dynamic, short-lived secret injection into workloads.' },
-              { num: '06', title: 'N3-SSDOF Implementation', desc: 'Full implementation of the Secure Software Deployment & Operations Framework, establishing continuous compliance and operational assurance across your deployment pipelines.' },
+              { num: '06', title: 'NS-SSDOF Implementation', desc: 'Full implementation of the Secure Software Deployment & Operations Framework, establishing continuous compliance and operational assurance across your deployment pipelines.' },
             ].map((s, i) => (
               <div className="svc-what-card reveal" key={i}>
                 <div className="svc-what-num">{s.num}</div>
@@ -71,7 +71,7 @@ export default function PlatDeployment() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3-SSDOF v1.0</span>
+            <span className="eyebrow">Framework: NS-SSDOF v1.0</span>
             <h2>The Nucleus Secure Software Deployment &amp; Ops Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>Deployment controls · Runtime assurance · Infrastructure hardening</p>
           </div>
@@ -104,7 +104,7 @@ export default function PlatDeployment() {
             <p>Speak with specialists who secure modern, containerised, and orchestrated deployment environments.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3-SSDOF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS-SSDOF Framework</Link>
             </div>
           </div>
         </div>

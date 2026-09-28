@@ -119,7 +119,7 @@ export default function About() {
                   <td>Operational Continuity</td>
                   <td className="col-mgmt">Engagements conclude with reports and client-owned implementation</td>
                   <td className="col-boutique">Advisory follow-through available but resource-constrained</td>
-                  <td className="col-ns">End-to-end support including Fractional CISO, DevSecOps, and CyberOne MSSP</td>
+                  <td className="col-ns">End-to-end support including Fractional CISO, DevSecOps, and Managed Detection &amp; Response</td>
                 </tr>
               </tbody>
             </table>

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap">
-        <div className="foot-grid" style={{ gridTemplateColumns: '1.2fr 1fr 1fr 1fr 1fr 1fr' }}>
+        <div className="foot-grid" style={{ gridTemplateColumns: '1.2fr repeat(6, 1fr)' }}>
           <div className="foot-brand">
             <div className="logo-stack">
               <span className="brand-logo nuc-l foot" role="img" aria-label="Nucleus Systems" />
@@ -58,11 +58,19 @@ export default function Footer() {
             <Link to="/what-we-do/cyber/compliance">Compliance Programmes</Link>
             <Link to="/what-we-do/cyber/resilience">Operational Resilience</Link>
             <Link to="/what-we-do/cyber/managed-security">Managed Security &amp; MDR</Link>
-            <Link to="/what-we-do/cyber/ma">M&amp;A Due Diligence</Link>
           </div>
 
           <div className="fcol">
-            <h4>Sectors</h4>
+            <h4>M&amp;A Cyber</h4>
+            <Link to="/ma/due-diligence">Buy-Side Due Diligence</Link>
+            <Link to="/ma/technical-validation">Technical Validation</Link>
+            <Link to="/ma/sell-side">Sell-Side / Exit Readiness</Link>
+            <Link to="/ma/post-deal">Post-Deal Value Creation</Link>
+            <Link to="/ma/portfolio">Start-up &amp; Portfolio</Link>
+          </div>
+
+          <div className="fcol">
+            <h4>Industries</h4>
             <Link to="/sectors/large-enterprises">Large Enterprises</Link>
             <Link to="/sectors/financial-services">Financial Services</Link>
             <Link to="/sectors/government-public-sector">Government &amp; Public Sector</Link>
@@ -75,7 +83,7 @@ export default function Footer() {
             <h4>Nucleus Systems</h4>
             <Link to="/about">About Us</Link>
             <Link to="/team">Leadership &amp; Team</Link>
-            <Link to="/how-we-do-it">Our Frameworks</Link>
+            <Link to="/impact">Impact</Link>
             <Link to="/experience">Experience</Link>
             <Link to="/experience/engagements">Selected Engagements</Link>
             <Link to="/insights">Insights</Link>

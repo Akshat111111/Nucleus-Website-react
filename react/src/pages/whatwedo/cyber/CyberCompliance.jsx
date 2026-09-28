@@ -27,7 +27,7 @@ export default function CyberCompliance() {
             <div className="svc-problem-left reveal">
               <span className="eyebrow" style={{ color: 'var(--orange)' }}>The Compliance Gap</span>
               <h2>Multiple regulations. Disjointed efforts. Audit fatigue.</h2>
-              <p>As organisations expand geographically and operationally, they fall under overlapping regulatory regimes. Running a separate programme for ISO 27001, another for GDPR, and a third for DORA creates massive inefficiency. Without a unified compliance architecture (like our N3-CMMF), organisations suffer from audit fatigue, duplicated evidence collection, and inconsistent policy enforcement.</p>
+              <p>As organisations expand geographically and operationally, they fall under overlapping regulatory regimes. Running a separate programme for ISO 27001, another for GDPR, and a third for DORA creates massive inefficiency. Without a unified compliance architecture (like our NS-CMMF), organisations suffer from audit fatigue, duplicated evidence collection, and inconsistent policy enforcement.</p>
             </div>
             <div className="svc-problem-right">
               {[
@@ -55,7 +55,7 @@ export default function CyberCompliance() {
               { num: '02', title: 'DORA & NIS2 Readiness', desc: 'Assessing operational resilience against DORA requirements for financial entities and ICT providers. Establishing ICT risk management frameworks, incident reporting protocols, and third-party risk management.' },
               { num: '03', title: 'SOC 2 Type I & II Readiness', desc: 'Preparing service organisations for SOC 2 attestation. Defining system boundaries, mapping Trust Services Criteria (Security, Availability, Confidentiality), and remediating control gaps prior to the CPA audit.' },
               { num: '04', title: 'Cyber Resilience Act (CRA) Compliance', desc: 'Assisting software and hardware manufacturers in meeting EU CRA obligations. Implementing secure-by-design processes, vulnerability handling procedures, and CE marking readiness.' },
-              { num: '05', title: 'Unified Compliance Mapping (N3-CMMF)', desc: 'Utilising our N3-CMMF framework to map controls across multiple standards simultaneously. Collect evidence once; apply it to ISO 27001, SOC 2, and DORA audits concurrently.' },
+              { num: '05', title: 'Unified Compliance Mapping (NS-CMMF)', desc: 'Utilising our NS-CMMF framework to map controls across multiple standards simultaneously. Collect evidence once; apply it to ISO 27001, SOC 2, and DORA audits concurrently.' },
               { num: '06', title: 'Virtual Data Protection Officer (vDPO)', desc: 'Providing expert GDPR/CCPA compliance advisory. Conducting Data Protection Impact Assessments (DPIAs), managing Data Subject Access Requests (DSARs), and advising on cross-border data transfers.' },
             ].map((s, i) => (
               <div className="svc-what-card reveal" key={i}>
@@ -103,7 +103,7 @@ export default function CyberCompliance() {
             <p>Speak with compliance specialists who build unified frameworks that reduce audit fatigue and improve actual security posture.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3-CMMF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS-CMMF Framework</Link>
             </div>
           </div>
         </div>

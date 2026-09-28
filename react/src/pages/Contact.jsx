@@ -38,7 +38,7 @@ export default function Contact() {
       <section className="ctc-hero">
         <div className="ctc-hero-left">
           <div className="ctc-eyebrow">Connect with us</div>
-          <h1 className="ctc-h1">Secure your <em>infrastructure.</em></h1>
+          <h1 className="ctc-h1">Secure your <em>Digital Future.</em></h1>
           <p className="ctc-sub">Whether you require an urgent maturity assessment, AI governance planning, or ongoing MDR support, our practitioners are ready to engage.</p>
           <div className="ctc-presence">
             <div className="ctc-pres-item">
@@ -47,7 +47,7 @@ export default function Contact() {
             </div>
             <div className="ctc-pres-item">
               <span className="ctc-pres-val">600+</span>
-              <span className="ctc-pres-lbl">Deployments</span>
+              <span className="ctc-pres-lbl">Engagements</span>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="ctc-info-label">General Enquiries</div>
-                  <a href="mailto:info@nucleussystems.com" className="ctc-info-value">info@nucleussystems.com</a>
+                  <a href="mailto:info@nucleus-systems.com" className="ctc-info-value">info@nucleus-systems.com</a>
                 </div>
               </div>
 
@@ -136,24 +136,16 @@ export default function Contact() {
                     <label>Nature of Inquiry <span className="req">*</span></label>
                     <div className="ctc-radio-group">
                       <label className="ctc-radio">
-                        <input type="radio" name="inquiry" value="security-assessment" required checked={formData.inquiry === 'security-assessment'} onChange={handleChange} />
-                        Cybersecurity Maturity Assessment
+                        <input type="radio" name="inquiry" value="ai-governance" required checked={formData.inquiry === 'ai-governance'} onChange={handleChange} />
+                        AI Governance &amp; Security
                       </label>
                       <label className="ctc-radio">
-                        <input type="radio" name="inquiry" value="ai-governance" checked={formData.inquiry === 'ai-governance'} onChange={handleChange} />
-                        AI Governance &amp; Security Assessment
+                        <input type="radio" name="inquiry" value="digital-platform" checked={formData.inquiry === 'digital-platform'} onChange={handleChange} />
+                        Digital Platform Trust &amp; Security Assurance
                       </label>
                       <label className="ctc-radio">
-                        <input type="radio" name="inquiry" value="mdr" checked={formData.inquiry === 'mdr'} onChange={handleChange} />
-                        Managed Detection &amp; Response (CyberOne)
-                      </label>
-                      <label className="ctc-radio">
-                        <input type="radio" name="inquiry" value="fractional-ciso" checked={formData.inquiry === 'fractional-ciso'} onChange={handleChange} />
-                        Fractional CISO &amp; Advisory Services
-                      </label>
-                      <label className="ctc-radio">
-                        <input type="radio" name="inquiry" value="other" checked={formData.inquiry === 'other'} onChange={handleChange} />
-                        Other / General Inquiry
+                        <input type="radio" name="inquiry" value="cyber-maturity" checked={formData.inquiry === 'cyber-maturity'} onChange={handleChange} />
+                        Cybersecurity Maturity Management &amp; M&amp;A Risk
                       </label>
                     </div>
                   </div>

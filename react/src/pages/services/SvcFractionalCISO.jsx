@@ -52,7 +52,7 @@ export default function SvcFractionalCISO() {
       <section className="svc-what section">
         <div className="wrap">
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">What We Do</span>
+            <span className="eyebrow">Services</span>
             <h2>Three engagement models. One senior practitioner.</h2>
             <p>All three models deliver a qualified, practitioner-level security leader who operates as a genuine extension of your team — not an advisory relationship at arm's length.</p>
           </div>

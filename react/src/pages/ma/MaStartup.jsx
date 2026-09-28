@@ -24,7 +24,7 @@ export default function MaStartup() {
       <section className="svc-what section">
         <div className="wrap">
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">What We Do</span>
+            <span className="eyebrow">Services</span>
             <h2>Start-up &amp; Growth Cyber Readiness Services</h2>
             <p>Staged cyber readiness programmes aligned to your funding and growth milestones — not enterprise-scale programmes that would slow you down.</p>
           </div>

@@ -51,8 +51,8 @@ export default function SectorEnterprise() {
           </div>
           <div className="svc-what-grid">
             {[
-              { num: '01', title: 'Enterprise AI Governance', desc: 'We deploy the N3-AIGF framework to discover shadow AI, establish acceptable use policies, and ensure enterprise AI deployments comply with the EU AI Act and ISO 42001.', link: '/what-we-do/ai-governance-security' },
-              { num: '02', title: 'Cybersecurity Maturity Management', desc: 'Moving security from subjective opinions to quantified metrics. We assess enterprise security programs against the N3-CMMF to provide board-level visibility into true cyber risk.', link: '/what-we-do/cyber/maturity' },
+              { num: '01', title: 'Enterprise AI Governance', desc: 'We deploy the NS-AIGF framework to discover shadow AI, establish acceptable use policies, and ensure enterprise AI deployments comply with the EU AI Act and ISO 42001.', link: '/what-we-do/ai-governance-security' },
+              { num: '02', title: 'Cybersecurity Maturity Management', desc: 'Moving security from subjective opinions to quantified metrics. We assess enterprise security programs against the NS-CMMF to provide board-level visibility into true cyber risk.', link: '/what-we-do/cyber/maturity' },
               { num: '03', title: 'Secure Cloud Architecture', desc: 'Designing zero-trust architectures for complex, multi-cloud environments. We standardise IAM, automate posture management, and secure deployment pipelines.', link: '/what-we-do/platform/cloud-infra' },
               { num: '04', title: 'M&A Cyber Due Diligence', desc: 'Conducting rapid, deep-dive technical due diligence on acquisition targets to quantify cyber risk, estimate remediation costs, and design safe integration strategies.', link: '/what-we-do/cyber/ma' },
               { num: '05', title: 'Penetration Testing & Validation', desc: 'Continuous testing of the external attack surface, internal networks, and critical applications to validate the effectiveness of the enterprise security architecture.', link: '/what-we-do/platform/security-testing' },

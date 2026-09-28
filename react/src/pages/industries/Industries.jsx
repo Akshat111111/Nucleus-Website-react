@@ -55,93 +55,97 @@ export default function Sectors() {
   ]
 
   return (
-    <div id="view-svc">
-      <section className="svc-hero">
+    <div className="wm-page">
+      {/* Hero */}
+      <section className="wm-hero">
         <div className="wrap">
-          <div className="svc-hero-inner">
-            <div className="svc-eyebrow reveal">Sector Experience</div>
-            <h1 className="svc-h1 reveal">Securing the most demanding sectors.</h1>
-            <p className="svc-lede reveal">
-              Different sectors face fundamentally different threat profiles and regulatory mandates. We tailor our AI governance, platform trust, and cybersecurity capabilities to the specific operational realities of the industries we serve.
-            </p>
-            <div className="svc-hero-ctas reveal">
-              <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/about">About Nucleus Systems <span className="arr">→</span></Link>
+          <div className="wm-hero-inner">
+            <div>
+              <span className="wm-eyebrow reveal">Industry Experience</span>
+              <h1 className="wm-h1 reveal">Securing the most <mark>demanding industries.</mark></h1>
+              <p className="wm-lede reveal">
+                Different industries face fundamentally different threat profiles and regulatory mandates. We tailor our AI governance, platform trust, and cybersecurity capabilities to the specific operational realities of the industries we serve.
+              </p>
+              <div className="reveal">
+                <Link className="wm-pill-btn" to="/contact">Book a Briefing</Link>
+              </div>
+            </div>
+            <div className="wm-hero-img-box reveal">
+              <div style={{ width: '100%', aspectRatio: '4/3', background: 'linear-gradient(135deg, #1e293b, #0f172a)', boxShadow: '16px 16px 0 0 rgba(10,9,61,0.05)' }}></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="reach-strip">
-        <div className="rs-inner">
-          <div className="rs-stats">
-            <div className="rs-stat reveal"><span className="rs-num">600<span className="rs-plus">+</span></span><span className="rs-label">Engagements</span></div>
-            <div className="rs-divider" aria-hidden="true"></div>
-            <div className="rs-stat reveal"><span className="rs-num">40<span className="rs-plus">+</span></span><span className="rs-label">Countries</span></div>
-            <div className="rs-divider" aria-hidden="true"></div>
-            <div className="rs-stat reveal"><span className="rs-num">250<span className="rs-plus">+</span></span><span className="rs-label">M&amp;A transactions</span></div>
-            <div className="rs-divider" aria-hidden="true"></div>
-            <div className="rs-stat reveal"><span className="rs-num">8</span><span className="rs-label">Sectors covered</span></div>
+      {/* Stats Strip */}
+      <section className="wm-section wm-section-dotted">
+        <div className="wrap">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }} className="reveal">
+            <span className="wm-eyebrow" style={{ color: 'var(--wm-pink)' }}>Practitioner-led. Evidence-based. Outcome-focused.</span>
           </div>
-          <p className="rs-tagline reveal">Practitioner-led. Evidence-based. Outcome-focused.</p>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '20px' }}>
+            {[
+              { num: '600+', label: 'Engagements' },
+              { num: '40+', label: 'Countries' },
+              { num: '250+', label: 'M&A transactions' },
+              { num: '8', label: 'Industries covered' }
+            ].map((stat, i) => (
+              <div key={i} className="reveal" style={{ background: '#fff', padding: '24px', border: '1px solid #eee', minWidth: '200px', textAlign: 'center', boxShadow: '0 8px 24px rgba(0,0,0,0.05)' }}>
+                <div style={{ color: 'var(--wm-pink)', fontWeight: 900, fontSize: '32px', marginBottom: '8px' }}>{stat.num}</div>
+                <div style={{ fontWeight: 800, color: 'var(--wm-navy)', fontSize: '14px', textTransform: 'uppercase' }}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="svc-what section">
+      {/* Industries Grid */}
+      <section className="wm-section">
         <div className="wrap">
-          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">Sectors We Serve</span>
-            <h2>Depth where it counts.</h2>
-            <p>Each sector page covers why that sector faces distinct trust and cyber risk challenges, which services we bring to it, and the track record that backs the claim.</p>
+          <div className="wm-services-header reveal">
+            <h2>INDUSTRIES WE SERVE: DEPTH WHERE IT COUNTS</h2>
+            <p style={{ marginTop: '16px', fontSize: '16px', color: '#555' }}>Each industry page covers why that industry faces distinct trust and cyber risk challenges, which services we bring to it, and the track record that backs the claim.</p>
           </div>
-          <div className="svc-what-grid">
+          <div className="wm-grid">
             {sectors.map((s, i) => (
-              <Link className="svc-what-card reveal" to={s.link} key={i} style={{ textDecoration: 'none', cursor: 'pointer' }}>
-                <div className="svc-what-num">{s.num}</div>
-                <h3 className="svc-what-title">{s.title}</h3>
-                <p className="svc-what-desc" style={{ fontSize: '12px', color: 'var(--blue)', marginBottom: '8px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.06em' }}>{s.sub}</p>
-                <p className="svc-what-desc">{s.desc}</p>
-                <span className="arr-link" style={{ marginTop: '12px', display: 'block' }}>Explore sector →</span>
+              <Link to={s.link} key={i} className="wm-card reveal">
+                <h3>{s.title}</h3>
+                <div style={{ fontSize: '12px', color: 'var(--wm-pink)', marginBottom: '8px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.06em' }}>{s.sub}</div>
+                <p>{s.desc}</p>
+                <div className="wm-card-link">Explore industry</div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="svc-related section">
+      {/* Cross-Industry Services block */}
+      <section className="wm-section">
         <div className="wrap">
-          <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Cross-Sector Services</span>
-            <h2>Services applied across all sectors</h2>
-          </div>
-          <div className="related-grid">
-            <Link className="related-card reveal" to="/what-we-do/cyber/maturity">
-              <h4>Cybersecurity Strategy &amp; Leadership</h4>
-              <p>Sector-specific maturity assessment and security improvement programmes.</p>
-              <span className="arr-link">Learn more →</span>
-            </Link>
-            <Link className="related-card reveal" to="/what-we-do/cyber/ma">
-              <h4>M&amp;A &amp; Investor Services</h4>
-              <p>Cyber due diligence, sell-side preparation and portfolio programmes across all sectors.</p>
-              <span className="arr-link">Learn more →</span>
-            </Link>
-            <Link className="related-card reveal" to="/what-we-do/cyber/fractional-ciso">
-              <h4>Fractional / Interim CISO</h4>
-              <p>Senior security leadership for regulated organisations at every stage.</p>
-              <span className="arr-link">Learn more →</span>
-            </Link>
+          <div className="wm-result-block reveal">
+            <div className="wm-result-img" style={{ background: 'linear-gradient(135deg, #be185d, #831843)' }}></div>
+            <div className="wm-result-content">
+              <div className="wm-result-eyebrow">Cross-Industry Services</div>
+              <h3 className="wm-result-h3">Services applied across all industries</h3>
+              <p className="wm-result-p">
+                Cybersecurity Strategy & Leadership • M&A & Investor Services • Fractional / Interim CISO
+              </p>
+              <Link to="/what-we-do/cybersecurity-compliance" className="wm-pill-btn">View Our Services</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="cta-band reveal">
-            <h2>Your sector has specific requirements. So do we.</h2>
-            <p>Book a briefing with a practitioner who has worked in your sector — not a generalist who has read about it.</p>
-            <div className="cta-btns">
-              <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/about">About Nucleus Systems</Link>
+      {/* CTA */}
+      <section className="wm-section wm-section-dotted">
+        <div className="wrap" style={{ textAlign: 'center' }}>
+          <div className="reveal">
+            <span className="wm-eyebrow">Contact Us</span>
+            <h2 className="wm-h2">Your industry has specific requirements. <mark>So do we.</mark></h2>
+            <p style={{ margin: '16px auto 32px', maxWidth: '600px', color: '#555' }}>Book a briefing with a practitioner who has worked in your industry — not a generalist who has read about it.</p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
+              <Link className="wm-pill-btn" to="/contact" style={{ background: 'var(--wm-navy)', color: '#fff' }}>Book a Briefing</Link>
+              <Link className="wm-pill-btn" to="/about">About Nucleus Systems</Link>
             </div>
           </div>
         </div>

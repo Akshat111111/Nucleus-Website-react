@@ -71,7 +71,7 @@ export default function AIUsage() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3 AI-UAF v1.0</span>
+            <span className="eyebrow">Framework: NS AI-UAF v1.0</span>
             <h2>The Nucleus AI Usage Assurance Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>Safe usage governance · Policy controls · Risk assessment · Continuous monitoring</p>
           </div>
@@ -104,7 +104,7 @@ export default function AIUsage() {
             <p>Speak with a practitioner who implements practical AI usage controls that balance productivity with security and compliance.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3 AI-UAF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS AI-UAF Framework</Link>
             </div>
           </div>
         </div>

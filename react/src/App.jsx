@@ -72,6 +72,7 @@ import MaDueDiligence from './pages/ma/MaDueDiligence'
 import MaSellSide     from './pages/ma/MaSellSide'
 import MaPostDeal     from './pages/ma/MaPostDeal'
 import MaPortfolio    from './pages/ma/MaPortfolio'
+import MaTechVal      from './pages/ma/MaTechVal'
 
 // ── Sectors pages ────────────────────────────────────────────────────────────
 import Industries   from './pages/industries/Industries'
@@ -135,8 +136,9 @@ function AppLayout() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/paxley" element={<Paxley />} />
-            <Route path="/how-we-do-it" element={<Frameworks />} />
-            <Route path="/frameworks" element={<Navigate to="/how-we-do-it" replace />} />
+            <Route path="/impact" element={<Frameworks />} />
+            <Route path="/how-we-do-it" element={<Navigate to="/impact" replace />} />
+            <Route path="/frameworks" element={<Navigate to="/impact" replace />} />
 
             {/* ── What We Do — Pillar Hubs ── */}
             <Route path="/what-we-do/ai-governance-security"  element={<PillarAI />} />
@@ -219,13 +221,14 @@ function AppLayout() {
             <Route path="/services/digital-infrastructure" element={<Navigate to="/what-we-do/platform/dpi-security" replace />} />
             <Route path="/services/post-quantum"           element={<Navigate to="/what-we-do/cyber/pqc" replace />} />
 
-            {/* ── Legacy M&A → Cyber Pillar ── */}
+            {/* ── M&A Sub-Pages ── */}
             <Route path="/ma"                   element={<Navigate to="/what-we-do/cyber/ma" replace />} />
-            <Route path="/ma/due-diligence"     element={<Navigate to="/what-we-do/cyber/ma" replace />} />
-            <Route path="/ma/sell-side"         element={<Navigate to="/what-we-do/cyber/ma" replace />} />
-            <Route path="/ma/post-deal"         element={<Navigate to="/what-we-do/cyber/ma" replace />} />
-            <Route path="/ma/portfolio"         element={<Navigate to="/what-we-do/cyber/ma" replace />} />
-            <Route path="/ma/startup-growth"    element={<Navigate to="/what-we-do/cyber/ma" replace />} />
+            <Route path="/ma/due-diligence"     element={<MaDueDiligence />} />
+            <Route path="/ma/technical-validation" element={<MaTechVal />} />
+            <Route path="/ma/sell-side"         element={<MaSellSide />} />
+            <Route path="/ma/post-deal"         element={<MaPostDeal />} />
+            <Route path="/ma/portfolio"         element={<MaPortfolio />} />
+            <Route path="/ma/startup-growth"    element={<MaStartup />} />
 
             {/* ── Older legacy redirects ── */}
             <Route path="/sol-mdr"      element={<Navigate to="/what-we-do/cyber/managed-security" replace />} />

@@ -11,7 +11,7 @@ export default function AISecOps() {
             <div className="svc-eyebrow reveal">AI Governance &amp; Security · 08</div>
             <h1 className="svc-h1 reveal">AI Security Operations (AI SecOps)</h1>
             <p className="svc-lede reveal">
-              Security operations must adapt to defend AI systems and leverage AI for defence. We deliver bidirectional AI SecOps using our N3 AI² SecOps framework: establishing continuous monitoring and incident response for your AI assets, while safely integrating AI-assisted capabilities into your SOC to accelerate threat detection and response.
+              Security operations must adapt to defend AI systems and leverage AI for defence. We deliver bidirectional AI SecOps using our NS AI² SecOps framework: establishing continuous monitoring and incident response for your AI assets, while safely integrating AI-assisted capabilities into your SOC to accelerate threat detection and response.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -56,7 +56,7 @@ export default function AISecOps() {
               { num: '03', title: 'Continuous Adversarial Testing', desc: 'Establishing automated, continuous adversarial testing pipelines that constantly probe AI deployments for vulnerabilities and regression, feeding results back into defensive controls.' },
               { num: '04', title: 'AI Incident Response Playbooks', desc: 'Developing specialised IR playbooks for AI compromises — detailing procedures for isolating models, investigating prompt attacks, assessing data contamination, and executing model recovery.' },
               { num: '05', title: 'Secure AI-Assisted SOC Design', desc: 'Architecting secure deployments of AI within the SOC — evaluating enterprise Copilots, designing private LLM deployments for log analysis, and implementing safeguards against hallucination-driven alerts.' },
-              { num: '06', title: 'ASOps Programme Delivery', desc: 'Full implementation of the N3 AI² SecOps framework, maturing your organisation from ad-hoc AI monitoring to a certified ASOps capability.' },
+              { num: '06', title: 'ASOps Programme Delivery', desc: 'Full implementation of the NS AI² SecOps framework, maturing your organisation from ad-hoc AI monitoring to a certified ASOps capability.' },
             ].map((s, i) => (
               <div className="svc-what-card reveal" key={i}>
                 <div className="svc-what-num">{s.num}</div>
@@ -71,12 +71,12 @@ export default function AISecOps() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3 AI² SecOps v1.0</span>
+            <span className="eyebrow">Framework: NS AI² SecOps v1.0</span>
             <h2>The Nucleus AI² Security Operations Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>88 controls · 8 domains · Bidirectional AI SecOps · ASOps-1→4 maturity certification</p>
           </div>
           <div className="standards-grid">
-            {['MITRE ATLAS', 'NIST SP 800-61 (IR applied to AI)', 'OWASP AI Security', 'N3 AI² SecOps', 'AI Incident Sharing (AIID)'].map(s => (
+            {['MITRE ATLAS', 'NIST SP 800-61 (IR applied to AI)', 'OWASP AI Security', 'NS AI² SecOps', 'AI Incident Sharing (AIID)'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>
@@ -104,7 +104,7 @@ export default function AISecOps() {
             <p>Speak with specialists who build bidirectional AI security operations capabilities that actually detect adversarial attacks.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3 AI² SecOps Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS AI² SecOps Framework</Link>
             </div>
           </div>
         </div>

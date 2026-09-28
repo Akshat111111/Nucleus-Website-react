@@ -1,46 +1,80 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
 
-const AI_CHAIN = [
-  { code: 'N3-AIGF v1.0', name: 'AI Governance Framework', tagline: 'Accountable AI governance satisfying EU AI Act, ISO 42001 & NIST AI RMF — one assessment, one evidence set.', stats: '60 controls · 7 domains · L1→L5 maturity', standards: ['EU AI Act', 'ISO 42001', 'NIST AI RMF'], link: '/what-we-do/ai/governance', accent: '#7c3aed' },
-  { code: 'N3 AI-UAF v1.0', name: 'AI Usage Assurance Framework', tagline: 'Safe, ethical and compliant use of AI tools across the enterprise — from copilots to automated decision systems.', stats: 'Safe usage governance · Policy · Risk controls', standards: ['Safe Usage', 'ISO 23894', 'NIST AI RMF'], link: '/what-we-do/ai/usage-assurance', accent: '#7c3aed' },
-  { code: 'N3 AISCA v1.0', name: 'AI Security Controls Architecture', tagline: 'Purpose-built AI security architecture covering every attack surface — model, prompt, RAG, agent, supply chain, runtime.', stats: '108 controls · 12 domains · 5-grade evidence', standards: ['LLM', 'RAG', 'Agentic AI', 'ML SecOps'], link: '/what-we-do/ai/security-architecture', accent: '#7c3aed' },
-  { code: 'N3 PAISAF v1.0', name: 'Physical AI & Safety Assurance Framework', tagline: 'Assurance for AI systems operating in physical environments — robotics, autonomous systems and safety-critical deployments.', stats: 'Physical safety · TrustOps · Assurance scoring', standards: ['Physical AI', 'OT/ICS', 'TEVV'], link: '/what-we-do/ai/physical-ai', accent: '#7c3aed' },
-  { code: 'N3 AI² SecOps v1.0', name: 'AI² Security Operations Framework', tagline: 'Continuous AI security operations — the only bidirectional AI SecOps framework. Secure AI. Use AI for defence.', stats: '88 controls · 8 domains · ASOps-1→4 certification', standards: ['AI SecOps', 'Adversarial Testing', 'ASOps'], link: '/what-we-do/ai/secops', accent: '#7c3aed' },
+const FRAMEWORKS_DATA = [
+  {
+    framework: <><strong>NS-CMMF</strong><br/>Cybersecurity Maturity Management Framework v1.0</>,
+    focus: 'Cyber maturity, board-level cyber risk, M&A risk',
+    standards: 'NIST CSF, ISO 27001, DORA, NIS 2',
+    serviceLine: 'Cybersecurity Maturity Management & M&A Risk',
+    role: 'Fractional CISO and board cyber risk, cyber diligence and post-deal improvement, and cloud/resilience work',
+    product: 'Cyber Maturity Management Platform: SaaS for board, M&A and post-deal maturity assessment, with roadmap, control owners and evidence tracking',
+    detail: 'High-level only'
+  },
+  {
+    framework: <><strong>NS-AIGF</strong><br/>AI Governance Framework v1.0</>,
+    focus: 'AI governance and risk management',
+    standards: 'EU AI Act, ISO 42001, NIST AI RMF',
+    serviceLine: 'AI Governance & AI Security',
+    role: <><strong>Govern:</strong> AI policy, ownership, risk classification, approval, oversight and board evidence. Outcome: governance assurance</>,
+    product: 'AI Governance Intelligence: AI inventory, risk classification, EU AI Act / ISO 42001 readiness, continuous reporting',
+    detail: 'Medium'
+  },
+  {
+    framework: <><strong>NS AI-UAF</strong><br/>AI Usage Assurance Framework v1.0</>,
+    focus: 'How employees, contractors, developers and business teams actually use enterprise AI, including approved copilots, shadow AI, embedded SaaS AI and agents',
+    standards: '15+ sources, including EU AI Act, ISO 42001, ISO 23894, NIST AI RMF and privacy/security baselines',
+    serviceLine: 'AI Governance & AI Security',
+    role: <><strong>Usage assurance:</strong> Proves users, tools and agents use AI safely. Outcome: Safe workforce and enterprise AI use</>,
+    product: 'Not stated as a separate product track',
+    detail: <><strong>High:</strong> 96 controls, 8 domains, L1→L5 maturity, 0–100 Trust Score, 5 evidence grades, assurance levels AUA-1 to AUA-4</>
+  },
+  {
+    framework: <><strong>NS AISCA</strong><br/>AI Security Controls Architecture v1.0</>,
+    focus: 'AI security architecture for LLM, RAG, agentic AI, MLSecOps',
+    standards: 'OWASP LLM Top 10, MITRE ATLAS, NIST AI 100-2, Google SAIF, ISO/IEC 27001',
+    serviceLine: 'AI Governance & AI Security',
+    role: <><strong>Design:</strong> security domains and controls for models, agents, data, identity, infrastructure and runtime. Outcome: control architecture</>,
+    product: 'AI Security Controls Platform: controls assessment, attack-surface scoring, evidence, AI security roadmap',
+    detail: 'Medium'
+  },
+  {
+    framework: <><strong>NS PAISAF</strong><br/>Physical AI &amp; Safety Assurance Framework v1.0</>,
+    focus: 'AI that senses, decides, recommends or acts where failure can affect people, equipment, infrastructure, services or the physical world',
+    standards: '20+ standards and sources',
+    serviceLine: 'AI Governance & AI Security',
+    role: <><strong>Safety assurance:</strong> Constrains physical AI and validates fail-safe operation. Outcome: Cyber-physical safety and resilience</>,
+    product: 'Not stated as a separate product track',
+    detail: <><strong>High:</strong> 130 controls, 10 domains, L1→L5 maturity, 0–100 Trust Score, 5-axis scoring, assurance levels PSA-1 to PSA-4</>
+  },
+  {
+    framework: <><strong>NS AI² SecOps</strong><br/>AI² Security Operations Framework</>,
+    focus: 'Secure AI, TrustOps, assurance ("Secure AI. Secure with AI.")',
+    standards: 'NIST AI RMF, ISO 42001, MITRE ATLAS, OWASP LLM Top 10; supporting: NIST CSF 2.0, MITRE ATT&CK, NIST SSDF/SLSA',
+    serviceLine: 'AI Governance & AI Security',
+    role: <><strong>Operate:</strong> runs controls via Paxley, DevSecOps scanning, IaC tools, SOC workflows, AI runtime telemetry, evidence ledgers. Outcome: continuous operations</>,
+    product: 'AI Security Operations Platform: SOC integration, TrustOps dashboards, runtime evidence, assurance metrics',
+    detail: 'Medium'
+  },
+  {
+    framework: <><strong>NS-CTAF</strong><br/>Code Trust Assurance Framework v1.0</>,
+    focus: 'Software supply-chain security and code trust',
+    standards: 'SLSA, NIST SSDF, SBOM, EU CRA, OWASP SAMM, EO 14028',
+    serviceLine: 'Code Trust & Platform Assurance (with Paxley)',
+    role: 'Secure SDLC, DevSecOps, AppSec, SBOM and supply-chain evidence, with Paxley as the evidence layer',
+    product: 'Independent Code Trust Assurance Entity: CTA certification, trust scores, supply-chain evidence',
+    detail: <><strong>High:</strong> 86 controls, 6 domains (D1–D6), 5 maturity levels, 0–100 Trust Score, evidence tiers T1–T4, certification levels CTA-1 to CTA-4</>
+  },
+  {
+    framework: <><strong>NS-PQCF</strong><br/>Post Quantum Cryptography Framework v1.0</>,
+    focus: 'Post-quantum cryptography readiness',
+    standards: 'NIST, IETF, ETSI, ENISA, CNSA',
+    serviceLine: 'Cybersecurity Maturity Management & M&A Risk',
+    role: 'PQC readiness within cloud, resilience and critical infrastructure work',
+    product: 'PQC Readiness Platform: cryptographic inventory, quantum-risk maturity, migration roadmap, board readiness evidence',
+    detail: 'High-level only'
+  }
 ]
-
-const DIGITAL_CHAIN = [
-  { code: 'N3-SSAF v1.0', name: 'Secure Software Architecture Framework', tagline: 'End-to-end secure software architecture assurance — from design principles to implementation standards and architecture review.', stats: 'Architecture review · Design patterns · Risk scoring', standards: ['ISO/IEC 27034', 'NIST SP 800-160'], link: '/what-we-do/platform/secure-architecture', accent: '#f97316' },
-  { code: 'N3-CTAF v1.0', name: 'Code Trust Assurance Framework', tagline: 'Cryptographically verifiable software supply-chain trust — identity, build integrity, secure development, dependencies, runtime.', stats: '86 controls · 6 domains · CTA-1→4 certification', standards: ['SLSA', 'NIST SSDF', 'S/CBOM', 'CRA'], link: '/what-we-do/platform/code-trust', accent: '#f97316' },
-  { code: 'N3-SSDOF v1.0', name: 'Secure Software Deployment & Operations Framework', tagline: 'Operational security assurance for software deployment pipelines — runtime controls, configuration hardening and continuous compliance.', stats: 'Deployment controls · Runtime assurance · Ops hardening', standards: ['NIST SP 800-53', 'CIS CSC 8', 'SAMM'], link: '/what-we-do/platform/deployment', accent: '#f97316' },
-]
-
-const CYBER_CHAIN = [
-  { code: 'N3-CMMF v1.0', name: 'Cybersecurity Maturity Management Framework', tagline: 'Unified cybersecurity maturity measurement — evidence-based scoring across 32 standards, financial gap quantification, board-ready reporting.', stats: '188 controls · 6 domains · 32 frameworks mapped', standards: ['NIST CSF', 'ISO 27001', 'DORA', 'NIS2'], link: '/what-we-do/cyber/maturity', accent: '#4f8ef7' },
-  { code: 'N3-PQCF v1.0', name: 'Post-Quantum Cryptography Framework', tagline: 'Structured readiness for the post-quantum era — cryptographic inventory, algorithm migration, crypto-agility and supplier readiness assessment.', stats: 'Crypto discovery · CBOM · Migration roadmap', standards: ['NIST PQC', 'IETF', 'ETSI', 'ENISA', 'CNSA'], link: '/what-we-do/cyber/pqc', accent: '#4f8ef7' },
-]
-
-function ChainCard({ fw }) {
-  return (
-    <Link to={fw.link} className="fw-card reveal" style={{ textDecoration: 'none' }}>
-      <div className="fw-card-accent" style={{ background: fw.accent }} />
-      <div className="fw-card-body">
-        <div className="fw-card-code" style={{ color: fw.accent }}>{fw.code}</div>
-        <h3 className="fw-card-name">{fw.name}</h3>
-        <p className="fw-card-tagline">{fw.tagline}</p>
-        <div className="fw-card-stats">{fw.stats}</div>
-        <div className="fw-card-standards">
-          {fw.standards.map((s, i) => (
-            <span className="fw-std-tag" key={i}>{s}</span>
-          ))}
-        </div>
-      </div>
-      <div className="fw-card-foot">
-        <span className="fw-card-link" style={{ color: fw.accent }}>See related service →</span>
-      </div>
-    </Link>
-  )
-}
 
 export default function Frameworks() {
   useReveal()
@@ -54,10 +88,10 @@ export default function Frameworks() {
           <div className="fw-hero-eyebrow reveal">How We Deliver</div>
           <h1 className="fw-hero-h1 reveal">The Nucleus Digital Trust Assurance Architecture</h1>
           <p className="fw-hero-lede reveal">
-            Ten proprietary frameworks are the evidence-based delivery engine behind every Nucleus Systems engagement. Structured, independently assessable, and built to produce board-ready evidence — not documentation theatre. Each framework operationalises a specific pillar of digital trust.
+            Eight proprietary frameworks are the evidence-based delivery engine behind every Nucleus Systems engagement. Structured, independently assessable, and built to produce board-ready evidence — not documentation theatre. Each framework operationalises a specific pillar of digital trust.
           </p>
           <div className="fw-hero-meta reveal">
-            <span>10 proprietary frameworks</span>
+            <span>8 proprietary frameworks</span>
             <span>3 trust pillars</span>
             <span>L1→L5 maturity scoring across all frameworks</span>
             <span>Board-ready evidence built in</span>
@@ -66,25 +100,25 @@ export default function Frameworks() {
       </section>
 
       {/* ── WHAT WE DO vs HOW WE DO IT ── */}
-      <section className="section" style={{ paddingBottom: 0 }}>
+      <section className="section" style={{ paddingBottom: '32px' }}>
         <div className="wrap">
           <div className="svc-problem-grid reveal">
             <div style={{ padding: '36px', background: 'var(--grey)', borderRadius: '16px' }}>
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: '12px' }}>What We Do</span>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: '12px' }}>Services</span>
               <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--navy)', marginBottom: '12px' }}>Three Trust Capabilities</h3>
-              <p style={{ fontSize: '13.5px', color: 'var(--slate)', lineHeight: 1.75, marginBottom: '20px' }}>We deliver AI Governance &amp; Security, Digital Platform Trust &amp; Assurance, and Cybersecurity &amp; Compliance Maturity Management across nine service domains each.</p>
+              <p style={{ fontSize: '13.5px', color: 'var(--slate)', lineHeight: 1.75, marginBottom: '20px' }}>We deliver AI Governance &amp; Security, Digital Platform Trust &amp; Security Assurance, and Cybersecurity Maturity Management &amp; M&amp;A Risk across nine service domains each.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <Link to="/what-we-do/ai-governance-security" style={{ fontSize: '12px', fontWeight: 700, color: '#7c3aed', textDecoration: 'none' }}>01 — AI Governance &amp; Security →</Link>
-                <Link to="/what-we-do/digital-platform-trust" style={{ fontSize: '12px', fontWeight: 700, color: 'var(--orange)', textDecoration: 'none' }}>02 — Digital Platform Trust &amp; Assurance →</Link>
-                <Link to="/what-we-do/cybersecurity-compliance" style={{ fontSize: '12px', fontWeight: 700, color: '#4f8ef7', textDecoration: 'none' }}>03 — Cybersecurity &amp; Compliance Maturity →</Link>
+                <Link to="/what-we-do/digital-platform-trust" style={{ fontSize: '12px', fontWeight: 700, color: 'var(--orange)', textDecoration: 'none' }}>02 — Digital Platform Trust &amp; Security Assurance →</Link>
+                <Link to="/what-we-do/cybersecurity-compliance" style={{ fontSize: '12px', fontWeight: 700, color: '#4f8ef7', textDecoration: 'none' }}>03 — Cybersecurity Maturity Management &amp; M&amp;A Risk →</Link>
               </div>
             </div>
             <div style={{ padding: '36px', background: 'var(--navy)', borderRadius: '16px' }}>
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', display: 'block', marginBottom: '12px' }}>How We Do It</span>
-              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--white)', marginBottom: '12px' }}>Ten Proprietary Frameworks</h3>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', display: 'block', marginBottom: '12px' }}>Impact</span>
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--white)', marginBottom: '12px' }}>Eight Proprietary Frameworks</h3>
               <p style={{ fontSize: '13.5px', color: 'rgba(255,255,255,.6)', lineHeight: 1.75, marginBottom: '20px' }}>Our frameworks are the structured methodologies, control architectures and evidence instruments behind every engagement. Applied proportionately — from a focused assessment to a continuous assurance programme.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {['N3-AIGF', 'N3 AI-UAF', 'N3 AISCA', 'N3 PAISAF', 'N3 AI² SecOps', 'N3-SSAF', 'N3-CTAF', 'N3-SSDOF', 'N3-CMMF', 'N3-PQCF'].map(f => (
+                {['NS-CMMF', 'NS-AIGF', 'NS AI-UAF', 'NS AISCA', 'NS PAISAF', 'NS AI² SecOps', 'NS-CTAF', 'NS-PQCF'].map(f => (
                   <span key={f} style={{ fontSize: '9.5px', fontFamily: 'var(--mono)', background: 'rgba(255,255,255,.08)', color: 'rgba(255,255,255,.7)', borderRadius: '5px', padding: '3px 8px', fontWeight: 600 }}>{f}</span>
                 ))}
               </div>
@@ -93,83 +127,34 @@ export default function Frameworks() {
         </div>
       </section>
 
-      {/* ── 01 AI Trust Chain ── */}
-      <section className="fw-group section">
+      {/* ── Framework Matrix Table ── */}
+      <section className="section" style={{ paddingTop: '20px' }}>
         <div className="wrap">
-          <div className="fw-group-header reveal" style={{ borderLeftColor: '#7c3aed' }}>
-            <span className="fw-group-label" style={{ color: '#7c3aed' }}>01 — AI Governance &amp; Security</span>
-            <h2 className="fw-group-title">The AI Trust Chain — Five Frameworks in Sequence</h2>
-            <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.7, maxWidth: '640px', marginTop: '10px' }}>
-              Govern AI. Control how it is used. Secure its attack surface. Assure physical safety. Operate it continuously. Five frameworks that address the full lifecycle of AI trust — applied sequentially or selectively based on your maturity position.
-            </p>
-          </div>
-
-          {/* Chain visual */}
-          <div className="reveal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '0', flexWrap: 'wrap', rowGap: '10px', marginBottom: '36px', padding: '20px', background: 'var(--grey)', borderRadius: '12px' }}>
-            {['N3-AIGF', 'N3 AI-UAF', 'N3 AISCA', 'N3 PAISAF', 'N3 AI² SecOps'].map((f, i, arr) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ fontSize: '10px', fontFamily: 'var(--mono)', fontWeight: 700, color: '#7c3aed', background: 'rgba(124,58,237,.1)', border: '1px solid rgba(124,58,237,.2)', borderRadius: '6px', padding: '5px 10px' }}>{f}</span>
-                {i < arr.length - 1 && <span style={{ margin: '0 6px', color: 'var(--slate)', fontSize: '12px' }}>→</span>}
-              </div>
-            ))}
-          </div>
-
-          <div className="fw-cards">
-            {AI_CHAIN.map((fw, i) => <ChainCard fw={fw} key={i} />)}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 02 Digital Platform Trust Chain ── */}
-      <section className="fw-group section">
-        <div className="wrap">
-          <div className="fw-group-header reveal" style={{ borderLeftColor: '#f97316' }}>
-            <span className="fw-group-label" style={{ color: '#f97316' }}>02 — Digital Platform Trust &amp; Assurance</span>
-            <h2 className="fw-group-title">The Digital Platform Trust Chain — Three Frameworks in Sequence</h2>
-            <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.7, maxWidth: '640px', marginTop: '10px' }}>
-              Design it securely. Build it with verifiable trust. Deploy it with operational assurance. Three frameworks that cover the full secure software lifecycle — from architecture through to runtime operations.
-            </p>
-          </div>
-
-          {/* Chain visual */}
-          <div className="reveal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '0', flexWrap: 'wrap', rowGap: '10px', marginBottom: '36px', padding: '20px', background: 'var(--grey)', borderRadius: '12px' }}>
-            {['N3-SSAF', 'N3-CTAF', 'N3-SSDOF'].map((f, i, arr) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ fontSize: '10px', fontFamily: 'var(--mono)', fontWeight: 700, color: '#f97316', background: 'rgba(249,115,22,.1)', border: '1px solid rgba(249,115,22,.2)', borderRadius: '6px', padding: '5px 10px' }}>{f}</span>
-                {i < arr.length - 1 && <span style={{ margin: '0 6px', color: 'var(--slate)', fontSize: '12px' }}>→</span>}
-              </div>
-            ))}
-          </div>
-
-          <div className="fw-cards">
-            {DIGITAL_CHAIN.map((fw, i) => <ChainCard fw={fw} key={i} />)}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 03 Cyber & Compliance Chain ── */}
-      <section className="fw-group section">
-        <div className="wrap">
-          <div className="fw-group-header reveal" style={{ borderLeftColor: '#4f8ef7' }}>
-            <span className="fw-group-label" style={{ color: '#4f8ef7' }}>03 — Cybersecurity &amp; Compliance Maturity Management</span>
-            <h2 className="fw-group-title">The Cyber &amp; Compliance Chain — Two Frameworks in Sequence</h2>
-            <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.7, maxWidth: '640px', marginTop: '10px' }}>
-              Measure and improve cybersecurity maturity. Prepare for the post-quantum transition. Two frameworks that address the present-state maturity gap and the forward-looking cryptographic risk simultaneously.
-            </p>
-          </div>
-
-          {/* Chain visual */}
-          <div className="reveal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: '0', flexWrap: 'wrap', rowGap: '10px', marginBottom: '36px', padding: '20px', background: 'var(--grey)', borderRadius: '12px' }}>
-            {['N3-CMMF', 'N3-PQCF'].map((f, i, arr) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ fontSize: '10px', fontFamily: 'var(--mono)', fontWeight: 700, color: '#4f8ef7', background: 'rgba(79,142,247,.1)', border: '1px solid rgba(79,142,247,.2)', borderRadius: '6px', padding: '5px 10px' }}>{f}</span>
-                {i < arr.length - 1 && <span style={{ margin: '0 6px', color: 'var(--slate)', fontSize: '12px' }}>→</span>}
-              </div>
-            ))}
-          </div>
-
-          <div className="fw-cards">
-            {CYBER_CHAIN.map((fw, i) => <ChainCard fw={fw} key={i} />)}
+          <div className="reveal" style={{ overflowX: 'auto', background: '#fff', borderRadius: '12px', border: '1px solid var(--line-2)' }}>
+            <table style={{ width: '100%', minWidth: '960px', borderCollapse: 'collapse', textAlign: 'left', fontSize: '13.5px' }}>
+              <thead>
+                <tr style={{ background: 'var(--grey)', color: 'var(--navy)', borderBottom: '2px solid var(--line-2)' }}>
+                  <th style={{ padding: '16px', fontWeight: 800, whiteSpace: 'nowrap' }}>Framework</th>
+                  <th style={{ padding: '16px', fontWeight: 800 }}>Focus</th>
+                  <th style={{ padding: '16px', fontWeight: 800 }}>Aligned standards</th>
+                  <th style={{ padding: '16px', fontWeight: 800 }}>Service line</th>
+                  <th style={{ padding: '16px', fontWeight: 800 }}>Role / what it does in practice</th>
+                  <th style={{ padding: '16px', fontWeight: 800 }}>Product track</th>
+                </tr>
+              </thead>
+              <tbody>
+                {FRAMEWORKS_DATA.map((r, i) => (
+                  <tr key={i} style={{ borderBottom: i === FRAMEWORKS_DATA.length - 1 ? 'none' : '1px solid var(--line)' }}>
+                    <td style={{ padding: '16px', verticalAlign: 'top', color: 'var(--ink)' }}>{r.framework}</td>
+                    <td style={{ padding: '16px', verticalAlign: 'top', color: 'var(--slate)' }}>{r.focus}</td>
+                    <td style={{ padding: '16px', verticalAlign: 'top', color: 'var(--slate)' }}>{r.standards}</td>
+                    <td style={{ padding: '16px', verticalAlign: 'top', color: 'var(--slate)' }}>{r.serviceLine}</td>
+                    <td style={{ padding: '16px', verticalAlign: 'top', color: 'var(--slate)' }}>{r.role}</td>
+                    <td style={{ padding: '16px', verticalAlign: 'top', color: 'var(--slate)' }}>{r.product}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
