@@ -23,7 +23,7 @@ export default function Paxley() {
               <a href="https://paxleysoftware.com/" target="_blank" rel="noopener noreferrer" className="btn px-btn-primary">
                 Visit Paxley Software <span>→</span>
               </a>
-              <a href="#pax-compare" className="btn px-btn-ghost">View differentiators</a>
+              <a href="#pax-compare" onClick={(e) => { e.preventDefault(); document.getElementById('pax-compare')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn px-btn-ghost">View differentiators</a>
             </div>
             <div className="px-strip">
               <div className="pxs"><b>8</b><span>Scanning Engines</span></div>
