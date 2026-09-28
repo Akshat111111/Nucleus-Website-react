@@ -11,7 +11,7 @@ export default function CyberMaturity() {
             <div className="svc-eyebrow reveal">Cybersecurity &amp; Compliance · 01</div>
             <h1 className="svc-h1 reveal">Cybersecurity Maturity Assessment</h1>
             <p className="svc-lede reveal">
-              Security cannot be managed if it cannot be measured. We deliver structured, evidence-based cybersecurity maturity assessments using the Nucleus Cybersecurity Maturity Management Framework (N3-CMMF). We evaluate 188 controls across 6 domains, producing quantified maturity scores, financial gap analysis, and board-ready reporting that translates technical risk into business context.
+              Security cannot be managed if it cannot be measured. We deliver structured, evidence-based cybersecurity maturity assessments using the Nucleus Cybersecurity Maturity Management Framework (NS-CMMF). We evaluate 188 controls across 6 domains, producing quantified maturity scores, financial gap analysis, and board-ready reporting that translates technical risk into business context.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -51,7 +51,7 @@ export default function CyberMaturity() {
           </div>
           <div className="svc-what-grid">
             {[
-              { num: '01', title: 'N3-CMMF Assessment', desc: 'Comprehensive evaluation of 188 security controls across 6 domains. Every control is scored from Level 1 (Initial/Ad-hoc) to Level 5 (Optimised) based on documented, verifiable evidence.' },
+              { num: '01', title: 'NS-CMMF Assessment', desc: 'Comprehensive evaluation of 188 security controls across 6 domains. Every control is scored from Level 1 (Initial/Ad-hoc) to Level 5 (Optimised) based on documented, verifiable evidence.' },
               { num: '02', title: 'Target State Definition', desc: 'Collaborating with leadership to define an appropriate target maturity level for each domain based on the organisation\'s threat profile, regulatory obligations, and risk appetite. Not every control needs to be Level 5.' },
               { num: '03', title: 'Gap Quantification & Financial Modelling', desc: 'Translating maturity gaps into quantified business risk. Estimating the financial impact of a breach given the current maturity state versus the target state to justify security investments.' },
               { num: '04', title: 'Prioritised Remediation Roadmap', desc: 'Developing a structured, multi-phase improvement roadmap (e.g., 1-3 years). Prioritising initiatives that deliver the highest risk reduction for the lowest cost and effort.' },
@@ -71,12 +71,12 @@ export default function CyberMaturity() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3-CMMF v1.0</span>
+            <span className="eyebrow">Framework: NS-CMMF v1.0</span>
             <h2>The Nucleus Cybersecurity Maturity Management Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>188 controls · 6 domains · L1→L5 maturity scoring · Maps to 32 industry standards</p>
           </div>
           <div className="standards-grid">
-            {['NIST CSF (Core Mapping)', 'CMMI (Maturity Model)', 'ISO/IEC 27001 (Control Mapping)', 'CIS Critical Security Controls', 'FFIEC CAT', 'N3-CMMF'].map(s => (
+            {['NIST CSF (Core Mapping)', 'CMMI (Maturity Model)', 'ISO/IEC 27001 (Control Mapping)', 'CIS Critical Security Controls', 'FFIEC CAT', 'NS-CMMF'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function CyberMaturity() {
           </div>
           <div className="related-grid">
             <Link className="related-card reveal" to="/what-we-do/cyber/governance"><h4>Cybersecurity Governance</h4><p>Implementing the governance structures required to drive maturity improvements.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/what-we-do/cyber/compliance"><h4>Compliance Programmes</h4><p>Using the N3-CMMF assessment to simultaneously identify compliance gaps.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/cyber/compliance"><h4>Compliance Programmes</h4><p>Using the NS-CMMF assessment to simultaneously identify compliance gaps.</p><span className="arr-link">Learn more →</span></Link>
             <Link className="related-card reveal" to="/what-we-do/cyber/fractional-ciso"><h4>Fractional CISO</h4><p>Providing the leadership to execute the remediation roadmap identified in the assessment.</p><span className="arr-link">Learn more →</span></Link>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function CyberMaturity() {
             <p>Speak with practitioners who have delivered maturity assessments for central banks, government agencies, and tier-one enterprises.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3-CMMF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS-CMMF Framework</Link>
             </div>
           </div>
         </div>

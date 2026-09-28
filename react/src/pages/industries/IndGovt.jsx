@@ -90,7 +90,7 @@ export default function IndGovt() {
             <h2>Adjacent to government</h2>
           </div>
           <div className="related-grid">
-            <Link className="related-card reveal" to="/sectors/dpi-digital-public-goods"><h4>Digital Public Infrastructure</h4><p>National DPI deployment security — the platforms governments are building.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/digital-platforms"><h4>Digital Public Infrastructure</h4><p>National DPI deployment security — the platforms governments are building.</p><span className="arr-link">Learn more →</span></Link>
             <Link className="related-card reveal" to="/sectors/critical-infrastructure"><h4>Critical Infrastructure</h4><p>Government-regulated critical systems — energy, water, transport, telecoms.</p><span className="arr-link">Learn more →</span></Link>
             <Link className="related-card reveal" to="/sectors/financial-services"><h4>Financial Services</h4><p>Central banks and public financial management systems.</p><span className="arr-link">Learn more →</span></Link>
           </div>

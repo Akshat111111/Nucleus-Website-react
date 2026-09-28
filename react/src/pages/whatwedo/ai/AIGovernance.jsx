@@ -11,7 +11,7 @@ export default function AIGovernance() {
             <div className="svc-eyebrow reveal">AI Governance &amp; Security · 01</div>
             <h1 className="svc-h1 reveal">AI Governance Strategy &amp; Responsible AI</h1>
             <p className="svc-lede reveal">
-              Deploying AI without a governance programme is deploying liability. We build enterprise AI governance frameworks that satisfy EU AI Act obligations, ISO 42001 certification requirements and NIST AI RMF baseline simultaneously — using our N3-AIGF proprietary framework. From AI inventory and risk classification through to board accountability structures and responsible AI principles.
+              Deploying AI without a governance programme is deploying liability. We build enterprise AI governance frameworks that satisfy EU AI Act obligations, ISO 42001 certification requirements and NIST AI RMF baseline simultaneously — using our NS-AIGF proprietary framework. From AI inventory and risk classification through to board accountability structures and responsible AI principles.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -52,7 +52,7 @@ export default function AIGovernance() {
           <div className="svc-what-grid">
             {[
               { num: '01', title: 'AI Inventory & Risk Classification', desc: 'Complete enumeration of AI systems in use — including shadow AI — risk-classified against EU AI Act categories and organisational risk appetite. The foundation of every AI governance programme.' },
-              { num: '02', title: 'AI Governance Framework Design', desc: 'Bespoke AI governance framework aligned to N3-AIGF — committee structures, policy hierarchy, RACI, escalation procedures and accountability assignments across business units.' },
+              { num: '02', title: 'AI Governance Framework Design', desc: 'Bespoke AI governance framework aligned to NS-AIGF — committee structures, policy hierarchy, RACI, escalation procedures and accountability assignments across business units.' },
               { num: '03', title: 'Responsible AI Principles', desc: 'Operationalised responsible AI principles — not aspirational statements. Fairness controls, bias assessment procedures, explainability requirements and human oversight mechanisms built into AI deployment processes.' },
               { num: '04', title: 'EU AI Act Compliance Programme', desc: 'Full EU AI Act compliance programme delivery — high-risk AI classification, conformity assessment, technical documentation, quality management system alignment and registration obligation management.' },
               { num: '05', title: 'ISO 42001 Certification Readiness', desc: 'Gap assessment and programme delivery for ISO/IEC 42001:2023 AI management system certification — from initial gap analysis through to certification body readiness.' },
@@ -71,7 +71,7 @@ export default function AIGovernance() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3-AIGF v1.0</span>
+            <span className="eyebrow">Framework: NS-AIGF v1.0</span>
             <h2>The Nucleus AI Governance Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>60 controls · 7 domains · L1→L5 maturity scoring · Maps simultaneously to EU AI Act, ISO 42001 and NIST AI RMF</p>
           </div>
@@ -104,7 +104,7 @@ export default function AIGovernance() {
             <p>Speak with a practitioner who has delivered AI governance programmes under EU AI Act, ISO 42001 and NIST AI RMF — not a consultant who has read the documentation.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3-AIGF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS-AIGF Framework</Link>
             </div>
           </div>
         </div>

@@ -92,7 +92,7 @@ export default function IndFinancial() {
           <div className="related-grid">
             <Link className="related-card reveal" to="/sectors/fintech-payments"><h4>Fintech &amp; Payments</h4><p>Regulated disruptors and payment operators in the financial services ecosystem.</p><span className="arr-link">Learn more →</span></Link>
             <Link className="related-card reveal" to="/sectors/private-equity"><h4>Private Equity &amp; Investment</h4><p>Deal teams and portfolio companies managing cyber risk through investment cycles.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/sectors/dpi-digital-public-goods"><h4>Digital Public Infrastructure</h4><p>Central bank payment infrastructure and national digital financial systems.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/sectors/digital-platforms"><h4>Digital Public Infrastructure</h4><p>Central bank payment infrastructure and national digital financial systems.</p><span className="arr-link">Learn more →</span></Link>
           </div>
         </div>
       </section>

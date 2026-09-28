@@ -26,7 +26,7 @@ export default function Home() {
             </p>
             <div className="hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/what-we-do/ai-governance-security">Explore What We Do <span className="arr">→</span></Link>
+              <Link className="btn btn-ghost" to="/what-we-do/ai-governance-security">Explore Services <span className="arr">→</span></Link>
             </div>
           </div>
         </div>
@@ -83,10 +83,10 @@ export default function Home() {
               </span>
             </Link>
 
-            {/* 02 — Digital Platform Trust & Assurance */}
+            {/* 02 — Digital Platform Trust & Security Assurance */}
             <Link className="cap-card reveal" to="/what-we-do/digital-platform-trust">
               <span className="cap-card-num" style={{ color: '#0891b2' }}>02</span>
-              <h2 className="cap-card-title">Digital Platform Trust &amp; Assurance</h2>
+              <h2 className="cap-card-title">Digital Platform Trust &amp; Security Assurance</h2>
               <p className="cap-card-desc">
                 Engineer trust into software, cloud platforms, digital infrastructure and the software supply chain.
               </p>
@@ -95,10 +95,10 @@ export default function Home() {
               </span>
             </Link>
 
-            {/* 03 — Cybersecurity & Compliance Maturity Management */}
+            {/* 03 — Cybersecurity Maturity Management & M&A Risk */}
             <Link className="cap-card reveal" to="/what-we-do/cybersecurity-compliance">
               <span className="cap-card-num" style={{ color: '#059669' }}>03</span>
-              <h2 className="cap-card-title">Cybersecurity &amp; Compliance Maturity Management</h2>
+              <h2 className="cap-card-title">Cybersecurity Maturity Management &amp; M&amp;A Risk</h2>
               <p className="cap-card-desc">
                 Measure, improve and continuously demonstrate cybersecurity, compliance and operational resilience.
               </p>
@@ -117,9 +117,9 @@ export default function Home() {
         <div className="interconnect-pillars">
           <span className="ic-pillar" style={{ color: '#a78bfa' }}>AI Governance &amp; Security</span>
           <span className="ic-arrow">→</span>
-          <span className="ic-pillar" style={{ color: '#67e8f9' }}>Digital Platform Trust &amp; Assurance</span>
+          <span className="ic-pillar" style={{ color: '#67e8f9' }}>Digital Platform Trust &amp; Security Assurance</span>
           <span className="ic-arrow">→</span>
-          <span className="ic-pillar" style={{ color: '#6ee7b7' }}>Cybersecurity &amp; Compliance Maturity</span>
+          <span className="ic-pillar" style={{ color: '#6ee7b7' }}>Cybersecurity Maturity Management &amp; M&amp;A Risk</span>
         </div>
         <div className="lifecycle-chain">
           {['Strategy','Architecture','Engineering','Validation','Operations','Evidence','Continuous Assurance'].map((step, i, arr) => (

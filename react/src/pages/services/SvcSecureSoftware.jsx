@@ -50,7 +50,7 @@ export default function SvcSecureSoftware() {
       <section className="svc-what section">
         <div className="wrap">
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">What We Do</span>
+            <span className="eyebrow">Services</span>
             <h2>Secure Software &amp; DevSecOps Services</h2>
           </div>
           <div className="svc-what-grid">

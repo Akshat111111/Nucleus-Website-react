@@ -103,7 +103,7 @@ export default function CyberGovernance() {
             <p>Speak with a practitioner who has designed governance models for regulated financial institutions and global enterprises.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/what-we-do/cyber/maturity">N3-CMMF Framework</Link>
+              <Link className="btn btn-ghost" to="/what-we-do/cyber/maturity">NS-CMMF Framework</Link>
             </div>
           </div>
         </div>

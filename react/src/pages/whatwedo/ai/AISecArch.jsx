@@ -11,7 +11,7 @@ export default function AISecArch() {
             <div className="svc-eyebrow reveal">AI Governance &amp; Security · 04</div>
             <h1 className="svc-h1 reveal">AI Security Architecture</h1>
             <p className="svc-lede reveal">
-              AI systems introduce attack surfaces that traditional security architectures do not cover. Threat modelling must account for prompt injection, data poisoning, model evasion, and supply chain compromise. We design purpose-built AI security architectures using our N3-AISCA framework — ensuring AI systems are secure by design, resilient to adversarial attack, and aligned with enterprise security patterns.
+              AI systems introduce attack surfaces that traditional security architectures do not cover. Threat modelling must account for prompt injection, data poisoning, model evasion, and supply chain compromise. We design purpose-built AI security architectures using our NS-AISCA framework — ensuring AI systems are secure by design, resilient to adversarial attack, and aligned with enterprise security patterns.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -52,7 +52,7 @@ export default function AISecArch() {
           <div className="svc-what-grid">
             {[
               { num: '01', title: 'AI Threat Modelling', desc: 'Structured threat modelling using MITRE ATLAS and OWASP methodologies to identify AI-specific vulnerabilities across the system lifecycle — from data ingestion to inference.' },
-              { num: '02', title: 'Secure AI Architecture Design', desc: 'Design of robust AI architectures aligned to N3-AISCA. Defining security boundaries, data flow controls, model access management, and integration patterns for enterprise deployment.' },
+              { num: '02', title: 'Secure AI Architecture Design', desc: 'Design of robust AI architectures aligned to NS-AISCA. Defining security boundaries, data flow controls, model access management, and integration patterns for enterprise deployment.' },
               { num: '03', title: 'Inference Security Controls', desc: 'Implementation of controls to secure model inference — input validation (prompt filtering), output sanitisation, rate limiting, and anomaly detection to identify adversarial queries.' },
               { num: '04', title: 'Model Protection & Access Control', desc: 'Architecture for protecting intellectual property (model weights) and controlling access to inference APIs. Strategies for secure deployment in edge, cloud, and on-premises environments.' },
               { num: '05', title: 'Training Data Security', desc: 'Design of secure data pipelines for model training and fine-tuning. Implementing data anonymisation, access controls, and integrity checks to prevent data poisoning and privacy violations.' },
@@ -71,7 +71,7 @@ export default function AISecArch() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3 AISCA v1.0</span>
+            <span className="eyebrow">Framework: NS AISCA v1.0</span>
             <h2>The Nucleus AI Security Controls Architecture.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>108 controls · 12 domains · Model Security · Prompt Architecture · Integration Controls</p>
           </div>
@@ -104,7 +104,7 @@ export default function AISecArch() {
             <p>Speak with an architect who understands how to secure probabilistic systems and defend against adversarial machine learning.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3 AISCA Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS AISCA Framework</Link>
             </div>
           </div>
         </div>

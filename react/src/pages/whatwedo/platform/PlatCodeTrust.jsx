@@ -11,7 +11,7 @@ export default function PlatCodeTrust() {
             <div className="svc-eyebrow reveal">Digital Platform Trust · 03</div>
             <h1 className="svc-h1 reveal">Code Trust &amp; Supply Chain</h1>
             <p className="svc-lede reveal">
-              In a landscape where supply chain compromises are the primary vector for advanced adversaries, trust in code must be verifiable, not assumed. We implement the Nucleus Code Trust Assurance Framework (N3-CTAF) to establish cryptographically verifiable provenance across your entire software lifecycle — ensuring that what is deployed is exactly what was built, and what was built is exactly what was committed.
+              In a landscape where supply chain compromises are the primary vector for advanced adversaries, trust in code must be verifiable, not assumed. We implement the Nucleus Code Trust Assurance Framework (NS-CTAF) to establish cryptographically verifiable provenance across your entire software lifecycle — ensuring that what is deployed is exactly what was built, and what was built is exactly what was committed.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -51,7 +51,7 @@ export default function PlatCodeTrust() {
           </div>
           <div className="svc-what-grid">
             {[
-              { num: '01', title: 'N3-CTAF Implementation', desc: 'End-to-end implementation of the Code Trust Assurance Framework (SLSA aligned). Establishing verifiable trust boundaries across source, build, and deployment environments.' },
+              { num: '01', title: 'NS-CTAF Implementation', desc: 'End-to-end implementation of the Code Trust Assurance Framework (SLSA aligned). Establishing verifiable trust boundaries across source, build, and deployment environments.' },
               { num: '02', title: 'Cryptographic Code Signing', desc: 'Implementing robust code signing architectures using tools like Sigstore, enabling developers to sign commits and CI pipelines to sign artifacts with ephemeral, verifiable keys.' },
               { num: '03', title: 'SBOM & VEX Generation', desc: 'Automating the generation, validation, and storage of Software Bill of Materials (SBOM) and Vulnerability Exploitability eXchange (VEX) documents for every build.' },
               { num: '04', title: 'Build Integrity Controls', desc: 'Hardening CI/CD environments. Implementing ephemeral build runners, secure secret management, build provenance attestation, and steps towards reproducible builds.' },
@@ -71,7 +71,7 @@ export default function PlatCodeTrust() {
       <section className="svc-standards section">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Framework: N3-CTAF v1.0</span>
+            <span className="eyebrow">Framework: NS-CTAF v1.0</span>
             <h2>The Nucleus Code Trust Assurance Framework.</h2>
             <p style={{ color: 'var(--slate)', fontSize: '14px', lineHeight: 1.75 }}>86 controls · 6 domains · CTA-1→4 certification · Cryptographically verifiable</p>
           </div>
@@ -104,7 +104,7 @@ export default function PlatCodeTrust() {
             <p>Speak with specialists who build SLSA-aligned pipelines and implement verifiable code trust.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3-CTAF Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS-CTAF Framework</Link>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function CyberPQC() {
             <div className="svc-eyebrow reveal">Cybersecurity &amp; Compliance · 09</div>
             <h1 className="svc-h1 reveal">Post-Quantum Cryptography (PQC)</h1>
             <p className="svc-lede reveal">
-              Quantum computers will eventually break the public-key cryptography that secures the global internet. The threat is not theoretical; adversaries are actively executing "Harvest Now, Decrypt Later" attacks. We deliver PQC readiness assessments and migration roadmaps using the Nucleus Post-Quantum Cryptography Framework (N3-PQCF) — transitioning your infrastructure to quantum-resistant algorithms before the cryptographic deadline.
+              Quantum computers will eventually break the public-key cryptography that secures the global internet. The threat is not theoretical; adversaries are actively executing "Harvest Now, Decrypt Later" attacks. We deliver PQC readiness assessments and migration roadmaps using the Nucleus Post-Quantum Cryptography Framework (NS-PQCF) — transitioning your infrastructure to quantum-resistant algorithms before the cryptographic deadline.
             </p>
             <div className="svc-hero-ctas reveal">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
@@ -75,7 +75,7 @@ export default function CyberPQC() {
             <h2>PQC methodologies.</h2>
           </div>
           <div className="standards-grid">
-            {['NIST PQC Standards (FIPS 203, 204, 205)', 'NSA CNSA Suite 2.0', 'CISA PQC Guidance', 'IETF PQC Drafts', 'N3-PQCF'].map(s => (
+            {['NIST PQC Standards (FIPS 203, 204, 205)', 'NSA CNSA Suite 2.0', 'CISA PQC Guidance', 'IETF PQC Drafts', 'NS-PQCF'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>
@@ -90,7 +90,7 @@ export default function CyberPQC() {
           </div>
           <div className="related-grid">
             <Link className="related-card reveal" to="/what-we-do/platform/secure-architecture"><h4>Secure Architecture Review</h4><p>Building cryptographic agility into the foundation of new software platforms.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/what-we-do/cyber/data-privacy"><h4>Data Privacy &amp; Protection</h4><p>Understanding which data possesses the shelf-life to warrant immediate PQC migration.</p><span className="arr-link">Learn more →</span></Link>
+            <Link className="related-card reveal" to="/what-we-do/cyber/compliance"><h4>Data Privacy &amp; Protection</h4><p>Understanding which data possesses the shelf-life to warrant immediate PQC migration.</p><span className="arr-link">Learn more →</span></Link>
             <Link className="related-card reveal" to="/sectors/government-public-sector"><h4>Government &amp; Public Sector</h4><p>Navigating federal mandates for post-quantum cryptographic migration.</p><span className="arr-link">Learn more →</span></Link>
           </div>
         </div>

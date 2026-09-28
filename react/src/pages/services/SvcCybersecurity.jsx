@@ -53,7 +53,7 @@ export default function SvcCybersecurity() {
       <section className="svc-what section">
         <div className="wrap">
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">What We Do</span>
+            <span className="eyebrow">Services</span>
             <h2>Cybersecurity Strategy, Maturity &amp; Leadership</h2>
             <p>We deliver across the full cybersecurity leadership lifecycle — from baseline assessment through to continuous advisory, fractional CISO leadership and managed improvement programmes.</p>
           </div>

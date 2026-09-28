@@ -1,0 +1,710 @@
+/* ==========================================================================
+   NUCLEUS â€” SERVICES / WHAT WE DO  Â·  West Monroe style system v2
+   ========================================================================== */
+
+:root {
+  --wm-navy:   #0A093D;
+  --wm-yellow: #DFFF00;
+  --wm-pink:   #E00070;
+  --wm-bg:     #F0F2F5;
+  --wm-text:   #333333;
+  --wm-border: rgba(10,9,61,0.10);
+  --wm-dot:    rgba(10,9,61,0.07);
+}
+
+.wm-page {
+  background: var(--wm-bg);
+  color: var(--wm-text);
+  overflow-x: hidden;
+  text-align: left;
+}
+
+.wm-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--wm-navy);
+  margin-bottom: 20px;
+  display: block;
+  font-family: 'Courier New', monospace;
+}
+
+.wm-h1 {
+  font-size: clamp(36px, 5vw, 66px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--wm-navy);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.wm-h2 {
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--wm-navy);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.wm-h1 mark, .wm-h2 mark {
+  background-color: var(--wm-yellow);
+  color: var(--wm-navy);
+  padding: 2px 6px;
+  display: inline;
+}
+
+.wm-lede {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 680px;
+  margin-bottom: 36px;
+}
+
+.wm-hero {
+  position: relative;
+  padding: 96px 0 80px;
+  background-color: #fff;
+  background-image: radial-gradient(circle, var(--wm-dot) 1.5px, transparent 0);
+  background-size: 28px 28px;
+  border-bottom: 1px solid var(--wm-border);
+}
+
+.wm-hero::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--wm-pink);
+}
+
+.wm-hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.wm-hero-img-box { position: relative; }
+
+.wm-hero-img-box img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  box-shadow: 14px 14px 0 0 var(--wm-navy);
+}
+
+.wm-hero-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  box-shadow: 14px 14px 0 0 var(--wm-navy);
+}
+
+.wm-section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--wm-border);
+  background: #fff;
+}
+
+.wm-section-alt {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--wm-border);
+  background-color: var(--wm-bg);
+  background-image: radial-gradient(circle, var(--wm-dot) 1.5px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.wm-section-dotted {
+  background-color: var(--wm-bg) !important;
+  background-image: radial-gradient(circle, var(--wm-dot) 1.5px, transparent 0) !important;
+  background-size: 28px 28px !important;
+}
+
+.wm-chain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 16px;
+}
+
+.wm-chain-node {
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  padding: 20px 24px;
+  min-width: 160px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.wm-chain-node:hover {
+  box-shadow: 0 8px 28px rgba(10,9,61,0.12);
+  transform: translateY(-2px);
+}
+
+.wm-chain-node + .wm-chain-node::before {
+  content: '\203a';
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--wm-pink);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wm-chain-step {
+  color: var(--wm-pink);
+  font-weight: 900;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.wm-chain-short {
+  font-weight: 800;
+  color: var(--wm-navy);
+  font-size: 13px;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.wm-chain-code {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+
+.wm-zigzag {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.wm-zz-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  box-shadow: 14px 14px 0 0 var(--wm-navy);
+}
+
+.wm-zz-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  box-shadow: 14px 14px 0 0 var(--wm-navy);
+}
+
+.wm-zz-content h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--wm-navy);
+}
+
+.wm-problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wm-problem-list li {
+  padding-left: 16px;
+  border-left: 3px solid var(--wm-yellow);
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555;
+}
+
+.wm-problem-list li strong {
+  display: block;
+  color: var(--wm-navy);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.wm-services-header {
+  border-top: 2.5px solid var(--wm-navy);
+  padding-top: 24px;
+  margin-bottom: 0;
+}
+
+.wm-services-header h2 {
+  font-size: 19px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--wm-navy);
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+}
+
+.wm-services-header p {
+  font-size: 15px;
+  color: #666;
+  margin: 0 0 36px;
+  max-width: 560px;
+}
+
+.wm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.wm-card {
+  background: var(--wm-navy);
+  color: #fff;
+  padding: 36px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.22s ease;
+  min-height: 260px;
+}
+
+.wm-card::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--wm-yellow);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.22s ease;
+}
+
+.wm-card:hover { background: #0f0e52; }
+.wm-card:hover::after { transform: scaleY(1); }
+
+.wm-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.wm-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.wm-card-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: auto;
+}
+
+.wm-card-link::after {
+  content: '\203a';
+  font-size: 20px;
+  color: var(--wm-yellow);
+  transition: transform 0.18s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.wm-card:hover .wm-card-link::after { transform: translateX(4px); }
+
+.wm-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--wm-navy);
+  border-top: 3px solid var(--wm-pink);
+}
+
+.wm-stat {
+  padding: 48px 36px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.wm-stat:last-child { border-right: none; }
+
+.wm-stat-num {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900;
+  color: var(--wm-yellow);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.wm-stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.wm-result-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+}
+
+.wm-result-img {
+  min-height: 380px;
+  background-size: cover;
+  background-position: center;
+}
+
+.wm-result-content {
+  background: var(--wm-navy);
+  padding: 56px 52px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wm-result-eyebrow {
+  color: var(--wm-pink);
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+}
+
+.wm-result-h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.wm-result-p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.wm-faq-header {
+  border-bottom: 2px solid var(--wm-navy);
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.wm-faq-header h2 {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--wm-navy);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.wm-faq-item {
+  border-bottom: 1px solid var(--wm-border);
+}
+
+.wm-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  gap: 24px;
+}
+
+.wm-faq-question span {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wm-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wm-faq-icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--wm-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--wm-navy);
+  transition: background 0.18s, color 0.18s;
+  line-height: 1;
+}
+
+.wm-faq-item.open .wm-faq-icon {
+  background: var(--wm-navy);
+  color: #fff;
+}
+
+.wm-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.wm-faq-item.open .wm-faq-answer {
+  max-height: 600px;
+  padding-bottom: 24px;
+}
+
+.wm-faq-answer p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #555;
+  margin: 0;
+  max-width: 760px;
+}
+
+.wm-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--wm-navy);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 2px solid var(--wm-navy);
+}
+
+.wm-pill-btn:hover {
+  background: var(--wm-yellow);
+  color: var(--wm-navy);
+  border-color: var(--wm-yellow);
+  box-shadow: 0 4px 20px rgba(223,255,0,0.3);
+}
+
+.wm-pill-btn-outline {
+  background: transparent;
+  color: var(--wm-navy);
+  border: 2px solid var(--wm-navy);
+}
+
+.wm-pill-btn-outline:hover {
+  background: var(--wm-navy);
+  color: #fff;
+}
+
+/* ============================================================
+   WEST MONROE MEGA-MENU â€” Services dropdown
+   ============================================================ */
+
+.wm-mega {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 50vh;
+  background: #0A093D;
+  z-index: 9000;
+  flex-direction: row;
+  align-items: stretch;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.nav-item.open .wm-mega {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.wm-mega-label {
+  width: 340px;
+  min-width: 260px;
+  min-height: 50vh;
+  flex-shrink: 0;
+  padding: 56px 48px 56px 64px;
+  border-right: 1px solid rgba(255,255,255,0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wm-mega-title {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.38);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: 'Courier New', monospace;
+}
+
+.wm-mega-sub {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.48);
+  margin: 0;
+}
+
+.wm-mega-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-mega-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 72px;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  transition: color 0.18s;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.wm-mega-item:last-child {
+  border-bottom: none;
+}
+
+.wm-mega-item:hover {
+  color: #fff;
+}
+
+/* â”€â”€ Responsive â”€â”€ */
+@media (max-width: 1100px) {
+  .wm-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .wrap { padding: 0 24px; }
+  .wm-hero-inner, .wm-zigzag, .wm-result-block { grid-template-columns: 1fr; gap: 40px; }
+  .wm-hero-img-box { display: none; }
+  .wm-grid { grid-template-columns: repeat(2, 1fr); }
+  .wm-stats { grid-template-columns: 1fr; }
+  .wm-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .wm-result-content { padding: 36px 24px; }
+  .wm-chain { gap: 12px; }
+  .wm-chain-node + .wm-chain-node::before { display: none; }
+  .wm-mega { display: none !important; }
+}
+
+@media (max-width: 560px) {
+  .wm-grid { grid-template-columns: 1fr; }
+  .wm-hero { padding: 72px 0 56px; }
+  .wm-section, .wm-section-alt { padding: 64px 0; }
+}
+
+/* ── Industries mega panel — same 50vh height as Services ── */
+/* inherits min-height:50vh from .wm-mega — no override needed */
+
+.wm-mega--industries .wm-mega-label {
+  padding: 56px 48px 56px 64px;
+  justify-content: center;
+}
+
+.wm-mega-ind-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-mega-ind-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 72px;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+  transition: color 0.18s;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.wm-mega-ind-item:last-child {
+  border-bottom: none;
+}
+
+.wm-mega-ind-item:hover {
+  color: #fff;
+}
+
+/* ── About mega panel — same structure as Industries ── */
+
+.wm-mega--about .wm-mega-label {
+  padding: 56px 48px 56px 64px;
+  justify-content: center;
+}
+
+.wm-mega-about-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wm-mega-about-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 72px;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+  transition: color 0.18s;
+  font-family: 'Courier New', monospace;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.wm-mega-about-item:last-child {
+  border-bottom: none;
+}
+
+.wm-mega-about-item:hover {
+  color: #fff;
+}

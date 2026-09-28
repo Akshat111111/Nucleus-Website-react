@@ -10,7 +10,7 @@ const PILLARS = [
     ],
   },
   {
-    title: 'Digital Platform Trust and Security Assurance',
+    title: 'Digital Platform Trust & Security Assurance',
     links: [
       { label: 'Secure Software \u0026 DevSecOps', to: '/services/secure-software' },
       { label: 'Digital Infrastructure \u0026 Critical Systems', to: '/services/digital-infrastructure' },
@@ -19,7 +19,7 @@ const PILLARS = [
     ],
   },
   {
-    title: 'Cybersecurity and Compliance Maturity Management',
+    title: 'Cybersecurity Maturity Management & M&A Risk',
     links: [
       { label: 'Cybersecurity Strategy \u0026 Leadership', to: '/services/cybersecurity-advisory' },
       { label: 'Fractional / Interim CISO', to: '/services/fractional-ciso' },

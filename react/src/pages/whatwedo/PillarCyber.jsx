@@ -1,215 +1,274 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useState } from 'react'
+import heroCyber from '../../assets/hero_cyber.jpg'
 
 const CYBER_CHAIN = [
-  { code: 'N3-CMMF v1.0', short: 'Cybersecurity Maturity Management', step: '01' },
-  { code: 'N3-PQCF v1.0', short: 'Post-Quantum Cryptography', step: '02' },
+  { code: 'NS-CMMF v1.0', short: 'Cybersecurity Maturity Management', step: '01' },
+  { code: 'NS-PQCF v1.0', short: 'Post-Quantum Cryptography', step: '02' },
 ]
 
 const SERVICES = [
   {
-    num: '01',
     title: 'Cybersecurity Maturity Assessment',
     desc: 'Structured maturity assessment aligned to NS-CMMF — 188 controls across 6 domains, evidence-based scoring, financial gap quantification, board-ready reporting and 3-year improvement roadmap.',
     link: '/what-we-do/cyber/maturity',
-    tags: ['NS-CMMF', 'Maturity Assessment', 'Board Reporting'],
   },
   {
-    num: '02',
     title: 'Cybersecurity Governance',
     desc: 'Cybersecurity strategy, governance model design, policy frameworks, security committee structures, RACI and accountability frameworks — the governance layer that makes security programmes work.',
     link: '/what-we-do/cyber/governance',
-    tags: ['Governance', 'CISO Advisory', 'Policy Frameworks'],
   },
   {
-    num: '03',
     title: 'Fractional / Virtual CISO',
     desc: 'CISO-level security leadership without a full-time appointment — fractional CISO, virtual CISO and interim CISO roles for organisations requiring experienced security leadership at board and executive level.',
     link: '/what-we-do/cyber/fractional-ciso',
-    tags: ['Fractional CISO', 'vCISO', 'Interim CISO'],
   },
   {
-    num: '04',
     title: 'Compliance Programme Management',
     desc: 'Regulatory compliance programme delivery — ISO 27001 certification, SOC 2 readiness, PCI DSS compliance, NIS2 implementation, DORA operational resilience, GDPR and Cyber Resilience Act preparation.',
     link: '/what-we-do/cyber/compliance',
-    tags: ['ISO 27001', 'DORA', 'NIS2', 'SOC 2', 'PCI DSS'],
   },
   {
-    num: '05',
     title: 'Operational Resilience',
     desc: 'Business continuity, disaster recovery, incident response planning and tabletop exercises — ensuring organisations can withstand, respond to and recover from security incidents and operational disruptions.',
     link: '/what-we-do/cyber/resilience',
-    tags: ['BCP', 'Disaster Recovery', 'IR Planning', 'Tabletop'],
   },
   {
-    num: '06',
     title: 'Threat & Vulnerability Management',
     desc: 'Continuous attack surface management — vulnerability assessments, threat intelligence, dark web monitoring, adversary simulation and exposure prioritisation across enterprise environments.',
     link: '/what-we-do/cyber/tvem',
-    tags: ['Vulnerability Management', 'Attack Surface', 'Dark Web'],
   },
   {
-    num: '07',
     title: 'Managed Security & MDR',
-    desc: 'Managed Detection and Response, MXDR, managed SOC and endpoint security management — the CyberOne managed security capability delivering 24/7 monitoring and response for organisations that need more than periodic assessment.',
+    desc: 'Managed Detection and Response, MXDR, managed SOC and endpoint security management — delivering 24/7 monitoring and response for organisations that need more than periodic assessment.',
     link: '/what-we-do/cyber/managed-security',
-    tags: ['MDR', 'SOC', 'CyberOne', 'Zero Trust'],
   },
   {
-    num: '08',
     title: 'Post-Quantum Cryptography',
     desc: 'Structured PQC readiness aligned to NS-PQCF — cryptographic inventory, CBOM construction, algorithm migration roadmap, crypto-agility assessment and supplier PQC readiness programme.',
     link: '/what-we-do/cyber/pqc',
-    tags: ['NS-PQCF', 'PQC Migration', 'CBOM', 'Crypto-Agility'],
   },
   {
-    num: '09',
     title: 'M&A Cyber Advisory',
     desc: 'Specialist cyber due diligence across the M&A lifecycle — buy-side technical validation, sell-side cyber readiness, post-close remediation and PE portfolio cybersecurity management across 250+ transactions.',
     link: '/what-we-do/cyber/ma',
-    tags: ['M&A Due Diligence', 'Buy-Side DD', 'Sell-Side', 'PE Portfolio'],
   },
 ]
+
+const PROBLEMS = [
+  {
+    title: 'Regulatory convergence and overlap',
+    desc: 'DORA, NIS2, ISO 27001, PCI DSS and CRA overlap significantly — but require separate evidence sets, different audit formats and distinct governance obligations. Without a unified maturity framework, organisations duplicate effort and still have gaps.',
+  },
+  {
+    title: 'Board accountability without board understanding',
+    desc: 'Regulators require board-level cybersecurity governance and accountability. Boards require evidence they can understand and act on. Translating technical security posture into investment-grade governance reporting is a specialist skill.',
+  },
+  {
+    title: 'Post-quantum timeline compression',
+    desc: 'Harvest-now, decrypt-later attacks mean cryptographic migration to post-quantum algorithms is already urgent — not a 2030 problem. Organisations without a cryptographic inventory cannot assess their exposure or plan their migration.',
+  },
+  {
+    title: 'M&A creating cybersecurity liability',
+    desc: 'Acquisitions without structured cyber due diligence routinely create post-close cybersecurity liabilities that exceed the cost of the diligence itself. 250+ M&A transactions have given us a precise view of where cyber risk hides in deal processes.',
+  },
+]
+
+const FAQS = [
+  {
+    q: 'What is cybersecurity maturity management?',
+    a: 'Cybersecurity maturity management is a structured approach to measuring, improving and governing an organisation\'s security controls against a defined framework — such as our proprietary NS-CMMF, which assesses 188 controls across 6 domains. Maturity programmes produce evidence-based scores, financial gap quantification and board-ready roadmaps.',
+  },
+  {
+    q: 'How does compliance differ from maturity?',
+    a: 'Compliance validates that specific controls are present at a point in time. Maturity management continuously measures how well those controls are implemented, sustained and improved. Compliance is the floor; maturity is the ceiling. Organisations that pursue compliance without maturity often fail audits because they cannot demonstrate sustained operation of controls.',
+  },
+  {
+    q: 'What is a fractional CISO and when does it make sense?',
+    a: 'A fractional CISO provides board-level cybersecurity leadership on a part-time or interim basis — typically 2–4 days per week. It makes sense for organisations that need CISO-calibre oversight but cannot justify or afford a full-time appointment, or who need experienced leadership during a transition period.',
+  },
+  {
+    q: 'How long does a cybersecurity maturity assessment take?',
+    a: 'Our NS-CMMF assessments typically run 4–6 weeks for a standard enterprise scope — covering evidence review, control interviews, technical validation and board report production. Specific scopes can be scoped and delivered faster for focused engagements.',
+  },
+]
+
+function FAQ({ items }) {
+  const [open, setOpen] = useState(null)
+  return (
+    <div>
+      {items.map((item, i) => (
+        <div key={i} className={`wm-faq-item${open === i ? ' open' : ''}`}>
+          <button className="wm-faq-question" onClick={() => setOpen(open === i ? null : i)}>
+            <span>{item.q}</span>
+            <span className="wm-faq-icon">{open === i ? '−' : '+'}</span>
+          </button>
+          <div className="wm-faq-answer"><p>{item.a}</p></div>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function PillarCyber() {
   useReveal()
   return (
-    <div id="view-svc">
-      <section className="svc-hero">
+    <div className="wm-page">
+
+      {/* ── Hero ── */}
+      <section className="wm-hero">
         <div className="wrap">
-          <div className="svc-hero-inner">
-            <div className="svc-eyebrow reveal">What We Do · 03</div>
-            <h1 className="svc-h1 reveal">Cybersecurity &amp; Compliance Maturity Management</h1>
-            <p className="svc-lede reveal">
-              Organisations face escalating regulatory obligations — DORA, NIS2, ISO 27001, PCI DSS, and now the Cyber Resilience Act — while simultaneously managing a threat environment that rewards maturity gaps. We deliver structured cybersecurity maturity programmes, compliance frameworks and specialist advisory services — from board-level governance through to 24/7 managed security operations — using two proprietary frameworks.
-            </p>
-            <div className="svc-hero-ctas reveal">
-              <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">Our Frameworks <span className="arr">→</span></Link>
+          <div className="wm-hero-inner">
+            <div>
+              <span className="wm-eyebrow reveal">Services · 03</span>
+              <h1 className="wm-h1 reveal">Cybersecurity &amp; Compliance <mark>Maturity Management</mark></h1>
+              <p className="wm-lede reveal">
+                Organisations face escalating regulatory obligations — DORA, NIS2, ISO 27001, PCI DSS, and the Cyber Resilience Act — while managing a threat environment that rewards maturity gaps. We deliver structured cybersecurity maturity programmes, compliance frameworks and specialist advisory services using two proprietary frameworks.
+              </p>
+              <div className="reveal" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Link className="wm-pill-btn" to="/contact">Book a Briefing</Link>
+                <Link className="wm-pill-btn wm-pill-btn-outline" to="/impact">Our Frameworks</Link>
+              </div>
+            </div>
+            <div className="wm-hero-img-box reveal">
+              <img src="/images/cyber_hero.jpg" alt="Cybersecurity and Maturity" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4px' }} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cyber & Compliance Chain */}
-      <section className="reach-strip">
-        <div className="rs-inner">
-          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-            <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--orange)' }}>
-              The Cyber & Compliance Chain — Two Frameworks in Sequence
-            </span>
+      {/* ── Stats strip ── */}
+      <div className="wm-stats">
+        <div className="wm-stat reveal">
+          <div className="wm-stat-num">250+</div>
+          <div className="wm-stat-label">M&amp;A Transactions Advised</div>
+        </div>
+        <div className="wm-stat reveal">
+          <div className="wm-stat-num">188</div>
+          <div className="wm-stat-label">NS-CMMF Controls Assessed</div>
+        </div>
+        <div className="wm-stat reveal">
+          <div className="wm-stat-num">6</div>
+          <div className="wm-stat-label">Compliance Frameworks Covered</div>
+        </div>
+      </div>
+
+      {/* ── Framework Chain ── */}
+      <section className="wm-section-alt">
+        <div className="wrap">
+          <div style={{ textAlign: 'center', marginBottom: '48px' }} className="reveal">
+            <span className="wm-eyebrow" style={{ color: 'var(--wm-pink)' }}>The Cyber &amp; Compliance Chain — Two Frameworks in Sequence</span>
+            <h2 className="wm-h2" style={{ marginBottom: '8px' }}>Measure maturity. <mark>Close compliance gaps.</mark> Prepare for post-quantum.</h2>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', flexWrap: 'wrap', rowGap: '12px' }}>
+          <div className="wm-chain">
             {CYBER_CHAIN.map((f, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
-                <div className="reveal" style={{ textAlign: 'center', padding: '14px 28px', background: 'rgba(255,255,255,.06)', borderRadius: '10px', minWidth: '190px' }}>
-                  <div style={{ fontFamily: 'var(--mono)', fontSize: '8.5px', fontWeight: 700, color: '#4f8ef7', letterSpacing: '.1em', textTransform: 'uppercase', marginBottom: '5px' }}>{f.step}</div>
-                  <div style={{ fontSize: '10px', fontWeight: 700, color: 'var(--white)', marginBottom: '4px' }}>{f.short}</div>
-                  <div style={{ fontFamily: 'var(--mono)', fontSize: '8px', color: 'rgba(255,255,255,.45)', letterSpacing: '.06em' }}>{f.code}</div>
-                </div>
-                {i < CYBER_CHAIN.length - 1 && (
-                  <div style={{ padding: '0 10px', color: 'rgba(255,255,255,.25)', fontSize: '16px', fontWeight: 300 }}>→</div>
-                )}
+              <div key={i} className="wm-chain-node reveal">
+                <div className="wm-chain-step">{f.step}</div>
+                <div className="wm-chain-short">{f.short}</div>
+                <div className="wm-chain-code">{f.code}</div>
               </div>
             ))}
           </div>
-          <p className="rs-tagline reveal" style={{ marginTop: '24px' }}>Measure maturity. Close compliance gaps. Prepare for post-quantum. Build continuously.</p>
         </div>
       </section>
 
-      {/* Problem */}
-      <section className="svc-problem section">
+      {/* ── Problem ZigZag ── */}
+      <section className="wm-section">
         <div className="wrap">
-          <div className="svc-problem-grid">
-            <div className="svc-problem-left reveal">
-              <span className="eyebrow" style={{ color: 'var(--orange)' }}>Why Cybersecurity Maturity Is the Foundation</span>
-              <h2>Compliance is a floor, not a ceiling — but most organisations cannot demonstrate they've reached it.</h2>
-              <p>DORA, NIS2, ISO 27001, PCI DSS and the Cyber Resilience Act create overlapping regulatory obligations for organisations operating in regulated sectors. Meeting them requires structured maturity measurement, documented evidence, and a governance framework that translates security controls into board-level accountability. Most organisations attempt compliance without the underlying maturity programme — and fail both.</p>
+          <div className="wm-zigzag">
+            <div className="wm-zz-content reveal">
+              <span className="wm-eyebrow">Why Cybersecurity Maturity Is the Foundation</span>
+              <h2 className="wm-h2">Compliance is a floor, not a ceiling — <mark>but most organisations cannot demonstrate they've reached it.</mark></h2>
+              <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#555', marginBottom: '28px' }}>
+                DORA, NIS2, ISO 27001, PCI DSS and the Cyber Resilience Act create overlapping regulatory obligations for organisations operating in regulated sectors. Meeting them requires structured maturity measurement, documented evidence, and a governance framework that translates security controls into board-level accountability.
+              </p>
+              <ul className="wm-problem-list">
+                {PROBLEMS.map((p, i) => (
+                  <li key={i}><strong>{p.title}</strong>{p.desc}</li>
+                ))}
+              </ul>
             </div>
-            <div className="svc-problem-right">
-              {[
-                { title: 'Regulatory convergence and overlap', desc: 'DORA, NIS2, ISO 27001, PCI DSS and CRA overlap significantly — but require separate evidence sets, different audit formats and distinct governance obligations. Without a unified maturity framework, organisations duplicate effort and still have gaps.' },
-                { title: 'Board accountability without board understanding', desc: 'Regulators require board-level cybersecurity governance and accountability. Boards require evidence they can understand and act on. Translating technical security posture into investment-grade governance reporting is a specialist skill.' },
-                { title: 'Post-quantum timeline compression', desc: 'Harvest-now, decrypt-later attacks mean cryptographic migration to post-quantum algorithms is already urgent — not a 2030 problem. Organisations without a cryptographic inventory cannot assess their exposure or plan their migration.' },
-                { title: 'M&A creating cybersecurity liability', desc: 'Acquisitions without structured cyber due diligence routinely create post-close cybersecurity liabilities that exceed the cost of the diligence itself. 250+ M&A transactions have given us a precise view of where cyber risk hides in deal processes.' },
-              ].map((p, i) => (
-                <div className="svc-prob-item reveal" key={i}><h4>{p.title}</h4><p>{p.desc}</p></div>
-              ))}
+            <div className="reveal">
+              <div className="wm-zz-placeholder" style={{ overflow: 'hidden' }}>
+                <img src="/images/cyber_hero.jpg" alt="Cyber abstract" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="svc-what section">
+      {/* ── Services Grid ── */}
+      <section className="wm-section-alt">
         <div className="wrap">
-          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">Nine Service Domains</span>
-            <h2>Cybersecurity &amp; Compliance Maturity Management — what we deliver.</h2>
-            <p>From maturity measurement to managed security operations — nine service domains covering every dimension of enterprise cybersecurity and compliance.</p>
+          <div className="wm-services-header reveal">
+            <div>
+              <h2>How We Can Help with Cybersecurity &amp; Compliance</h2>
+              <p>Nine service domains covering every dimension of enterprise cybersecurity — from maturity measurement to 24/7 managed security operations.</p>
+            </div>
           </div>
-          <div className="svc-what-grid">
+          <div className="wm-grid">
             {SERVICES.map((s, i) => (
-              <Link className="svc-what-card reveal" to={s.link} key={i} style={{ textDecoration: 'none', cursor: 'pointer' }}>
-                <div className="svc-what-num">{s.num}</div>
-                <h3 className="svc-what-title">{s.title}</h3>
-                <p className="svc-what-desc">{s.desc}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginTop: '12px' }}>
-                  {s.tags.map(t => (
-                    <span key={t} style={{ fontSize: '9.5px', background: 'rgba(79,142,247,.1)', color: '#4f8ef7', border: '1px solid rgba(79,142,247,.25)', borderRadius: '5px', padding: '2px 7px', fontWeight: 700, letterSpacing: '.04em' }}>{t}</span>
-                  ))}
-                </div>
-                <span className="arr-link" style={{ marginTop: '12px', display: 'block' }}>Learn more →</span>
+              <Link to={s.link} key={i} className="wm-card reveal">
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+                <div className="wm-card-link">Learn More</div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Standards */}
-      <section className="svc-standards section">
+      {/* ── Standards block ── */}
+      <section className="wm-section">
         <div className="wrap">
-          <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Frameworks &amp; Standards</span>
-            <h2>The regulatory and security frameworks we work to.</h2>
-          </div>
-          <div className="standards-grid">
-            {['NIST CSF 2.0', 'ISO/IEC 27001:2022', 'DORA (EU)', 'NIS2 Directive', 'PCI DSS v4.0', 'SOC 2 Type II', 'ISO 22301 (BCMS)', 'CIS CSC v8', 'NIST SP 800-53', 'Cyber Resilience Act', 'NIST PQC Standards', 'ETSI Quantum-Safe'].map(s => (
-              <span className="standard-badge reveal" key={s}>{s}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Related */}
-      <section className="svc-related section">
-        <div className="wrap">
-          <div className="section-head reveal" style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <span className="eyebrow">Connected Capabilities</span>
-            <h2>Cybersecurity &amp; Compliance connects to</h2>
-          </div>
-          <div className="related-grid">
-            <Link className="related-card reveal" to="/what-we-do/ai-governance-security"><h4>AI Governance &amp; Security</h4><p>AI governance adds an AI-specific compliance layer on top of enterprise cybersecurity maturity.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/what-we-do/digital-platform-trust"><h4>Digital Platform Trust</h4><p>Platform security and code trust — the technical controls that underpin compliance evidence.</p><span className="arr-link">Learn more →</span></Link>
-            <Link className="related-card reveal" to="/experience/ma"><h4>M&amp;A Experience</h4><p>250+ M&amp;A transactions — buy-side, sell-side, post-deal and portfolio cybersecurity advisory.</p><span className="arr-link">Explore →</span></Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="cta-band reveal">
-            <h2>Compliance is a floor, not a destination. Maturity is the goal.</h2>
-            <p>Speak with a practitioner who has delivered cybersecurity maturity programmes across financial services, government, DPI and private equity — not a generalist running a checklist.</p>
-            <div className="cta-btns">
-              <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">Our Cyber Frameworks</Link>
+          <div className="wm-result-block reveal">
+            <div className="wm-result-img" style={{ minHeight: 380, overflow: 'hidden' }}>
+              <img src="/images/cyber_hero.jpg" alt="Cyber Frameworks" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <div className="wm-result-content">
+              <div className="wm-result-eyebrow">Frameworks &amp; Standards</div>
+              <h3 className="wm-result-h3">The regulatory and security frameworks we work to.</h3>
+              <p className="wm-result-p">
+                {['NIST CSF 2.0', 'ISO/IEC 27001:2022', 'DORA (EU)', 'NIS2 Directive', 'PCI DSS v4.0', 'SOC 2 Type II', 'ISO 22301', 'CIS CSC v8', 'NIST SP 800-53', 'Cyber Resilience Act', 'NIST PQC Standards', 'ETSI Quantum-Safe'].join(' · ')}
+              </p>
+              <Link to="/impact" className="wm-pill-btn">View Our Cyber Frameworks</Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── FAQ ── */}
+      <section className="wm-section-alt">
+        <div className="wrap">
+          <div className="wm-faq-header reveal" style={{ marginBottom: '0' }}>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div className="reveal">
+            <FAQ items={FAQS} />
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="wm-section" style={{ textAlign: 'center' }}>
+        <div className="wrap">
+          <div className="reveal">
+            <span className="wm-eyebrow">Connected Capabilities</span>
+            <h2 className="wm-h2">Cybersecurity &amp; Compliance <mark>connects to</mark></h2>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap', margin: '32px 0 56px' }}>
+              <Link to="/what-we-do/ai-governance-security" className="wm-pill-btn wm-pill-btn-outline">AI Governance &amp; Security</Link>
+              <Link to="/what-we-do/digital-platform-trust" className="wm-pill-btn wm-pill-btn-outline">Digital Platform Trust &amp; Assurance</Link>
+            </div>
+            <h2 className="wm-h2" style={{ fontSize: '26px' }}>Compliance is a floor, not a destination. Maturity is the goal.</h2>
+            <p style={{ margin: '16px auto 36px', maxWidth: '600px', color: '#555', fontSize: '16px' }}>
+              Speak with a practitioner who has delivered cybersecurity maturity programmes across financial services, government, DPI and private equity.
+            </p>
+            <Link className="wm-pill-btn" to="/contact">Book a Briefing</Link>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }

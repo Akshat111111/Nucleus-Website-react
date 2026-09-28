@@ -25,7 +25,7 @@ export default function SvcResilience() {
       <section className="svc-what section">
         <div className="wrap">
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
-            <span className="eyebrow">What We Do</span>
+            <span className="eyebrow">Services</span>
             <h2>Operational Resilience &amp; Managed Security Services</h2>
           </div>
           <div className="svc-what-grid">
@@ -34,7 +34,7 @@ export default function SvcResilience() {
               { num: '02', title: 'Incident Response Playbook Development', desc: 'Structured incident response playbooks covering ransomware, data breach, DDoS, insider threat, supply chain compromise and AI-specific scenarios — tested through tabletop exercises before a real incident occurs.' },
               { num: '03', title: 'Tabletop Exercises &amp; Simulation', desc: 'Facilitated tabletop exercises and red team simulations that test whether your response plans work under realistic attack conditions — not as documented procedures, but as lived experience.' },
               { num: '04', title: 'Business Continuity &amp; Disaster Recovery', desc: 'BCP and DR programme review, RTO/RPO validation, tested recovery programme design and cyber insurance alignment — building demonstrable recovery capability for regulators and insurers.' },
-              { num: '05', title: 'Managed Detection &amp; Response (MDR)', desc: '24/7 threat detection, investigation and response delivered through our specialist MSSP partnership with CyberOne — with detection findings contextualised against your security maturity programme, not treated as isolated tickets.' },
+              { num: '05', title: 'Managed Detection &amp; Response (MDR)', desc: '24/7 threat detection, investigation and response — with detection findings contextualised against your security maturity programme, not treated as isolated tickets.' },
               { num: '06', title: 'SOC Advisory &amp; Improvement', desc: 'SOC capability maturity assessment, technology stack review, detection engineering improvement, SIEM optimisation, UEBA configuration and threat hunting programme development.' },
             ].map((s, i) => (
               <div className="svc-what-card reveal" key={i}>
@@ -53,7 +53,7 @@ export default function SvcResilience() {
           <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '640px' }}>
             <span className="eyebrow">Managed Detection &amp; Response</span>
             <h2>24/7 MDR that connects detection to security improvement.</h2>
-            <p>Delivered through our specialist MSSP partnership with CyberOne — detection events are contextualised against your security posture, so incidents become evidence in your improvement programme rather than isolated closed tickets.</p>
+            <p>Detection events are contextualised against your security posture, so incidents become evidence in your improvement programme rather than isolated closed tickets.</p>
           </div>
           <div className="svc-what-grid">
             {[
@@ -76,8 +76,8 @@ export default function SvcResilience() {
           <div className="svc-problem-grid" style={{ marginTop: '48px' }}>
             <div className="svc-problem-left reveal">
               <span className="eyebrow" style={{ color: 'var(--orange)' }}>The Partnership</span>
-              <h2>CyberOne MSSP · Nucleus Systems delivery</h2>
-              <p>CyberOne brings deep SOC operations, SIEM/SOAR infrastructure, EDR/XDR tooling and 24/7 analyst coverage. Nucleus Systems provides the security programme layer — connecting detection events to security improvement, and ensuring MDR output feeds directly into your board and regulator reporting.</p>
+              <h2>Nucleus Systems MDR Delivery</h2>
+              <p>Nucleus Systems provides the security programme layer — connecting detection events to security improvement, and ensuring MDR output feeds directly into your board and regulator reporting, underpinned by deep SOC operations, SIEM/SOAR infrastructure, EDR/XDR tooling and 24/7 analyst coverage.</p>
               <p style={{ marginTop: '12px' }}>Detection rules, alert triage and threat hunting playbooks are mapped to MITRE ATT&CK tactics and techniques — giving you visibility into which adversary techniques are actively being used against your environment, not just which alerts fired.</p>
             </div>
             <div className="svc-problem-right">

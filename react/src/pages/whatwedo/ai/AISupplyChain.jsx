@@ -75,7 +75,7 @@ export default function AISupplyChain() {
             <h2>AI supply chain methodologies.</h2>
           </div>
           <div className="standards-grid">
-            {['SLSA for ML', 'CycloneDX (AI SBOM Profile)', 'SPDX', 'NIST SP 800-218A', 'OWASP Top 10 for LLMs (Supply Chain)', 'N3 AISCA Framework'].map(s => (
+            {['SLSA for ML', 'CycloneDX (AI SBOM Profile)', 'SPDX', 'NIST SP 800-218A', 'OWASP Top 10 for LLMs (Supply Chain)', 'NS AISCA Framework'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>
@@ -103,7 +103,7 @@ export default function AISupplyChain() {
             <p>Speak with specialists who secure ML pipelines and build verifiable trust into the AI supply chain.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3 AISCA Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS AISCA Framework</Link>
             </div>
           </div>
         </div>

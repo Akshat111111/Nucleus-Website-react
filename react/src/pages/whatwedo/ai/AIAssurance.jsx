@@ -53,7 +53,7 @@ export default function AIAssurance() {
             {[
               { num: '01', title: 'AI Red Teaming (LLMs & GenAI)', desc: 'Specialist adversarial testing against Generative AI applications. Attempting jailbreaks, prompt injection, extraction of training data, and safety filter bypasses to validate the robustness of the system.' },
               { num: '02', title: 'Adversarial Machine Learning (AML) Testing', desc: 'Testing traditional ML models (e.g., classification, regression) against evasion attacks, data poisoning, and model inversion techniques to ensure resilience in adversarial environments.' },
-              { num: '03', title: 'AI Governance Maturity Assessment', desc: 'Independent assessment of your AI governance programme against the N3-AIGF framework (and by extension, the EU AI Act and ISO 42001), producing a quantified maturity score and gap analysis.' },
+              { num: '03', title: 'AI Governance Maturity Assessment', desc: 'Independent assessment of your AI governance programme against the NS-AIGF framework (and by extension, the EU AI Act and ISO 42001), producing a quantified maturity score and gap analysis.' },
               { num: '04', title: 'TrustOps Metrics & Reporting', desc: 'Developing continuous TrustOps metrics that quantify the security, privacy, and fairness of your AI systems over time, providing leadership with a dashboard of AI trustworthiness.' },
               { num: '05', title: 'Pre-Deployment Assurance Certification', desc: 'Independent security and compliance certification of AI systems prior to production deployment, providing stakeholders with a formal "go/no-go" assurance report.' },
               { num: '06', title: 'Bias & Fairness Testing', desc: 'Structured evaluation of AI models to identify and quantify unintended bias or discriminatory outcomes, ensuring compliance with responsible AI principles and regulatory requirements.' },
@@ -75,7 +75,7 @@ export default function AIAssurance() {
             <h2>AI assurance methodologies.</h2>
           </div>
           <div className="standards-grid">
-            {['MITRE ATLAS', 'OWASP Top 10 for LLMs', 'NIST AI RMF (Measure Function)', 'ISO/IEC 42001 (Auditing)', 'N3-AIGF', 'N3 AISCA'].map(s => (
+            {['MITRE ATLAS', 'OWASP Top 10 for LLMs', 'NIST AI RMF (Measure Function)', 'ISO/IEC 42001 (Auditing)', 'NS-AIGF', 'NS AISCA'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>

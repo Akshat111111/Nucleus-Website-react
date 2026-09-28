@@ -75,7 +75,7 @@ export default function AIGenAI() {
             <h2>GenAI security methodologies.</h2>
           </div>
           <div className="standards-grid">
-            {['OWASP Top 10 for LLMs', 'MITRE ATLAS', 'NIST SP 800-218A (GenAI Profile)', 'N3 AISCA Framework', 'Cloud Security Alliance GenAI Guidelines'].map(s => (
+            {['OWASP Top 10 for LLMs', 'MITRE ATLAS', 'NIST SP 800-218A (GenAI Profile)', 'NS AISCA Framework', 'Cloud Security Alliance GenAI Guidelines'].map(s => (
               <span className="standard-badge reveal" key={s}>{s}</span>
             ))}
           </div>
@@ -103,7 +103,7 @@ export default function AIGenAI() {
             <p>Speak with specialists who test, break, and secure GenAI applications — from RAG pipelines to autonomous agents.</p>
             <div className="cta-btns">
               <Link className="btn btn-orange" to="/contact">Book a Briefing <span className="arr">→</span></Link>
-              <Link className="btn btn-ghost" to="/how-we-do-it">N3 AISCA Framework</Link>
+              <Link className="btn btn-ghost" to="/how-we-do-it">NS AISCA Framework</Link>
             </div>
           </div>
         </div>
