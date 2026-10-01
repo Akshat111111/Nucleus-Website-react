@@ -115,11 +115,11 @@ export default function Home() {
       <div className="interconnect-strip">
         <div className="interconnect-tagline">GOVERN THE AI · TRUST THE PLATFORM · PROVE THE ENTERPRISE</div>
         <div className="interconnect-pillars">
-          <span className="ic-pillar" style={{ color: '#a78bfa' }}>AI Governance &amp; Security</span>
+          <span className="ic-pillar" style={{ color: '#7c3aed' }}>AI Governance &amp; Security</span>
           <span className="ic-arrow">→</span>
-          <span className="ic-pillar" style={{ color: '#67e8f9' }}>Digital Platform Trust &amp; Security Assurance</span>
+          <span className="ic-pillar" style={{ color: '#0891b2' }}>Digital Platform Trust &amp; Security Assurance</span>
           <span className="ic-arrow">→</span>
-          <span className="ic-pillar" style={{ color: '#6ee7b7' }}>Cybersecurity Maturity Management &amp; M&amp;A Risk</span>
+          <span className="ic-pillar" style={{ color: '#059669' }}>Cybersecurity Maturity Management &amp; M&amp;A Risk</span>
         </div>
         <div className="lifecycle-chain">
           {['Strategy','Architecture','Engineering','Validation','Operations','Evidence','Continuous Assurance'].map((step, i, arr) => (
@@ -131,24 +131,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── SECTORS STRIP ── */}
-      <div className="sectors-strip">
-        <div className="wrap">
-          <p className="sectors-strip-title">Who we serve</p>
-          <div className="sectors-links">
-            {[
-              { label: 'Large Enterprises',          to: '/sectors/large-enterprises' },
-              { label: 'Financial Services',          to: '/sectors/financial-services' },
-              { label: 'Government & Public Sector',  to: '/sectors/government-public-sector' },
-              { label: 'Software / SaaS',             to: '/sectors/software-saas' },
-              { label: 'Digital Platforms',           to: '/sectors/digital-platforms' },
-              { label: 'Private Equity / Investors',  to: '/sectors/private-equity' },
-            ].map(s => (
-              <Link key={s.to} className="sector-pill" to={s.to}>{s.label}</Link>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       {/* ── TICKER ── */}
       <div className="ticker-wrap" aria-hidden="true">

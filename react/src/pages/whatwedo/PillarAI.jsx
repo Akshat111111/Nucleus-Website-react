@@ -4,11 +4,11 @@ import { useState } from 'react'
 import heroAI from '../../assets/hero_ai.jpg'
 
 const AI_CHAIN = [
-  { code: 'NS-AIGF v1.0', short: 'AI Governance Framework', step: '01' },
-  { code: 'NS AI-UAF v1.0', short: 'AI Usage Assurance', step: '02' },
-  { code: 'NS AISCA v1.0', short: 'AI Security Controls', step: '03' },
-  { code: 'NS PAISAF v1.0', short: 'Physical AI Safety', step: '04' },
-  { code: 'NS AI² SecOps v1.0', short: 'AI² SecOps', step: '05' },
+  { code: 'NS-AIGF v1.0', short: 'Nucleus Systems AI Governance Framework', step: '01' },
+  { code: 'NS AI-UAF v1.0', short: 'Nucleus Systems AI Usage Assurance Framework', step: '02' },
+  { code: 'NS AISCA v1.0', short: 'Nucleus Systems AI Security Controls Assessment', step: '03' },
+  { code: 'NS PAISAF v1.0', short: 'Nucleus Systems Physical AI Safety Assurance Framework', step: '04' },
+  { code: 'NS AI² SecOps v1.0', short: 'Nucleus Systems AI² Security Operations', step: '05' },
 ]
 
 const SERVICES = [
@@ -124,7 +124,7 @@ export default function PillarAI() {
         <div className="wrap">
           <div className="wm-hero-inner">
             <div>
-              <span className="wm-eyebrow reveal">Services · 01</span>
+              <span className="wm-eyebrow reveal" style={{ fontSize: '18px' }}>Services · 01</span>
               <h1 className="wm-h1 reveal">AI Governance &amp; <mark>Security</mark></h1>
               <p className="wm-lede reveal">
                 Organisations deploying AI — from enterprise copilots to autonomous decision systems — face a dual challenge: governing AI responsibly under an accelerating regulatory framework, and securing AI systems against a rapidly evolving threat landscape. We deliver both, using five proprietary frameworks built specifically for AI assurance.
@@ -161,7 +161,7 @@ export default function PillarAI() {
       <section className="wm-section-alt">
         <div className="wrap">
           <div style={{ textAlign: 'center', marginBottom: '48px' }} className="reveal">
-            <span className="wm-eyebrow" style={{ color: 'var(--wm-pink)' }}>The AI Trust Chain — Five Frameworks in Sequence</span>
+            <span className="wm-eyebrow" style={{ color: 'var(--wm-pink)', fontSize: '18px' }}>The AI Trust Chain — Five Frameworks in Sequence</span>
             <h2 className="wm-h2" style={{ marginBottom: '8px' }}>Govern it. Secure it. <mark>Assure it continuously.</mark></h2>
           </div>
           <div className="wm-chain">
@@ -181,7 +181,7 @@ export default function PillarAI() {
         <div className="wrap">
           <div className="wm-zigzag">
             <div className="wm-zz-content reveal">
-              <span className="wm-eyebrow">Why AI Requires Specialist Advisory</span>
+              <span className="wm-eyebrow" style={{ fontSize: '18px' }}>Why AI Requires Specialist Advisory</span>
               <h2 className="wm-h2">Governance obligations and security threats are converging — <mark>faster than anticipated.</mark></h2>
               <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#555', marginBottom: '28px' }}>
                 The EU AI Act is live. ISO 42001 is the certification standard. NIST AI RMF is the US baseline. Meanwhile, LLM prompt injection, model theft, adversarial inputs and AI supply chain compromise are active attack vectors — not hypothetical risks. Most organisations are navigating both simultaneously with general-purpose advisory support that was never designed for AI.
@@ -230,9 +230,9 @@ export default function PillarAI() {
               <img src="/images/ai_hero.jpg" alt="AI Frameworks" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div className="wm-result-content">
-              <div className="wm-result-eyebrow">Frameworks &amp; Standards</div>
-              <h3 className="wm-result-h3">The regulatory and technical frameworks we work to.</h3>
-              <p className="wm-result-p">
+              <div className="wm-result-eyebrow" style={{ fontSize: '18px' }}>Frameworks &amp; Standards</div>
+              <h3 className="wm-result-h3" style={{ fontSize: '26px' }}>The regulatory and technical frameworks we work to.</h3>
+              <p className="wm-result-p" style={{ fontSize: '17px', lineHeight: 1.8 }}>
                 {['EU AI Act', 'ISO/IEC 42001:2023', 'NIST AI RMF', 'ISO/IEC 23894', 'OWASP LLM Top 10', 'MITRE ATLAS', 'NIST SP 800-218A', 'Cyber Resilience Act', 'ENISA AI Threat Landscape', 'ETSI SAI', 'IEEE 7000 Series', 'SLSA Framework'].join(' · ')}
               </p>
               <Link to="/impact" className="wm-pill-btn">View Our AI Frameworks</Link>
@@ -257,7 +257,7 @@ export default function PillarAI() {
       <section className="wm-section" style={{ textAlign: 'center' }}>
         <div className="wrap">
           <div className="reveal">
-            <span className="wm-eyebrow">Connected Capabilities</span>
+            <span className="wm-eyebrow" style={{ fontSize: '18px' }}>Connected Capabilities</span>
             <h2 className="wm-h2">AI Governance &amp; Security <mark>connects to</mark></h2>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap', margin: '32px 0 56px' }}>
               <Link to="/what-we-do/digital-platform-trust" className="wm-pill-btn wm-pill-btn-outline">Digital Platform Trust &amp; Assurance</Link>
