@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function MaStartup() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Startups & Growth Companies | Fundraising Readiness — Nucleus Systems',
+    description: 'Security assurance for high-growth startups and scale-ups. Investor-ready cybersecurity posture, enterprise security for customer diligence and compliance readiness for Series A through IPO.',
+    canonical: 'https://www.nucleussystems.com/ma/startup-growth',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero svc-hero--ma">

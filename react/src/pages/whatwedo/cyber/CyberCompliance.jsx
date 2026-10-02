@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberCompliance() {
   useReveal()
+  useSEO({
+    title: 'Compliance Programme Management | ISO 27001, DORA, NIS2, SOC 2 — Nucleus Systems',
+    description: 'End-to-end compliance programme management. ISO 27001 certification, SOC 2 readiness, PCI DSS, DORA, NIS2 and Cyber Resilience Act (CRA). Expert guidance for regulated organisations across global markets.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/compliance',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

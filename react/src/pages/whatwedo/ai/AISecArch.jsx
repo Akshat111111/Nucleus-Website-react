@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AISecArch() {
   useReveal()
+  useSEO({
+    title: 'AI Security Architecture | NS-AISCA Framework — Nucleus Systems',
+    description: 'Purpose-built AI security architecture using the NS-AISCA framework. Threat modelling for prompt injection, data poisoning, model evasion and AI supply chain compromise. Zero-trust AI design for enterprises.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/security-architecture',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndFinancial() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Financial Services | Banks, Insurers & Asset Managers — Nucleus Systems',
+    description: 'Specialist cybersecurity, AI governance and compliance advisory for financial services. Banks, insurers, asset managers and central banks across regulated markets. DORA, NIS2 and regulatory compliance experts.',
+    canonical: 'https://www.nucleussystems.com/sectors/financial-services',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

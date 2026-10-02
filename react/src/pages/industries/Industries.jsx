@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function Sectors() {
   useReveal()
+  useSEO({
+    title: 'Sectors We Serve | Financial Services, Government, Private Equity — Nucleus Systems',
+    description: 'Nucleus Systems serves financial services, government, digital public infrastructure, private equity, technology & SaaS, fintech, AI product companies and critical infrastructure across 40+ countries.',
+    canonical: 'https://www.nucleussystems.com/sectors',
+  })
   const sectors = [
     {
       num: '01', title: 'Financial Services', sub: 'Banks · Insurers · Asset Managers · Central Banks',

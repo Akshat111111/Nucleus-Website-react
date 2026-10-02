@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
 import { useState } from 'react'
+import { useSEO } from '../../hooks/useSEO'
 import heroAI from '../../assets/hero_ai.jpg'
 
 const AI_CHAIN = [
@@ -116,6 +117,11 @@ function FAQ({ items }) {
 
 export default function PillarAI() {
   useReveal()
+  useSEO({
+    title: 'AI Governance & Security Services | 9-Service AI Trust Programme — Nucleus Systems',
+    description: 'Complete AI governance and security: governance strategy, EU AI Act compliance, usage assurance, security architecture, GenAI & LLM security, supply chain, physical AI, AI SecOps and red teaming.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai-governance-security',
+  })
   return (
     <div className="wm-page">
 

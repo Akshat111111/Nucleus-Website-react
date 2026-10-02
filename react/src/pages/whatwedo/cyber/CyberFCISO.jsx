@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberFCISO() {
   useReveal()
+  useSEO({
+    title: 'Fractional CISO & Virtual CISO (vCISO) Services — Nucleus Systems',
+    description: 'Fractional and Virtual CISO services embedding seasoned security executives into your leadership team. Board presentations, regulatory relationships, strategy and team mentoring on a flexible engagement model.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/fractional-ciso',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

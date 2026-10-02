@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatSupplyChain() {
   useReveal()
+  useSEO({
+    title: 'Software Supply Chain Security | SBOM & Dependency Risk — Nucleus Systems',
+    description: 'Comprehensive software supply chain security beyond vulnerability scanning. SBOM management, open-source risk, dependency governance and operational risk management for modern application security.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/supply-chain',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

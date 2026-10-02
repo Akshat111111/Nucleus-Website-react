@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function ExpDPI() {
   useReveal()
+  useSEO({
+    title: 'DPI & Digital Public Goods Experience | MOSIP, Mojaloop — Nucleus Systems',
+    description: 'Nucleus Systems DPI security track record: national payment rails, digital identity programmes and open-source public goods across Africa, Asia and the Middle East. MOSIP, Mojaloop and OpenG2P specialists.',
+    canonical: 'https://www.nucleussystems.com/experience/dpi-dpg',
+  })
 
   const platforms = [
     {

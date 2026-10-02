@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 const FRAMEWORKS_DATA = [
   {
@@ -78,6 +79,11 @@ const FRAMEWORKS_DATA = [
 
 export default function Frameworks() {
   useReveal()
+  useSEO({
+    title: 'Nucleus Digital Trust Assurance Architecture | Proprietary Frameworks',
+    description: 'Explore Nucleus Systems proprietary frameworks: NS-CMMF, NS-AIGF, NS-AISCA, NS-CTAF, NS-SSDOF and NS-PQCF. Structured methodologies covering cybersecurity maturity, AI governance, secure software and post-quantum cryptography.',
+    canonical: 'https://www.nucleussystems.com/impact',
+  })
 
   return (
     <div id="view-frameworks">

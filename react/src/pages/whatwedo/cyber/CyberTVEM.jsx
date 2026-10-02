@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberTVEM() {
   useReveal()
+  useSEO({
+    title: 'Threat & Vulnerability Management (TVEM) — Nucleus Systems',
+    description: 'Comprehensive Threat & Vulnerability Exposure Management (TVEM). Correlating threat intelligence, business context and attack surface discovery to prioritise vulnerabilities that actually matter before exploitation.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/tvem',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function Experience() {
   useReveal()
+  useSEO({
+    title: 'Our Experience | 600+ Engagements Across 40+ Countries — Nucleus Systems',
+    description: 'Nucleus Systems track record: 600+ cybersecurity and AI governance engagements across 40+ countries. M&A cyber due diligence, DPI security, global financial services and secure software delivery.',
+    canonical: 'https://www.nucleussystems.com/experience',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

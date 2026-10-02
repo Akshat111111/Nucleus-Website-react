@@ -1,10 +1,16 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 import Globe from '../components/common/Globe'
 
 export default function Home() {
   useReveal()
+  useSEO({
+    title: 'Nucleus Systems | Digital Trust Assurance — Cybersecurity, AI Governance & Technology Risk',
+    description: 'Nucleus Systems — practitioner-led cybersecurity, AI governance and technology risk advisory. 600+ engagements. 40+ countries. Financial services, government, DPI and private equity.',
+    canonical: 'https://www.nucleussystems.com/',
+  })
 
   useEffect(() => {
     const el = document.querySelector('.ns-about-left')

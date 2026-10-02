@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 import { useState } from 'react'
 
 const SERVICES = [
@@ -83,6 +84,11 @@ function FAQ({ items }) {
 
 export default function CyberMA() {
   useReveal()
+  useSEO({
+    title: 'M&A Cyber Risk | Cybersecurity Due Diligence Services — Nucleus Systems',
+    description: 'Cyber risk advisory for M&A transactions. Buy-side diligence, technical validation, sell-side readiness and post-deal integration. 250+ technology transactions across global private equity and strategic M&A.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/ma',
+  })
   return (
     <div className="wm-page">
 

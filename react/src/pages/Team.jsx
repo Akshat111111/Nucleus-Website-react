@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 export default function Team() {
   useReveal()
+  useSEO({
+    title: 'Our Team | Nucleus Systems — Senior Cybersecurity Practitioners',
+    description: 'Meet the Nucleus Systems team. Founder-led cybersecurity and AI governance specialists with 100+ combined years of experience across financial services, government and private equity globally.',
+    canonical: 'https://www.nucleussystems.com/team',
+  })
 
   return (
     <div id="view-team">

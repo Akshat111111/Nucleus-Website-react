@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AISupplyChain() {
   useReveal()
+  useSEO({
+    title: 'AI Supply Chain Security | MLSecOps & AI SBOM — Nucleus Systems',
+    description: 'AI supply chain security: MLSecOps, AI SBOMs, model signing and third-party AI risk management. Bring visibility and control to foundation models, fine-tuned weights and AI tooling. Nucleus Systems.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/supply-chain',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

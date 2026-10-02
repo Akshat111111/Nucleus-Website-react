@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndTech() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Technology & SaaS Companies — Nucleus Systems',
+    description: 'Security assurance for technology and SaaS platforms. Proving security posture to enterprise buyers, boards and investors. DevSecOps, penetration testing, SOC 2 readiness and AI governance for tech companies.',
+    canonical: 'https://www.nucleussystems.com/sectors/software-saas',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

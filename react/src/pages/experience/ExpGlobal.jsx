@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function ExpGlobal() {
   useReveal()
+  useSEO({
+    title: 'Global Delivery Experience | 40+ Countries Served — Nucleus Systems',
+    description: 'Nucleus Systems global delivery: cybersecurity and AI governance engagements across 40+ countries in Africa, Middle East, Asia-Pacific, Europe and the Americas. Practitioner-led international expertise.',
+    canonical: 'https://www.nucleussystems.com/experience/global-delivery',
+  })
 
   const regions = [
     {

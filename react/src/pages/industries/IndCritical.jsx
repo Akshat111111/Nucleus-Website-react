@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndCritical() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Critical Infrastructure | Energy, Water & Transport — Nucleus Systems',
+    description: 'Operational technology (OT) and critical infrastructure security. Energy, water and transport operators where a breach carries national consequences. ICS/SCADA security and resilience assurance.',
+    canonical: 'https://www.nucleussystems.com/sectors/critical-infrastructure',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

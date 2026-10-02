@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function MaSellSide() {
   useReveal()
+  useSEO({
+    title: 'Sell-Side Cyber Readiness & Exit Preparation | M&A — Nucleus Systems',
+    description: 'Sell-side M&A cyber readiness. Prepare for exit with evidence-based cybersecurity posture assessment, remediation and buyer-ready reporting. Nucleus Systems M&A cyber specialists with 250+ transactions.',
+    canonical: 'https://www.nucleussystems.com/ma/sell-side',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero svc-hero--ma">

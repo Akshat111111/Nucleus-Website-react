@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberGovernance() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity Governance | Security Strategy & Policy — Nucleus Systems',
+    description: 'Design and implement cybersecurity governance frameworks. Security strategy, RACI, security committees and policy frameworks aligned to NIST, ISO 27001 and DORA. Nucleus Systems practitioner-led delivery.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/governance',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

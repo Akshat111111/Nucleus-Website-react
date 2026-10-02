@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatDeployment() {
   useReveal()
+  useSEO({
+    title: 'Secure Deployment & Operations | IaC, Kubernetes & Container Security — Nucleus Systems',
+    description: 'Bridge development and operations with NS-SSDOF. Infrastructure-as-code security, container hardening, Kubernetes security architecture and runtime controls ensuring production environments stay secure.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/deployment',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">
