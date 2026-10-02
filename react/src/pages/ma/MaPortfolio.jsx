@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function MaPortfolio() {
   useReveal()
+  useSEO({
+    title: 'Portfolio Cybersecurity for Private Equity | Ongoing Monitoring — Nucleus Systems',
+    description: 'Continuous cybersecurity monitoring and improvement across private equity portfolio companies. Standardised security baseline, maturity measurement and board reporting for PE portfolio management.',
+    canonical: 'https://www.nucleussystems.com/ma/portfolio',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero svc-hero--ma">

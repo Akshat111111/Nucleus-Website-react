@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberResilience() {
   useReveal()
+  useSEO({
+    title: 'Operational Resilience & Incident Response | DORA Compliance — Nucleus Systems',
+    description: 'Build operational resilience against cyber events. Ransomware playbooks, board wargames, live incident response and DORA compliance. Nucleus Systems prepares you to withstand, adapt and recover from cyberattacks.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/resilience',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

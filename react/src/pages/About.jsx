@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 export default function About() {
   useReveal()
+  useSEO({
+    title: 'About Nucleus Systems | Founder-Led Digital Trust Assurance Firm',
+    description: 'Founded in 2014, Nucleus Systems is a practitioner-led cybersecurity and AI governance advisory firm. 600+ engagements across 40+ countries serving financial services, government and private equity.',
+    canonical: 'https://www.nucleussystems.com/about',
+  })
 
   return (
     <div id="view-about">

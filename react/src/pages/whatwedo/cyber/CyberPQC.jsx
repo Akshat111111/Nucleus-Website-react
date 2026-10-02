@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberPQC() {
   useReveal()
+  useSEO({
+    title: 'Post-Quantum Cryptography (PQC) Migration — Nucleus Systems',
+    description: 'PQC readiness assessments and migration roadmaps using NS-PQCF. Protect against Harvest Now Decrypt Later attacks by transitioning to NIST-approved quantum-resistant algorithms before the cryptographic deadline.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/pqc',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 export default function Paxley() {
   useReveal()
+  useSEO({
+    title: 'Paxley | Continuous Software Supply Chain Trust — Nucleus Systems',
+    description: 'Paxley by Nucleus Systems: continuous code-security monitoring and software supply chain assurance platform. Automates SBOM ingestion, VEX processing and vulnerability intelligence for real-time trust scoring.',
+    canonical: 'https://www.nucleussystems.com/paxley',
+  })
 
   return (
     <div id="view-paxley">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function MaPostDeal() {
   useReveal()
+  useSEO({
+    title: 'Post-Deal Cybersecurity Improvement | M&A Integration — Nucleus Systems',
+    description: 'Post-deal cybersecurity improvement and integration advisory. Remediate identified risks, align security programmes and improve the acquired asset cybersecurity posture after transaction close.',
+    canonical: 'https://www.nucleussystems.com/ma/post-deal',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero svc-hero--ma">

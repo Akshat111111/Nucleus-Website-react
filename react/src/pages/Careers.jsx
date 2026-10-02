@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 // Radar graphic — orbiting labels around a Nucleus shield logo
 function RadarGraphic() {
@@ -131,6 +132,11 @@ const WHY_CARDS = [
 
 export default function Careers() {
   useReveal()
+  useSEO({
+    title: 'Careers at Nucleus Systems | Join Our Cybersecurity & AI Team',
+    description: 'Build your career at Nucleus Systems. We are hiring cybersecurity practitioners, AI governance specialists and technology risk advisors. Remote-friendly roles across Africa, Middle East, APAC and Europe.',
+    canonical: 'https://www.nucleussystems.com/careers',
+  })
   const [modalOpen, setModalOpen] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [formData, setFormData] = useState({

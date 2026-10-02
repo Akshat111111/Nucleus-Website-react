@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndGovt() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Government & Public Sector — Nucleus Systems',
+    description: 'Digital trust advisory for public institutions. Government cybersecurity, digital identity security, DPI assurance and regulatory compliance. Nucleus Systems serves public sector across Africa, Middle East and APAC.',
+    canonical: 'https://www.nucleussystems.com/sectors/government-public-sector',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

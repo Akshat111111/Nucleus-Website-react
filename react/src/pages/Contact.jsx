@@ -1,7 +1,13 @@
 import { useState } from 'react'
 import Globe from '../components/common/Globe'
+import { useSEO } from '../hooks/useSEO'
 
 export default function Contact() {
+  useSEO({
+    title: 'Contact Nucleus Systems | Book a Cybersecurity Briefing',
+    description: 'Get in touch with Nucleus Systems. Book a 30-minute briefing with a senior practitioner to discuss cybersecurity, AI governance, M&A cyber risk or technology risk advisory.',
+    canonical: 'https://www.nucleussystems.com/contact',
+  })
   const [formData, setFormData] = useState({
     name: '',
     email: '',

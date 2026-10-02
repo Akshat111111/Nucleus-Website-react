@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndFintech() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Fintech & Payments — Nucleus Systems',
+    description: 'Security advisory for regulated fintech and payment operators. PCI DSS compliance, payment rail security, digital wallet assurance, regulatory readiness and cybersecurity governance for fintech disruptors.',
+    canonical: 'https://www.nucleussystems.com/sectors/fintech-payments',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

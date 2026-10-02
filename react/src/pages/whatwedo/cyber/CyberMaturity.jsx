@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberMaturity() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity Maturity Assessment | NS-CMMF Framework — Nucleus Systems',
+    description: 'Evidence-based cybersecurity maturity assessments using NS-CMMF. 188 controls across 6 domains, quantified maturity scores, financial gap analysis and board-ready reporting. ISO 27001, NIST CSF, DORA aligned.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/maturity',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

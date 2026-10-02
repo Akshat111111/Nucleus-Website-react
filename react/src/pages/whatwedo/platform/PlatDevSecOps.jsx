@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatDevSecOps() {
   useReveal()
+  useSEO({
+    title: 'DevSecOps Transformation | Secure SDLC & CI/CD Security — Nucleus Systems',
+    description: 'Transform engineering cultures with embedded security. SAST/DAST automation, secure coding standards, security champions programmes and CI/CD pipeline hardening. DevSecOps as an enabler, not a gatekeeper.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/devsecops',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

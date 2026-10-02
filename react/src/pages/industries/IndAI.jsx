@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndAI() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for AI Product Companies | EU AI Act Compliance — Nucleus Systems',
+    description: 'AI governance, security architecture and regulatory compliance for AI product companies. EU AI Act readiness, ISO 42001 certification, AI red teaming and enterprise security assurance. Nucleus Systems.',
+    canonical: 'https://www.nucleussystems.com/sectors/ai-product-companies',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

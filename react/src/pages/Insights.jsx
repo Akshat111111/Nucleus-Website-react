@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 import * as pdfjsLib from 'pdfjs-dist'
 
 // Point the worker at the bundled worker file
@@ -461,6 +462,11 @@ function FeaturedCard({ article }) {
 
 export default function Insights() {
   useReveal()
+  useSEO({
+    title: 'Insights | Cybersecurity & AI Trust Research — Nucleus Systems',
+    description: 'Articles, research and specialist perspectives on cybersecurity leadership, M&A cyber risk, AI trust & security, secure software, digital infrastructure and regulation from Nucleus Systems practitioners.',
+    canonical: 'https://www.nucleussystems.com/insights',
+  })
   const [activeCategory, setActiveCategory] = useState('all')
 
   const filtered = activeCategory === 'all'

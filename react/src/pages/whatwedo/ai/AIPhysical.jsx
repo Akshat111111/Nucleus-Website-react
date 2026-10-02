@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AIPhysical() {
   useReveal()
+  useSEO({
+    title: 'Physical AI & Safety Assurance | Cyber-Physical AI Security — Nucleus Systems',
+    description: 'Security and safety assurance for cyber-physical AI: robotics, autonomous vehicles, manufacturing OT and safety-critical infrastructure. NS PAISAF framework for adversarial attack and systemic failure resilience.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/physical-ai',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

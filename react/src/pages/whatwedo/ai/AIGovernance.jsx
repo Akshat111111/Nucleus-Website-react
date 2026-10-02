@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AIGovernance() {
   useReveal()
+  useSEO({
+    title: 'AI Governance Strategy & Responsible AI | Nucleus Systems',
+    description: 'Build enterprise AI governance frameworks satisfying EU AI Act, ISO 42001 and NIST AI RMF simultaneously. AI inventory, risk classification, board accountability and responsible AI principles — delivered by Nucleus Systems.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/governance',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">
