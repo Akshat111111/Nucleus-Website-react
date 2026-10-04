@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function ExpMA() {
   useReveal()
+  useSEO({
+    title: 'M&A Cyber Experience | 250+ Technology Transactions — Nucleus Systems',
+    description: 'Nucleus Systems M&A cyber track record: 250+ technology transactions across private equity, strategic M&A and growth investment. Buy-side diligence, technical validation, sell-side readiness and post-deal integration.',
+    canonical: 'https://www.nucleussystems.com/experience/ma',
+  })
 
   const stats = [
     { val: '250+', lab: 'Transactions advised' },

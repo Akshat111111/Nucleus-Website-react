@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 const FRAMEWORKS_DATA = [
   {
@@ -78,6 +79,11 @@ const FRAMEWORKS_DATA = [
 
 export default function Frameworks() {
   useReveal()
+  useSEO({
+    title: 'Nucleus Digital Trust Assurance Architecture | Proprietary Frameworks',
+    description: 'Explore Nucleus Systems proprietary frameworks: NS-CMMF, NS-AIGF, NS-AISCA, NS-CTAF, NS-SSDOF and NS-PQCF. Structured methodologies covering cybersecurity maturity, AI governance, secure software and post-quantum cryptography.',
+    canonical: 'https://www.nucleussystems.com/impact',
+  })
 
   return (
     <div id="view-frameworks">
@@ -104,22 +110,22 @@ export default function Frameworks() {
         <div className="wrap">
           <div className="svc-problem-grid reveal">
             <div style={{ padding: '36px', background: 'var(--grey)', borderRadius: '16px' }}>
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: '12px' }}>Services</span>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: '12px' }}>Services</span>
               <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--navy)', marginBottom: '12px' }}>Three Trust Capabilities</h3>
               <p style={{ fontSize: '13.5px', color: 'var(--slate)', lineHeight: 1.75, marginBottom: '20px' }}>We deliver AI Governance &amp; Security, Digital Platform Trust &amp; Security Assurance, and Cybersecurity Maturity Management &amp; M&amp;A Risk across nine service domains each.</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <Link to="/what-we-do/ai-governance-security" style={{ fontSize: '12px', fontWeight: 700, color: '#7c3aed', textDecoration: 'none' }}>01 — AI Governance &amp; Security →</Link>
-                <Link to="/what-we-do/digital-platform-trust" style={{ fontSize: '12px', fontWeight: 700, color: 'var(--orange)', textDecoration: 'none' }}>02 — Digital Platform Trust &amp; Security Assurance →</Link>
-                <Link to="/what-we-do/cybersecurity-compliance" style={{ fontSize: '12px', fontWeight: 700, color: '#4f8ef7', textDecoration: 'none' }}>03 — Cybersecurity Maturity Management &amp; M&amp;A Risk →</Link>
+                <Link to="/what-we-do/ai-governance-security" style={{ fontSize: '14px', fontWeight: 700, color: '#7c3aed', textDecoration: 'none' }}>01 — AI Governance &amp; Security →</Link>
+                <Link to="/what-we-do/digital-platform-trust" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--orange)', textDecoration: 'none' }}>02 — Digital Platform Trust &amp; Security Assurance →</Link>
+                <Link to="/what-we-do/cybersecurity-compliance" style={{ fontSize: '14px', fontWeight: 700, color: '#4f8ef7', textDecoration: 'none' }}>03 — Cybersecurity Maturity Management &amp; M&amp;A Risk →</Link>
               </div>
             </div>
             <div style={{ padding: '36px', background: 'var(--navy)', borderRadius: '16px' }}>
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--orange)', display: 'block', marginBottom: '12px' }}>Impact</span>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--orange)', display: 'block', marginBottom: '12px' }}>Impact</span>
               <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--white)', marginBottom: '12px' }}>Eight Proprietary Frameworks</h3>
               <p style={{ fontSize: '13.5px', color: 'rgba(255,255,255,.6)', lineHeight: 1.75, marginBottom: '20px' }}>Our frameworks are the structured methodologies, control architectures and evidence instruments behind every engagement. Applied proportionately — from a focused assessment to a continuous assurance programme.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                 {['NS-CMMF', 'NS-AIGF', 'NS AI-UAF', 'NS AISCA', 'NS PAISAF', 'NS AI² SecOps', 'NS-CTAF', 'NS-PQCF'].map(f => (
-                  <span key={f} style={{ fontSize: '9.5px', fontFamily: 'var(--mono)', background: 'rgba(255,255,255,.08)', color: 'rgba(255,255,255,.7)', borderRadius: '5px', padding: '3px 8px', fontWeight: 600 }}>{f}</span>
+                  <span key={f} style={{ fontSize: '12px', fontFamily: 'var(--mono)', background: 'rgba(255,255,255,.08)', color: 'rgba(255,255,255,.7)', borderRadius: '5px', padding: '4px 10px', fontWeight: 600 }}>{f}</span>
                 ))}
               </div>
             </div>

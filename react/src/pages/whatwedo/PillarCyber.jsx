@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 import { useState } from 'react'
 import heroCyber from '../../assets/hero_cyber.jpg'
 
@@ -113,6 +114,11 @@ function FAQ({ items }) {
 
 export default function PillarCyber() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity Maturity Management & M&A Risk | Nucleus Systems',
+    description: 'Measure, improve and prove cybersecurity, compliance and operational resilience. Maturity assessments, governance, fractional CISO, DORA, NIS2, TVEM, MDR, PQC and M&A cyber risk services.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cybersecurity-compliance',
+  })
   return (
     <div className="wm-page">
 

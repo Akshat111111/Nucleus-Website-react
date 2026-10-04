@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 // Radar graphic — orbiting labels around a Nucleus shield logo
 function RadarGraphic() {
   const labels = [
-    { label: 'CYBER',    angle: -70,  r: 46 },
-    { label: 'AI GOV',   angle: 10,   r: 50 },
-    { label: 'PAYMENTS', angle: 70,   r: 48 },
-    { label: 'IDENTITY', angle: 130,  r: 46 },
-    { label: 'CODE',     angle: 195,  r: 44 },
-    { label: 'PQC',      angle: 255,  r: 46 },
+    { label: 'CYBER', angle: -70, r: 46 },
+    { label: 'AI GOV', angle: 10, r: 50 },
+    { label: 'PAYMENTS', angle: 70, r: 48 },
+    { label: 'IDENTITY', angle: 130, r: 46 },
+    { label: 'CODE', angle: 195, r: 44 },
+    { label: 'PQC', angle: 255, r: 46 },
   ]
 
   const toXY = (angle, r, cx = 50, cy = 50) => {
@@ -20,7 +21,7 @@ function RadarGraphic() {
 
   return (
     <div style={{ position: 'relative', width: '340px', height: '340px', flexShrink: 0 }}>
-      <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100%' }}>
+      <svg viewBox="0 0 100 100" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
         {/* Outer rings */}
         <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(11,80,200,0.08)" strokeWidth="0.4" />
         <circle cx="50" cy="50" r="36" fill="none" stroke="rgba(11,80,200,0.07)" strokeWidth="0.4" />
@@ -44,7 +45,7 @@ function RadarGraphic() {
 
         {/* Label text */}
         {labels.map((l) => {
-          const pos = toXY(l.angle, l.r + 4)
+          const pos = toXY(l.angle, l.r + 8)
           return (
             <text
               key={l.label + 't'}
@@ -74,7 +75,7 @@ function RadarGraphic() {
         boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
         display: 'flex', flexDirection: 'column', gap: '2px'
       }}>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--slate-2)' }}>NS TRUST INDEX</span>
+        <span style={{ fontFamily: 'var(--mono)', fontSize: '13px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate-2)' }}>NS TRUST INDEX</span>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '5px' }}>
           <span style={{ fontFamily: 'var(--display)', fontSize: '22px', fontWeight: 800, color: 'var(--navy)', letterSpacing: '-0.01em' }}>96.4<span style={{ fontSize: '14px' }}>%</span></span>
           <span style={{ fontSize: '11px', color: 'var(--orange)', fontWeight: 700 }}>▲ verified</span>
@@ -131,6 +132,11 @@ const WHY_CARDS = [
 
 export default function Careers() {
   useReveal()
+  useSEO({
+    title: 'Careers at Nucleus Systems | Join Our Cybersecurity & AI Team',
+    description: 'Build your career at Nucleus Systems. We are hiring cybersecurity practitioners, AI governance specialists and technology risk advisors. Remote-friendly roles across Africa, Middle East, APAC and Europe.',
+    canonical: 'https://www.nucleussystems.com/careers',
+  })
   const [modalOpen, setModalOpen] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [formData, setFormData] = useState({
@@ -167,7 +173,7 @@ export default function Careers() {
       }}>
         <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '40px', alignItems: 'center' }}>
           <div>
-            <div className="eyebrow" style={{ marginBottom: '24px' }}>Careers</div>
+            <div className="eyebrow" style={{ fontSize: '15px', letterSpacing: '0.14em', marginBottom: '24px' }}>Careers</div>
             <h1 style={{ fontSize: 'clamp(36px,5vw,60px)', fontWeight: 800, lineHeight: 1.1, margin: '0 0 20px', color: 'var(--navy)' }}>
               Engineer trust<br />
               <span style={{ color: 'rgba(30,40,80,0.35)', fontWeight: 700 }}>for a </span>
@@ -186,16 +192,16 @@ export default function Careers() {
             {/* Stats */}
             <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
               {[
-                { val: '40+',      valSup: '',    sub: 'COUNTRIES' },
-                { val: '13+',      valSup: ' yrs', sub: 'OF PRACTICE' },
-                { val: '6',        valSup: '',    sub: 'SERVICE DOMAINS' },
-                { val: '4',        valSup: '',    sub: 'FRAMEWORKS TO MASTER' },
+                { val: '40+', valSup: '', sub: 'COUNTRIES' },
+                { val: '13+', valSup: ' yrs', sub: 'OF PRACTICE' },
+                { val: '6', valSup: '', sub: 'SERVICE DOMAINS' },
+                { val: '4', valSup: '', sub: 'FRAMEWORKS TO MASTER' },
               ].map(s => (
                 <div key={s.sub}>
                   <div style={{ fontFamily: 'var(--display)', fontSize: '28px', fontWeight: 800, color: 'var(--navy)', lineHeight: 1 }}>
                     {s.val}<span style={{ color: 'var(--orange)', fontSize: '20px' }}>{s.valSup}</span>
                   </div>
-                  <div style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--slate-2)', marginTop: '5px' }}>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '13px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate-2)', marginTop: '5px' }}>
                     {s.sub}
                   </div>
                 </div>
@@ -212,7 +218,7 @@ export default function Careers() {
       <section style={{ background: '#f4f6fa', padding: '72px 0' }}>
         <div className="wrap">
           <div style={{ marginBottom: '48px' }}>
-            <div className="eyebrow" style={{ marginBottom: '12px' }}>Why Nucleus</div>
+            <div className="eyebrow" style={{ fontSize: '15px', letterSpacing: '0.14em', marginBottom: '12px' }}>Why Nucleus</div>
             <h2 style={{ fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 700, margin: '0 0 12px' }}>Work that proves itself.</h2>
             <p style={{ fontSize: '16px', color: 'var(--slate)', maxWidth: '52ch' }}>
               We hire people who care about evidence. Here is what you can expect in return.
@@ -228,8 +234,8 @@ export default function Careers() {
                 boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
                 transition: 'transform .25s, box-shadow .25s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(0,0,0,0.1)' }}
-              onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)' }}
+                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(0,0,0,0.1)' }}
+                onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)' }}
               >
                 {/* Icon */}
                 <div style={{
@@ -255,7 +261,7 @@ export default function Careers() {
       <section style={{ background: '#fff', padding: '72px 0' }}>
         <div className="wrap">
           <div className="reveal" style={{ maxWidth: '620px', margin: '0 auto', textAlign: 'center' }}>
-            <div className="eyebrow" style={{ marginBottom: '12px' }}>Open Roles</div>
+            <div className="eyebrow" style={{ fontSize: '15px', letterSpacing: '0.14em', marginBottom: '12px' }}>Open Roles</div>
             <h2 style={{ fontSize: 'clamp(24px,3vw,36px)', fontWeight: 700, margin: '0 0 14px' }}>No opportunities at the moment.</h2>
             <p style={{ fontSize: '15px', color: 'var(--slate)', lineHeight: 1.7, margin: '0 0 32px' }}>
               We are not actively hiring right now. We still review every application, so if you can prove trust, introduce yourself and we will reach out when the right role opens.

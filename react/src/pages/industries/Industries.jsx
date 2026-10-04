@@ -1,56 +1,62 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function Sectors() {
   useReveal()
+  useSEO({
+    title: 'Sectors We Serve | Financial Services, Government, Private Equity — Nucleus Systems',
+    description: 'Nucleus Systems serves financial services, government, digital public infrastructure, private equity, technology & SaaS, fintech, AI product companies and critical infrastructure across 40+ countries.',
+    canonical: 'https://www.nucleussystems.com/sectors',
+  })
   const sectors = [
     {
       num: '01', title: 'Financial Services', sub: 'Banks · Insurers · Asset Managers · Central Banks',
       desc: 'Banks, insurers and asset managers where a trust failure triggers systemic regulatory action. Tier-one banking, insurance capital modelling, asset management operational resilience and central bank digital infrastructure.',
       link: '/sectors/financial-services',
-      icon: <svg viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="1"/><path d="M3 10l9-7 9 7"/><path d="M9 21V13h6v8"/></svg>,
+      img: '/images/sector_financial.jpg',
     },
     {
       num: '02', title: 'Government & Public Sector', sub: 'Ministries · Agencies · Multilaterals · Development Banks',
       desc: 'Public institutions where digital trust is foundational to governance and citizen confidence. National digital transformation, cross-agency data governance and multilateral programme security.',
       link: '/sectors/government-public-sector',
-      icon: <svg viewBox="0 0 24 24"><path d="M3 21h18M4 18V9.5M20 18V9.5M12 3l9 6.5H3L12 3z"/><rect x="9" y="13" width="6" height="5"/></svg>,
+      img: '/images/sector_government.jpg',
     },
     {
       num: '03', title: 'Digital Public Infrastructure', sub: 'National Identity · Payment Rails · DPGs · Open-Source Platforms',
       desc: 'National payment rails, digital identity programmes and open-source Digital Public Goods that underpin entire economies. Mojaloop, MOSIP, OpenG2P, Tazama, COMESA — built by our practitioners.',
       link: '/sectors/digital-platforms',
-      icon: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a14.5 14.5 0 0 1 0 18M12 3a14.5 14.5 0 0 0 0 18"/></svg>,
+      img: '/images/sector_dpi.jpg',
     },
     {
       num: '04', title: 'Private Equity & Investment', sub: 'PE Houses · Family Offices · Deal Teams · Portfolio Companies',
       desc: 'Deal teams and portfolio companies managing cyber risk through M&A and ownership cycles. 250+ transactions — buy-side diligence, sell-side preparation, post-deal improvement and portfolio governance.',
       link: '/sectors/private-equity',
-      icon: <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>,
+      img: '/images/sector_pe.jpg',
     },
     {
       num: '05', title: 'Technology & SaaS', sub: 'Platforms · SaaS · Scale-ups · Enterprise Software',
       desc: 'Platforms, SaaS and technology companies proving security posture to enterprise buyers, boards and investors. Enterprise sales unblocked, ISO 27001 achieved, board-level accountability established.',
       link: '/sectors/software-saas',
-      icon: <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 4.93 4.93M4.93 19.07A10 10 0 0 0 19.07 19.07M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>,
+      img: '/images/sector_tech.jpg',
     },
     {
       num: '06', title: 'Fintech & Payments', sub: 'Fintechs · Payment Operators · Mobile Money · Neobanks',
       desc: 'Regulated disruptors building trust at speed — PCI DSS, FCA, PRA, DORA and emerging market central bank requirements. From seed-stage compliance to tier-one payment operator assurance.',
       link: '/industries/fintech-payments',
-      icon: <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg>,
+      img: '/images/sector_fintech.jpg',
     },
     {
       num: '07', title: 'AI Product Companies', sub: 'AI Startups · Foundation Model Labs · Enterprise AI · Agentic AI',
       desc: 'AI product companies navigating EU AI Act, AI governance and the security architecture of LLM, RAG and agentic AI systems — proving trustworthiness to enterprise buyers and regulators.',
       link: '/industries/ai-product-companies',
-      icon: <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
+      img: '/images/sector_ai.jpg',
     },
     {
       num: '08', title: 'Critical Infrastructure', sub: 'Energy · Water · Transport · Telecoms',
       desc: 'Energy, water, transport and telecommunications operators where a breach carries national consequences. ICS/SCADA security, OT/IT convergence and NIS2/DORA critical infrastructure compliance.',
       link: '/industries/critical-infrastructure',
-      icon: <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+      img: '/images/sector_critical.jpg',
     },
   ]
 
@@ -62,7 +68,7 @@ export default function Sectors() {
           <div className="wm-hero-inner">
             <div>
               <span className="wm-eyebrow reveal">Industry Experience</span>
-              <h1 className="wm-h1 reveal">Securing the most <mark>demanding industries.</mark></h1>
+              <h1 className="wm-h1 reveal">Securing the most demanding industries.</h1>
               <p className="wm-lede reveal">
                 Different industries face fundamentally different threat profiles and regulatory mandates. We tailor our AI governance, platform trust, and cybersecurity capabilities to the specific operational realities of the industries we serve.
               </p>
@@ -71,7 +77,7 @@ export default function Sectors() {
               </div>
             </div>
             <div className="wm-hero-img-box reveal">
-              <div style={{ width: '100%', aspectRatio: '4/3', background: 'linear-gradient(135deg, #1e293b, #0f172a)', boxShadow: '16px 16px 0 0 rgba(10,9,61,0.05)' }}></div>
+              <img src="/images/sector_financial.jpg" alt="Industries" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4px' }} />
             </div>
           </div>
         </div>
@@ -108,11 +114,20 @@ export default function Sectors() {
           </div>
           <div className="wm-grid">
             {sectors.map((s, i) => (
-              <Link to={s.link} key={i} className="wm-card reveal">
-                <h3>{s.title}</h3>
-                <div style={{ fontSize: '12px', color: 'var(--wm-pink)', marginBottom: '8px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.06em' }}>{s.sub}</div>
-                <p>{s.desc}</p>
-                <div className="wm-card-link">Explore industry</div>
+              <Link to={s.link} key={i} className="wm-card reveal" style={{ padding: 0, overflow: 'hidden' }}>
+                <div style={{ position: 'relative', height: '180px', overflow: 'hidden' }}>
+                  <img src={s.img} alt={s.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
+                    onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
+                    onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', left: '12px', background: 'var(--wm-pink)', color: '#fff', fontWeight: 800, fontSize: '11px', letterSpacing: '.08em', padding: '4px 10px', borderRadius: '4px' }}>{s.num}</div>
+                </div>
+                <div style={{ padding: '20px 24px 24px' }}>
+                  <h3 style={{ marginBottom: '6px' }}>{s.title}</h3>
+                  <div style={{ fontSize: '12px', color: 'var(--wm-pink)', marginBottom: '10px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.06em' }}>{s.sub}</div>
+                  <p>{s.desc}</p>
+                  <div className="wm-card-link">Explore industry</div>
+                </div>
               </Link>
             ))}
           </div>
@@ -123,7 +138,9 @@ export default function Sectors() {
       <section className="wm-section">
         <div className="wrap">
           <div className="wm-result-block reveal">
-            <div className="wm-result-img" style={{ background: 'linear-gradient(135deg, #be185d, #831843)' }}></div>
+            <div className="wm-result-img" style={{ overflow: 'hidden' }}>
+              <img src="/images/sector_cross_industry.jpg" alt="Cross-Industry Services" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
             <div className="wm-result-content">
               <div className="wm-result-eyebrow">Cross-Industry Services</div>
               <h3 className="wm-result-h3">Services applied across all industries</h3>

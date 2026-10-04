@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatSecArch() {
   useReveal()
+  useSEO({
+    title: 'Secure Architecture Review | Zero-Trust Design — Nucleus Systems',
+    description: 'Threat-informed security architecture reviews and design advisory using NS-SSAF. Zero-trust principles, resilient-by-design platforms and enterprise security standards — before a line of code is written.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/secure-architecture',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

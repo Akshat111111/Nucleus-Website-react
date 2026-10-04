@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AIUsage() {
   useReveal()
+  useSEO({
+    title: 'AI Usage Assurance | Shadow AI & GenAI Controls — Nucleus Systems',
+    description: 'Enterprise AI acceptable use governance, shadow AI detection and GenAI controls. Enable safe AI adoption with structured usage assurance frameworks. Nucleus Systems practitioner-led delivery.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/usage-assurance',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

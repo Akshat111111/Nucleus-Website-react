@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AIRegulatory() {
   useReveal()
+  useSEO({
+    title: 'AI Regulatory Compliance | EU AI Act & ISO 42001 — Nucleus Systems',
+    description: 'Structured EU AI Act and ISO 42001 compliance programmes. Conformity assessments, technical documentation, high-risk AI classification and audit-ready evidence packages delivered by Nucleus Systems practitioners.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/regulatory',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

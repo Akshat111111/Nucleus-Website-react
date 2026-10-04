@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatDPI() {
   useReveal()
+  useSEO({
+    title: 'DPI & Digital Identity Security | MOSIP, Mojaloop, OpenG2P — Nucleus Systems',
+    description: 'Specialist security for Digital Public Infrastructure. National identity systems, payment rails and data exchange platforms. Threat modelling and deployment assurance for MOSIP, Mojaloop and OpenG2P globally.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/dpi-security',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 export default function Paxley() {
   useReveal()
+  useSEO({
+    title: 'Paxley | Continuous Software Supply Chain Trust — Nucleus Systems',
+    description: 'Paxley by Nucleus Systems: continuous code-security monitoring and software supply chain assurance platform. Automates SBOM ingestion, VEX processing and vulnerability intelligence for real-time trust scoring.',
+    canonical: 'https://www.nucleussystems.com/paxley',
+  })
 
   return (
     <div id="view-paxley">
@@ -89,7 +95,7 @@ export default function Paxley() {
       <div className="pg-section" id="pax-compare">
         <div className="wrap">
           <div className="section-head reveal" style={{ maxWidth: '760px', textAlign: 'left' }}>
-            <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--pax-green)', marginBottom: '12px' }}>Why Paxley Code Security Platform</div>
+            <div style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--pax-green)', marginBottom: '12px' }}>Why Paxley Code Security Platform</div>
             <h2 style={{ color: '#fff', marginBottom: '12px' }}>Six strategic differentiators.</h2>
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '15px', lineHeight: 1.7 }}>Designed with the benefit of hindsight — meeting the demands of continuous security, software supply chain risk and demonstrable assurance.</p>
           </div>

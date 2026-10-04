@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AISecOps() {
   useReveal()
+  useSEO({
+    title: 'AI Security Operations (AI SecOps) | NS AI² SecOps — Nucleus Systems',
+    description: 'Bidirectional AI SecOps: continuous monitoring for AI assets and AI-assisted SOC capabilities. AI-specific SIEM detections, adversarial validation, incident response and threat detection using the NS AI² SecOps framework.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/secops',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

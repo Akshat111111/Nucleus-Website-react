@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatCloud() {
   useReveal()
+  useSEO({
+    title: 'Cloud & Infrastructure Security | AWS, Azure, GCP — Nucleus Systems',
+    description: 'Cloud-native security architecture, multi-cloud posture management and IAM across AWS, Azure and GCP. Shared responsibility model expertise ensuring your cloud infrastructure is resilient against compromise.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/cloud-infra',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatTesting() {
   useReveal()
+  useSEO({
+    title: 'Penetration Testing & Security Testing | Web, API & Mobile — Nucleus Systems',
+    description: 'Intelligence-led penetration testing across web applications, APIs, mobile platforms and network infrastructure. Adversarial simulation beyond compliance checklists to validate true digital platform resilience.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/security-testing',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

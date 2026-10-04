@@ -1,10 +1,16 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 import Globe from '../components/common/Globe'
 
 export default function Home() {
   useReveal()
+  useSEO({
+    title: 'Nucleus Systems | Digital Trust Assurance — Cybersecurity, AI Governance & Technology Risk',
+    description: 'Nucleus Systems — practitioner-led cybersecurity, AI governance and technology risk advisory. 600+ engagements. 40+ countries. Financial services, government, DPI and private equity.',
+    canonical: 'https://www.nucleussystems.com/',
+  })
 
   useEffect(() => {
     const el = document.querySelector('.ns-about-left')
@@ -115,11 +121,11 @@ export default function Home() {
       <div className="interconnect-strip">
         <div className="interconnect-tagline">GOVERN THE AI · TRUST THE PLATFORM · PROVE THE ENTERPRISE</div>
         <div className="interconnect-pillars">
-          <span className="ic-pillar" style={{ color: '#a78bfa' }}>AI Governance &amp; Security</span>
+          <span className="ic-pillar" style={{ color: '#7c3aed' }}>AI Governance &amp; Security</span>
           <span className="ic-arrow">→</span>
-          <span className="ic-pillar" style={{ color: '#67e8f9' }}>Digital Platform Trust &amp; Security Assurance</span>
+          <span className="ic-pillar" style={{ color: '#0891b2' }}>Digital Platform Trust &amp; Security Assurance</span>
           <span className="ic-arrow">→</span>
-          <span className="ic-pillar" style={{ color: '#6ee7b7' }}>Cybersecurity Maturity Management &amp; M&amp;A Risk</span>
+          <span className="ic-pillar" style={{ color: '#059669' }}>Cybersecurity Maturity Management &amp; M&amp;A Risk</span>
         </div>
         <div className="lifecycle-chain">
           {['Strategy','Architecture','Engineering','Validation','Operations','Evidence','Continuous Assurance'].map((step, i, arr) => (
@@ -131,24 +137,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── SECTORS STRIP ── */}
-      <div className="sectors-strip">
-        <div className="wrap">
-          <p className="sectors-strip-title">Who we serve</p>
-          <div className="sectors-links">
-            {[
-              { label: 'Large Enterprises',          to: '/sectors/large-enterprises' },
-              { label: 'Financial Services',          to: '/sectors/financial-services' },
-              { label: 'Government & Public Sector',  to: '/sectors/government-public-sector' },
-              { label: 'Software / SaaS',             to: '/sectors/software-saas' },
-              { label: 'Digital Platforms',           to: '/sectors/digital-platforms' },
-              { label: 'Private Equity / Investors',  to: '/sectors/private-equity' },
-            ].map(s => (
-              <Link key={s.to} className="sector-pill" to={s.to}>{s.label}</Link>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       {/* ── TICKER ── */}
       <div className="ticker-wrap" aria-hidden="true">
@@ -229,7 +218,7 @@ export default function Home() {
       <section className="ai-trust-section section" id="ai-home">
         <div className="wrap">
           <div className="ai-trust-head reveal">
-            <span className="eyebrow" style={{ color: '#7c9eff' }}>AI Trust &amp; Security</span>
+            <span className="eyebrow" style={{ color: '#7c9eff', fontSize: '19px', fontWeight: 'bold' }}>AI Trust &amp; Security</span>
             <h2>Govern AI. Secure AI.<br /><span style={{ fontWeight: 400, color: 'var(--slate)' }}>Operate AI Safely.</span></h2>
             <p style={{ maxWidth: '560px', margin: '0 auto', color: 'var(--slate)' }}>
               From board-level AI governance and regulatory readiness through to LLM, RAG and agentic AI security — our practitioners cover the complete AI trust lifecycle.
@@ -489,10 +478,6 @@ export default function Home() {
               <div className="tt2-note">
                 <div className="tt2-note-label">Team at a glance</div>
                 <div className="tt2-stat-row">
-                  <div className="tt2-stat-item">
-                    <span className="tt2-stat-num">100<span>+</span></span>
-                    <span className="tt2-stat-label">Combined years</span>
-                  </div>
                   <div className="tt2-stat-item">
                     <span className="tt2-stat-num">150<span>+</span></span>
                     <span className="tt2-stat-label">Engagements led</span>

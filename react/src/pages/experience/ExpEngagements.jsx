@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function ExpEngagements() {
   useReveal()
+  useSEO({
+    title: 'Our Engagements | 600+ Cybersecurity & AI Projects — Nucleus Systems',
+    description: 'A selection of Nucleus Systems engagement experience across cybersecurity, AI governance, M&A due diligence, DevSecOps, DPI security and compliance across financial services, government and private equity.',
+    canonical: 'https://www.nucleussystems.com/experience/engagements',
+  })
 
   const engagements = [
     {

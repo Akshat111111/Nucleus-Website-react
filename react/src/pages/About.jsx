@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 
 export default function About() {
   useReveal()
+  useSEO({
+    title: 'About Nucleus Systems | Founder-Led Digital Trust Assurance Firm',
+    description: 'Founded in 2014, Nucleus Systems is a practitioner-led cybersecurity and AI governance advisory firm. 600+ engagements across 40+ countries serving financial services, government and private equity.',
+    canonical: 'https://www.nucleussystems.com/about',
+  })
 
   return (
     <div id="view-about">
@@ -163,23 +169,23 @@ export default function About() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '16px' }}>
             <div className="reveal" style={{ padding: '32px 24px', background: 'var(--grey)', borderRadius: '14px', textAlign: 'center' }}>
               <div style={{ fontFamily: 'var(--display)', fontSize: '42px', fontWeight: '800', color: 'var(--navy)' }}>600<span style={{ color: 'var(--orange)' }}>+</span></div>
-              <div style={{ fontSize: '14px', fontWeight: '700', margin: '4px 0 8px' }}>Engagements</div>
-              <div style={{ fontSize: '13px', color: 'var(--slate)' }}>Across enterprise, government and financial sectors</div>
+              <div style={{ fontSize: '16px', fontWeight: '700', margin: '4px 0 8px' }}>Engagements</div>
+              <div style={{ fontSize: '15px', color: 'var(--slate)' }}>Across enterprise, government and financial sectors</div>
             </div>
             <div className="reveal" style={{ padding: '32px 24px', background: 'var(--grey)', borderRadius: '14px', textAlign: 'center', transitionDelay: '0.1s' }}>
               <div style={{ fontFamily: 'var(--display)', fontSize: '42px', fontWeight: '800', color: 'var(--navy)' }}>250<span style={{ color: 'var(--orange)' }}>+</span></div>
-              <div style={{ fontSize: '14px', fontWeight: '700', margin: '4px 0 8px' }}>M&amp;A Deals</div>
-              <div style={{ fontSize: '13px', color: 'var(--slate)' }}>Cyber diligence transactions across private equity</div>
+              <div style={{ fontSize: '16px', fontWeight: '700', margin: '4px 0 8px' }}>M&amp;A Deals</div>
+              <div style={{ fontSize: '15px', color: 'var(--slate)' }}>Cyber diligence transactions across private equity</div>
             </div>
             <div className="reveal" style={{ padding: '32px 24px', background: 'var(--grey)', borderRadius: '14px', textAlign: 'center', transitionDelay: '0.2s' }}>
               <div style={{ fontFamily: 'var(--display)', fontSize: '42px', fontWeight: '800', color: 'var(--navy)' }}>40<span style={{ color: 'var(--orange)' }}>+</span></div>
-              <div style={{ fontSize: '14px', fontWeight: '700', margin: '4px 0 8px' }}>Countries</div>
-              <div style={{ fontSize: '13px', color: 'var(--slate)' }}>Active in Africa, Middle East, Asia-Pacific, Europe</div>
+              <div style={{ fontSize: '16px', fontWeight: '700', margin: '4px 0 8px' }}>Countries</div>
+              <div style={{ fontSize: '15px', color: 'var(--slate)' }}>Active in Africa, Middle East, Asia-Pacific, Europe</div>
             </div>
             <div className="reveal" style={{ padding: '32px 24px', background: 'var(--grey)', borderRadius: '14px', textAlign: 'center', transitionDelay: '0.3s' }}>
               <div style={{ fontFamily: 'var(--display)', fontSize: '42px', fontWeight: '800', color: 'var(--navy)' }}>13<span style={{ color: 'var(--orange)' }}>+</span></div>
-              <div style={{ fontSize: '14px', fontWeight: '700', margin: '4px 0 8px' }}>Years</div>
-              <div style={{ fontSize: '13px', color: 'var(--slate)' }}>Operating history, founded 2014</div>
+              <div style={{ fontSize: '16px', fontWeight: '700', margin: '4px 0 8px' }}>Years</div>
+              <div style={{ fontSize: '15px', color: 'var(--slate)' }}>Operating history, founded 2014</div>
             </div>
           </div>
         </div>

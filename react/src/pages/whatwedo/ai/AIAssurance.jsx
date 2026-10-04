@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AIAssurance() {
   useReveal()
+  useSEO({
+    title: 'AI Assurance & Red Teaming | Independent AI Security Validation — Nucleus Systems',
+    description: 'Independent AI assurance reporting and specialist AI red teaming. Adversarial testing of AI models, LLMs and agentic systems against MITRE ATLAS TTPs. Evidence-based proof of AI security and compliance.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/assurance',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

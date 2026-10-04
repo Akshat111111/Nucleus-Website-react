@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 import { useState } from 'react'
 import heroCyber from '../../assets/hero_cyber.jpg'
 
@@ -114,6 +115,11 @@ function FAQ({ items }) {
 
 export default function PillarDigital() {
   useReveal()
+  useSEO({
+    title: 'Digital Platform Trust & Security Assurance | Nucleus Systems',
+    description: 'Engineer trust into software, cloud platforms, digital infrastructure and the software supply chain. Secure architecture, DevSecOps, penetration testing, SBOM, DPI security and Paxley platform.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/digital-platform-trust',
+  })
   return (
     <div className="wm-page">
 

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatPaxley() {
   useReveal()
+  useSEO({
+    title: 'Paxley Platform | Continuous Code-Security & Supply Chain Trust — Nucleus Systems',
+    description: 'Paxley operationalises NS-CTAF: automating SBOM ingestion, VEX processing, vulnerability intelligence and continuous trust scoring for your entire software portfolio. Dynamic security over static compliance.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/paxley',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

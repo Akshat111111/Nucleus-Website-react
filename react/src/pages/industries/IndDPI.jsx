@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndDPI() {
   useReveal()
+  useSEO({
+    title: 'Digital Public Infrastructure (DPI) Security | MOSIP, Mojaloop — Nucleus Systems',
+    description: 'Security for national digital infrastructure: payment rails, digital identity and data exchange platforms. MOSIP, Mojaloop and OpenG2P security advisory. Nucleus Systems DPI specialists across 40+ countries.',
+    canonical: 'https://www.nucleussystems.com/sectors/digital-platforms',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

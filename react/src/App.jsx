@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { useEffect, useState, lazy, Suspense } from 'react'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
@@ -177,6 +177,11 @@ function AppLayout() {
             <Route path="/what-we-do/cyber/managed-security" element={<CyberMDR />} />
             <Route path="/what-we-do/cyber/pqc"              element={<CyberPQC />} />
             <Route path="/what-we-do/cyber/ma"               element={<CyberMA />} />
+            <Route path="/ma/due-diligence"                  element={<MaDueDiligence />} />
+            <Route path="/ma/technical-validation"           element={<MaTechVal />} />
+            <Route path="/ma/sell-side"                      element={<MaSellSide />} />
+            <Route path="/ma/post-deal"                      element={<MaPostDeal />} />
+            <Route path="/ma/startup-growth"                 element={<MaStartup />} />
 
             {/* ── Sectors ── */}
             <Route path="/sectors"                           element={<Industries />} />
@@ -258,9 +263,9 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <AppLayout />
-    </HashRouter>
+    </BrowserRouter>
   )
 }

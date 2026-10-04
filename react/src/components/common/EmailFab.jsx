@@ -2,7 +2,7 @@ export default function EmailFab() {
   return (
     <a
       id="emailFab"
-      href="mailto:info@nucleussystems.com"
+      href="mailto:info@nucleus-systems.com"
       aria-label="Email us"
     >
       <svg viewBox="0 0 24 24">

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useReveal } from '../hooks/useReveal'
+import { useSEO } from '../hooks/useSEO'
 import * as pdfjsLib from 'pdfjs-dist'
 
 // Point the worker at the bundled worker file
@@ -461,6 +462,11 @@ function FeaturedCard({ article }) {
 
 export default function Insights() {
   useReveal()
+  useSEO({
+    title: 'Insights | Cybersecurity & AI Trust Research — Nucleus Systems',
+    description: 'Articles, research and specialist perspectives on cybersecurity leadership, M&A cyber risk, AI trust & security, secure software, digital infrastructure and regulation from Nucleus Systems practitioners.',
+    canonical: 'https://www.nucleussystems.com/insights',
+  })
   const [activeCategory, setActiveCategory] = useState('all')
 
   const filtered = activeCategory === 'all'
@@ -482,7 +488,7 @@ export default function Insights() {
       <div className="ins-mast">
         <div className="wrap ins-mast-inner">
           <div>
-            <span className="eyebrow">Nucleus Systems Insights</span>
+            <span className="eyebrow" style={{ fontSize: '15px', letterSpacing: '0.14em' }}>Nucleus Systems Insights</span>
             <h1>The trust frontier, in writing.</h1>
             <p>Research, field notes and practitioner perspectives on cybersecurity, AI trust, M&amp;A risk and digital infrastructure — organised around buyer issues, not proprietary taxonomy.</p>
           </div>

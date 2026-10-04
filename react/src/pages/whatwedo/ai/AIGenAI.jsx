@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function AIGenAI() {
   useReveal()
+  useSEO({
+    title: 'GenAI & LLM Security | RAG & Agentic AI Assurance — Nucleus Systems',
+    description: 'Security assurance for GenAI, LLMs and agentic AI. Prompt injection prevention, RAG security, data leakage controls and agent privilege escalation defence. Specialist GenAI security from Nucleus Systems.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/ai/genai-security',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

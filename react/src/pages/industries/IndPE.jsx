@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function IndPE() {
   useReveal()
+  useSEO({
+    title: 'Cybersecurity for Private Equity | M&A Cyber Due Diligence — Nucleus Systems',
+    description: 'Cyber risk advisory for private equity deal teams and portfolio companies. Buy-side diligence, sell-side readiness, portfolio monitoring and exit preparation. 250+ technology M&A transactions.',
+    canonical: 'https://www.nucleussystems.com/sectors/private-equity',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function CyberMDR() {
   useReveal()
+  useSEO({
+    title: 'Managed Security & MDR | 24/7 Detection & Response — Nucleus Systems',
+    description: '24/7/365 Managed Detection and Response (MDR). Endpoint, network, cloud and identity telemetry with expert threat analysis to detect, investigate and contain threats before they become breaches.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/cyber/managed-security',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">

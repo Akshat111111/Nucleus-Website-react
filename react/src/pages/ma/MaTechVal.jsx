@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function MaTechVal() {
   useReveal()
+  useSEO({
+    title: 'Technical Validation & Software Assessment | M&A — Nucleus Systems',
+    description: 'Deep-dive technical validation of acquisition target software, infrastructure and AI systems. Identifying critical vulnerabilities, architectural flaws and open-source licensing risks in M&A due diligence.',
+    canonical: 'https://www.nucleussystems.com/ma/technical-validation',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero svc-hero--ma">

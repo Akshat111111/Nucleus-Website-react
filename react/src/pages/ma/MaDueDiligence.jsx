@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../hooks/useReveal'
+import { useSEO } from '../../hooks/useSEO'
 
 export default function MaDueDiligence() {
   useReveal()
+  useSEO({
+    title: 'M&A Cyber Due Diligence | Buy-Side Cybersecurity Assessment — Nucleus Systems',
+    description: 'Expert buy-side M&A cyber due diligence. Cybersecurity, privacy and AI risk assessment for acquisition targets. 250+ technology transactions. Nucleus Systems practitioner-led M&A cyber advisory.',
+    canonical: 'https://www.nucleussystems.com/ma/due-diligence',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero svc-hero--ma">

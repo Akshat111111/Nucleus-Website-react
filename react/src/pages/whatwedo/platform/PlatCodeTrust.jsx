@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../../../hooks/useReveal'
+import { useSEO } from '../../../hooks/useSEO'
 
 export default function PlatCodeTrust() {
   useReveal()
+  useSEO({
+    title: 'Code Trust & Software Supply Chain Security | NS-CTAF — Nucleus Systems',
+    description: 'Cryptographically verifiable code provenance across your entire software lifecycle using NS-CTAF. SBOM governance, software signing and supply chain integrity — ensuring what is deployed is exactly what was built.',
+    canonical: 'https://www.nucleussystems.com/what-we-do/platform/code-trust',
+  })
   return (
     <div id="view-svc">
       <section className="svc-hero">
