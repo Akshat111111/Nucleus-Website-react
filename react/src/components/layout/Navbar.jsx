@@ -4,57 +4,61 @@ import { Link, useNavigate } from 'react-router-dom'
 const PILLARS = [
   {
     title: 'AI Governance & Security',
+    icon: '🤖',
     hub: '/what-we-do/ai-governance-security',
     items: [
-      { label: 'AI Governance & Responsible AI',          to: '/what-we-do/ai/governance' },
-      { label: 'AI Regulatory & Compliance Readiness',    to: '/what-we-do/ai/regulatory' },
-      { label: 'AI Usage Assurance',                      to: '/what-we-do/ai/usage-assurance' },
-      { label: 'AI Security Architecture',                to: '/what-we-do/ai/security-architecture' },
-      { label: 'GenAI, LLM, RAG & Agentic AI Security',   to: '/what-we-do/ai/genai-security' },
-      { label: 'AI Supply Chain & MLSecOps',              to: '/what-we-do/ai/supply-chain' },
-      { label: 'Physical AI & Safety Assurance',          to: '/what-we-do/ai/physical-ai' },
-      { label: 'AI Security Operations',                  to: '/what-we-do/ai/secops' },
-      { label: 'AI Assurance, Red Teaming & Trust',       to: '/what-we-do/ai/assurance' },
+      { label: 'AI Governance & Responsible AI',          desc: 'Ethical AI frameworks & policies',            to: '/what-we-do/ai/governance' },
+      { label: 'AI Regulatory & Compliance Readiness',    desc: 'Navigate AI laws & regulations',              to: '/what-we-do/ai/regulatory' },
+      { label: 'AI Usage Assurance',                      desc: 'Validate AI usage across your org',           to: '/what-we-do/ai/usage-assurance' },
+      { label: 'AI Security Architecture',                desc: 'Secure-by-design AI systems',                 to: '/what-we-do/ai/security-architecture' },
+      { label: 'GenAI, LLM, RAG & Agentic AI Security',   desc: 'Secure generative & agentic AI stacks',      to: '/what-we-do/ai/genai-security' },
+      { label: 'AI Supply Chain & MLSecOps',              desc: 'Model provenance & pipeline security',        to: '/what-we-do/ai/supply-chain' },
+      { label: 'Physical AI & Safety Assurance',          desc: 'Safety assurance for physical AI systems',    to: '/what-we-do/ai/physical-ai' },
+      { label: 'AI Security Operations',                  desc: 'Continuous AI threat monitoring',             to: '/what-we-do/ai/secops' },
+      { label: 'AI Assurance, Red Teaming & Trust',       desc: 'Adversarial testing for AI reliability',      to: '/what-we-do/ai/assurance' },
     ],
   },
   {
     title: 'Digital Platform Trust & Assurance',
+    icon: '🛡️',
     hub: '/what-we-do/digital-platform-trust',
     items: [
-      { label: 'Secure Architecture & Trust-by-Design',   to: '/what-we-do/platform/secure-architecture' },
-      { label: 'Secure SDLC & DevSecOps',                 to: '/what-we-do/platform/devsecops' },
-      { label: 'Code Trust Assurance',                    to: '/what-we-do/platform/code-trust' },
-      { label: 'Software Supply Chain & SBOM',            to: '/what-we-do/platform/supply-chain' },
-      { label: 'Application & Platform Security Testing', to: '/what-we-do/platform/security-testing' },
-      { label: 'Secure Deployment & Platform Operations', to: '/what-we-do/platform/deployment' },
-      { label: 'Cloud & Infrastructure Security',         to: '/what-we-do/platform/cloud-infra' },
-      { label: 'DPI, Payments & Digital Infra Security',  to: '/what-we-do/platform/dpi-security' },
-      { label: 'Continuous Platform Trust — Paxley',      to: '/what-we-do/platform/paxley' },
+      { label: 'Secure Architecture & Trust-by-Design',   desc: 'Security built into platform foundations',    to: '/what-we-do/platform/secure-architecture' },
+      { label: 'Secure SDLC & DevSecOps',                 desc: 'Security embedded in development lifecycle',  to: '/what-we-do/platform/devsecops' },
+      { label: 'Code Trust Assurance',                    desc: 'Assurance for code integrity & quality',      to: '/what-we-do/platform/code-trust' },
+      { label: 'Software Supply Chain & SBOM',            desc: 'Visibility into software dependencies',       to: '/what-we-do/platform/supply-chain' },
+      { label: 'Application & Platform Security Testing', desc: 'Deep-dive security testing & pen tests',      to: '/what-we-do/platform/security-testing' },
+      { label: 'Secure Deployment & Platform Operations', desc: 'Safe and resilient platform operations',      to: '/what-we-do/platform/deployment' },
+      { label: 'Cloud & Infrastructure Security',         desc: 'Cloud-native security architecture',          to: '/what-we-do/platform/cloud-infra' },
+      { label: 'DPI, Payments & Digital Infra Security',  desc: 'Security for critical digital infrastructure',to: '/what-we-do/platform/dpi-security' },
+      { label: 'Continuous Platform Trust — Paxley',      desc: 'Real-time platform trust monitoring',         to: '/what-we-do/platform/paxley' },
     ],
   },
   {
-    title: 'Cybersecurity & Compliance Maturity Management',
+    title: 'Cybersecurity & Compliance',
+    icon: '🔐',
     hub: '/what-we-do/cybersecurity-compliance',
     items: [
-      { label: 'Cybersecurity Maturity Assessment',       to: '/what-we-do/cyber/maturity' },
-      { label: 'Cybersecurity Governance & Strategy',     to: '/what-we-do/cyber/governance' },
-      { label: 'Fractional / Virtual CISO',               to: '/what-we-do/cyber/fractional-ciso' },
-      { label: 'Cybersecurity Compliance & Regulatory',   to: '/what-we-do/cyber/compliance' },
-      { label: 'Operational Resilience & Incident Readiness', to: '/what-we-do/cyber/resilience' },
-      { label: 'Threat, Vulnerability & Exposure Mgmt',   to: '/what-we-do/cyber/tvem' },
-      { label: 'Managed Security / MDR / SOC',            to: '/what-we-do/cyber/managed-security' },
-      { label: 'Post-Quantum Cryptography Readiness',     to: '/what-we-do/cyber/pqc' },
+      { label: 'Cybersecurity Maturity Assessment',        desc: 'Benchmark your security posture',             to: '/what-we-do/cyber/maturity' },
+      { label: 'Cybersecurity Governance & Strategy',      desc: 'Board-level security governance',             to: '/what-we-do/cyber/governance' },
+      { label: 'Fractional / Virtual CISO',                desc: 'On-demand senior security leadership',        to: '/what-we-do/cyber/fractional-ciso' },
+      { label: 'Cybersecurity Compliance & Regulatory',    desc: 'Meet your regulatory obligations',            to: '/what-we-do/cyber/compliance' },
+      { label: 'Operational Resilience & Incident Readiness', desc: 'Prepare for and recover from incidents',  to: '/what-we-do/cyber/resilience' },
+      { label: 'Threat, Vulnerability & Exposure Mgmt',   desc: 'Identify and prioritise exposures',           to: '/what-we-do/cyber/tvem' },
+      { label: 'Managed Security / MDR / SOC',             desc: '24/7 managed detection & response',          to: '/what-we-do/cyber/managed-security' },
+      { label: 'Post-Quantum Cryptography Readiness',      desc: 'Prepare for quantum-era threats',             to: '/what-we-do/cyber/pqc' },
     ],
   },
   {
-    title: 'M&A Cyber, Technology & Compliance Assurance',
+    title: 'M&A Cyber & Compliance Assurance',
+    icon: '📊',
     hub: '/what-we-do/cyber/ma',
     items: [
-      { label: 'Buy-Side Due Diligence',              to: '/what-we-do/cyber/ma' },
-      { label: 'Technical Validation',                to: '/what-we-do/cyber/ma' },
-      { label: 'Sell-Side / Exit Readiness',          to: '/what-we-do/cyber/ma' },
-      { label: 'Post-Deal Value Creation',            to: '/what-we-do/cyber/ma' },
-      { label: 'Start-up & Portfolio Investment Assurance', to: '/what-we-do/cyber/ma' },
+      { label: 'Buy-Side Due Diligence',                   desc: 'Cyber risk assessment before acquisition',    to: '/ma/due-diligence' },
+      { label: 'Technical Validation',                     desc: 'Validate technology & security claims',       to: '/ma/technical-validation' },
+      { label: 'Sell-Side / Exit Readiness',               desc: 'Maximise value through security posture',     to: '/ma/sell-side' },
+      { label: 'Post-Deal Value Creation',                 desc: 'Realise security synergies post-deal',        to: '/ma/post-deal' },
+      { label: 'Start-up & Portfolio Investment Assurance',desc: 'Security assurance for portfolio companies',  to: '/ma/startup-growth' },
     ],
   }
 ]
@@ -151,22 +155,39 @@ export default function Navbar({ onMenuOpen }) {
               </span>
 
               {item.isMega ? (
-                /* ── SERVICES MEGA-MENU — 4 top-level items ── */
+                /* ── SERVICES MEGA-MENU — 4-column adaptive layout ── */
                 <div
-                  className="wm-mega"
+                  className="svc-mega"
                   onMouseEnter={() => openItem(item.id)}
                   onMouseLeave={() => closeItem(item.id)}
                   onClick={e => e.stopPropagation()}
                 >
-                  <div className="wm-mega-label">
-                    <span className="wm-mega-title">SERVICES</span>
-                    <p className="wm-mega-sub">Our cybersecurity &amp; digital trust advisory services</p>
-                  </div>
-                  <div className="wm-mega-items">
-                    {item.children.map((child, idx) => (
-                      <Link key={idx} className="wm-mega-item" to={child.to} onClick={() => setOpenId(null)}>
-                        {child.label}
-                      </Link>
+                  <div className="svc-mega-inner">
+                    {PILLARS.map((pillar, pi) => (
+                      <div key={pi} className="svc-mega-col">
+                        <Link
+                          className="svc-mega-col-header"
+                          to={pillar.hub}
+                          onClick={() => setOpenId(null)}
+                        >
+                          <span className="svc-mega-col-icon">{pillar.icon}</span>
+                          <span className="svc-mega-col-title">{pillar.title}</span>
+                        </Link>
+                        <ul className="svc-mega-list">
+                          {pillar.items.map((sub, si) => (
+                            <li key={si}>
+                              <Link
+                                className="svc-mega-link"
+                                to={sub.to}
+                                onClick={() => setOpenId(null)}
+                              >
+                                <span className="svc-mega-link-label">{sub.label}</span>
+                                {sub.desc && <span className="svc-mega-link-desc">{sub.desc}</span>}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
                   </div>
                 </div>
