@@ -92,13 +92,13 @@ export default function ExpDPI() {
                 display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '40px',
               }}>
                 <div>
-                  <div style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--blue)', marginBottom: '8px' }}>Platform</div>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--blue)', marginBottom: '8px' }}>Platform</div>
                   <h3 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--navy)', marginBottom: '6px' }}>{p.name}</h3>
-                  <div style={{ fontSize: '11px', background: 'var(--orange)', color: '#fff', borderRadius: '6px', padding: '3px 10px', display: 'inline-block', marginBottom: '20px', fontWeight: 700 }}>{p.tag}</div>
+                  <div style={{ fontSize: '13px', background: 'var(--orange)', color: '#fff', borderRadius: '6px', padding: '4px 12px', display: 'inline-block', marginBottom: '20px', fontWeight: 700 }}>{p.tag}</div>
                   <p style={{ fontSize: '13.5px', color: 'var(--slate)', lineHeight: 1.75 }}>{p.desc}</p>
                 </div>
                 <div>
-                  <div style={{ fontFamily: 'var(--mono)', fontSize: '9px', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '14px' }}>What We Have Delivered</div>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '14px' }}>What We Have Delivered</div>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                     {p.work.map((w, j) => (
                       <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '13.5px', color: 'var(--slate)', lineHeight: 1.6 }}>

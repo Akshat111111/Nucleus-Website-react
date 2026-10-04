@@ -218,7 +218,7 @@ export default function Home() {
       <section className="ai-trust-section section" id="ai-home">
         <div className="wrap">
           <div className="ai-trust-head reveal">
-            <span className="eyebrow" style={{ color: '#7c9eff' }}>AI Trust &amp; Security</span>
+            <span className="eyebrow" style={{ color: '#7c9eff', fontSize: '19px', fontWeight: 'bold' }}>AI Trust &amp; Security</span>
             <h2>Govern AI. Secure AI.<br /><span style={{ fontWeight: 400, color: 'var(--slate)' }}>Operate AI Safely.</span></h2>
             <p style={{ maxWidth: '560px', margin: '0 auto', color: 'var(--slate)' }}>
               From board-level AI governance and regulatory readiness through to LLM, RAG and agentic AI security — our practitioners cover the complete AI trust lifecycle.
@@ -478,10 +478,6 @@ export default function Home() {
               <div className="tt2-note">
                 <div className="tt2-note-label">Team at a glance</div>
                 <div className="tt2-stat-row">
-                  <div className="tt2-stat-item">
-                    <span className="tt2-stat-num">100<span>+</span></span>
-                    <span className="tt2-stat-label">Combined years</span>
-                  </div>
                   <div className="tt2-stat-item">
                     <span className="tt2-stat-num">150<span>+</span></span>
                     <span className="tt2-stat-label">Engagements led</span>

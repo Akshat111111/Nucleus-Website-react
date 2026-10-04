@@ -488,7 +488,7 @@ export default function Insights() {
       <div className="ins-mast">
         <div className="wrap ins-mast-inner">
           <div>
-            <span className="eyebrow">Nucleus Systems Insights</span>
+            <span className="eyebrow" style={{ fontSize: '15px', letterSpacing: '0.14em' }}>Nucleus Systems Insights</span>
             <h1>The trust frontier, in writing.</h1>
             <p>Research, field notes and practitioner perspectives on cybersecurity, AI trust, M&amp;A risk and digital infrastructure — organised around buyer issues, not proprietary taxonomy.</p>
           </div>

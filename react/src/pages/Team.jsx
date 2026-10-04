@@ -157,8 +157,7 @@ export default function Team() {
       {/* CTA Band */}
       <section className="team-cta-band">
         <div className="team-cta-band-inner">
-          <div className="eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '20px' }}>
-            <span style={{ width: '24px', height: '2px', background: 'var(--orange)', display: 'block' }} />
+          <div className="eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--mono)', fontSize: '15px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '20px' }}>
             Work with us
           </div>
           <h2>Ready to put this expertise to work for your organisation?</h2>

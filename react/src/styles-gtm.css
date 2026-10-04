@@ -7,8 +7,8 @@
 .ns-hero-main{background:linear-gradient(135deg,#010B1D 0%,#021233 50%,#011029 100%);padding:120px var(--pad) 100px;position:relative;overflow:hidden}
 .ns-hero-main::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%,rgba(11,80,200,.15) 0%,transparent 70%);pointer-events:none}
 .hero-inner{max-width:760px;position:relative;z-index:1}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);color:var(--orange);font-weight:600;margin-bottom:24px}
-.hero-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--orange)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:15px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);color:var(--orange);font-weight:600;margin-bottom:24px}
+.hero-eyebrow::before{content:'';display:inline-block;width:28px;height:2px;background:var(--orange)}
 .hero-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(42px,7vw,78px);font-weight:900;color:#fff;line-height:1.0;letter-spacing:-.04em;margin:0 0 28px}
 .hero-h1 .hl{color:var(--orange);font-size:clamp(28px,4.8vw,54px);display:block}
 .hero-lede{font-size:clamp(16px,2vw,18px);color:rgba(255,255,255,.7);line-height:1.75;max-width:680px;margin:0 0 40px}
@@ -69,7 +69,7 @@
 @media(max-width:700px){.tech-strip-inner{flex-direction:column;align-items:flex-start}}
 
 /* ── WHO WE SERVE ── */
-.wws-eyebrow{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.14em;margin-bottom:20px}
+.wws-eyebrow{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px}
 .wws-buyer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
 .wws-buyer-card{background:#F7F9FC;border:1px solid var(--line);border-radius:14px;padding:24px}
 .wws-buyer-title{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px}
@@ -100,7 +100,7 @@
 .svc-hero--ma::before{background:radial-gradient(ellipse 50% 60% at 75% 50%,rgba(234,88,12,.08) 0%,transparent 70%)}
 .svc-hero--dpi::before{background:radial-gradient(ellipse 50% 60% at 75% 50%,rgba(0,194,129,.08) 0%,transparent 70%)}
 .svc-hero-inner{max-width:760px;position:relative;z-index:1}
-.svc-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);color:var(--orange);font-weight:600;margin-bottom:20px}
+.svc-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);color:var(--orange);font-weight:600;margin-bottom:20px}
 .svc-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--orange)}
 .svc-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(34px,5.5vw,60px);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-.035em;margin:0 0 24px}
 .svc-lede{font-size:clamp(15px,1.8vw,17px);color:rgba(255,255,255,.7);line-height:1.8;max-width:680px;margin:0 0 36px}
@@ -168,7 +168,7 @@
 /* Standards */
 .svc-standards{background:#F7F9FC}
 .standards-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.standard-badge{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--blue);background:#EEF2FF;border:1px solid rgba(11,80,200,.15);border-radius:20px;padding:7px 16px;letter-spacing:.05em}
+.standard-badge{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--blue);background:#EEF2FF;border:1px solid rgba(11,80,200,.15);border-radius:20px;padding:7px 16px;letter-spacing:.05em}
 
 /* Related services */
 .svc-related{background:#fff}
