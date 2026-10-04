@@ -68,7 +68,7 @@ export default function Sectors() {
           <div className="wm-hero-inner">
             <div>
               <span className="wm-eyebrow reveal">Industry Experience</span>
-              <h1 className="wm-h1 reveal">Securing the most <mark>demanding industries.</mark></h1>
+              <h1 className="wm-h1 reveal">Securing the most demanding industries.</h1>
               <p className="wm-lede reveal">
                 Different industries face fundamentally different threat profiles and regulatory mandates. We tailor our AI governance, platform trust, and cybersecurity capabilities to the specific operational realities of the industries we serve.
               </p>
