@@ -27,7 +27,7 @@ const FRAMEWORKS_DATA = [
     standards: '15+ sources, including EU AI Act, ISO 42001, ISO 23894, NIST AI RMF and privacy/security baselines',
     serviceLine: 'AI Governance & AI Security',
     role: <><strong>Usage assurance:</strong> Proves users, tools and agents use AI safely. Outcome: Safe workforce and enterprise AI use</>,
-    product: 'Not stated as a separate product track',
+    product: 'AI Usage Assurance Platform: AI usage inventory (approved, shadow, embedded and agent AI), acceptable-use policy mapping, usage assurance scoring, attestations, and EU AI Act / ISO 42001 usage evidence',
     detail: <><strong>High:</strong> 96 controls, 8 domains, L1→L5 maturity, 0–100 Trust Score, 5 evidence grades, assurance levels AUA-1 to AUA-4</>
   },
   {
@@ -45,7 +45,7 @@ const FRAMEWORKS_DATA = [
     standards: '20+ standards and sources',
     serviceLine: 'AI Governance & AI Security',
     role: <><strong>Safety assurance:</strong> Constrains physical AI and validates fail-safe operation. Outcome: Cyber-physical safety and resilience</>,
-    product: 'Not stated as a separate product track',
+    product: 'Physical AI Safety Assurance Platform: physical AI system inventory, safety controls assessment, hazard and fail-safe evidence tracking, cyber-physical safety scoring and resilience roadmap',
     detail: <><strong>High:</strong> 130 controls, 10 domains, L1→L5 maturity, 0–100 Trust Score, 5-axis scoring, assurance levels PSA-1 to PSA-4</>
   },
   {
@@ -74,6 +74,22 @@ const FRAMEWORKS_DATA = [
     role: 'PQC readiness within cloud, resilience and critical infrastructure work',
     product: 'PQC Readiness Platform: cryptographic inventory, quantum-risk maturity, migration roadmap, board readiness evidence',
     detail: 'High-level only'
+  },
+  {
+    framework: <><strong>NS-SSAF</strong><br/>Secure Software Architecture Framework v1.0</>,
+    focus: 'Secure-by-design architecture assurance: proves the product was securely architected before it was built. 96 controls across 8 weighted domains (governance, threat modelling, identity, data/privacy/crypto, API, cloud-native, resilience, AI/emerging tech)',
+    standards: 'NIST SP 800-160, NIST SSDF (SP 800-218), ISO/IEC 27034, ISO/IEC/IEEE 15288, ISO/IEC 25010, OWASP ASVS and SAMM, NIST SP 800-204C, CSA CCM, EU CRA, DORA, NIS2, GDPR, EU AI Act (40+ standards)',
+    serviceLine: 'Code Trust & Platform Assurance (with Paxley)',
+    role: <><strong>Design:</strong> turns architecture review into reusable evidence (ADRs, threat models, DFDs, identity flows, API contracts). Outputs: Architecture Trust Score, Risk Register, Design Evidence Pack, 90/180/365-day roadmap. Outcome: secure-by-design trust</>,
+    product: 'Secure Architecture Assurance Platform: 96-control assessment, design evidence repository, trust scoring, risk register, roadmap, with Paxley design-to-code traceability'
+  },
+  {
+    framework: <><strong>NS-SSDOF</strong><br/>Secure Software Deployment &amp; Operations Framework v1.0</>,
+    focus: 'Operational trust: proves the deployed product stays secure, observable, resilient and recoverable in production. 104 controls across 8 weighted domains (release governance, pipeline integrity, cloud/container/K8s runtime, secrets and crypto ops, detection, vulnerability/drift, incident response, operational governance)',
+    standards: 'NIST SP 800-190, 800-204C, 800-137, 800-128, 800-61r3, 800-34, CIS Kubernetes Benchmark, CSA CCM, SLSA, ISO/IEC 27035, ISO 22301, DORA, NIS2 (40+ standards)',
+    serviceLine: 'Code Trust & Platform Assurance (with Paxley)',
+    role: <><strong>Operate and prove:</strong> Operational Trust Score, Release Evidence Pack, Runtime Risk Register, Operational Resilience Roadmap, with hard gates that cap maturity when evidence is weak. Outcome: operational trust and resilience</>,
+    product: 'Operational Trust Assurance Platform: 104-control assessment, release evidence packs, runtime risk register, evidence-age tracking, Paxley release-gate evidence ingestion'
   }
 ]
 
@@ -94,10 +110,10 @@ export default function Frameworks() {
           <div className="fw-hero-eyebrow reveal">How We Deliver</div>
           <h1 className="fw-hero-h1 reveal">The Nucleus Digital Trust Assurance Architecture</h1>
           <p className="fw-hero-lede reveal">
-            Eight proprietary frameworks are the evidence-based delivery engine behind every Nucleus Systems engagement. Structured, independently assessable, and built to produce board-ready evidence — not documentation theatre. Each framework operationalises a specific pillar of digital trust.
+            Ten proprietary frameworks are the evidence-based delivery engine behind every Nucleus Systems engagement. Structured, independently assessable, and built to produce board-ready evidence — not documentation theatre. Each framework operationalises a specific pillar of digital trust.
           </p>
           <div className="fw-hero-meta reveal">
-            <span>8 proprietary frameworks</span>
+            <span>10 proprietary frameworks</span>
             <span>3 trust pillars</span>
             <span>L1→L5 maturity scoring across all frameworks</span>
             <span>Board-ready evidence built in</span>
@@ -121,10 +137,10 @@ export default function Frameworks() {
             </div>
             <div style={{ padding: '36px', background: 'var(--navy)', borderRadius: '16px' }}>
               <span style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--orange)', display: 'block', marginBottom: '12px' }}>Impact</span>
-              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--white)', marginBottom: '12px' }}>Eight Proprietary Frameworks</h3>
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--white)', marginBottom: '12px' }}>Ten Proprietary Frameworks</h3>
               <p style={{ fontSize: '13.5px', color: 'rgba(255,255,255,.6)', lineHeight: 1.75, marginBottom: '20px' }}>Our frameworks are the structured methodologies, control architectures and evidence instruments behind every engagement. Applied proportionately — from a focused assessment to a continuous assurance programme.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                {['NS-CMMF', 'NS-AIGF', 'NS AI-UAF', 'NS AISCA', 'NS PAISAF', 'NS AI² SecOps', 'NS-CTAF', 'NS-PQCF'].map(f => (
+                {['NS-CMMF', 'NS-AIGF', 'NS AI-UAF', 'NS AISCA', 'NS PAISAF', 'NS AI² SecOps', 'NS-CTAF', 'NS-PQCF', 'NS-SSAF', 'NS-SSDOF'].map(f => (
                   <span key={f} style={{ fontSize: '12px', fontFamily: 'var(--mono)', background: 'rgba(255,255,255,.08)', color: 'rgba(255,255,255,.7)', borderRadius: '5px', padding: '4px 10px', fontWeight: 600 }}>{f}</span>
                 ))}
               </div>
@@ -161,6 +177,90 @@ export default function Frameworks() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Framework Classification ── */}
+      <section className="section" style={{ paddingTop: '48px', paddingBottom: '8px' }}>
+        <div className="wrap">
+          <div className="section-head reveal" style={{ textAlign: 'left', maxWidth: '560px', marginBottom: '36px' }}>
+            <span className="eyebrow" style={{ fontSize: '16px' }}>Framework Classification</span>
+            <h2>Ten frameworks. Three trust pillars.</h2>
+            <p>Every framework maps to one of three capability areas — each with its own service line, control architecture and product track.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+
+            {/* Pillar 1 */}
+            <div className="reveal" style={{ background: '#fff', border: '1px solid var(--line-2)', borderRadius: '16px', overflow: 'hidden' }}>
+              <div style={{ background: '#4f8ef7', padding: '20px 24px' }}>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)', display: 'block', marginBottom: '6px' }}>Pillar 01</span>
+                <div style={{ fontSize: '20px', fontWeight: 800, color: '#fff', lineHeight: 1.3 }}>Cybersecurity Maturity Management &amp; M&amp;A Risk</div>
+              </div>
+              <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                {[
+                  { num: '01', code: 'NS-CMMF', name: 'Cybersecurity Maturity Management Framework v1.0' },
+                  { num: '02', code: 'NS-PQCF', name: 'Post Quantum Cryptography Framework v1.0' },
+                ].map(f => (
+                  <div key={f.code} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                    <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', fontWeight: 700, color: '#4f8ef7', minWidth: '26px', paddingTop: '2px' }}>{f.num}</span>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, color: 'var(--navy)', marginBottom: '2px' }}>{f.code}</div>
+                      <div style={{ fontSize: '15px', color: 'var(--slate)', lineHeight: 1.5 }}>{f.name}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="reveal" style={{ background: '#fff', border: '1px solid var(--line-2)', borderRadius: '16px', overflow: 'hidden' }}>
+              <div style={{ background: '#7c3aed', padding: '20px 24px' }}>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)', display: 'block', marginBottom: '6px' }}>Pillar 02</span>
+                <div style={{ fontSize: '20px', fontWeight: 800, color: '#fff', lineHeight: 1.3 }}>AI Governance &amp; AI Security</div>
+              </div>
+              <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                {[
+                  { num: '03', code: 'NS-AIGF',       name: 'AI Governance Framework v1.0' },
+                  { num: '04', code: 'NS AI-UAF',     name: 'AI Usage Assurance Framework v1.0' },
+                  { num: '05', code: 'NS AISCA',      name: 'AI Security Controls Architecture v1.0' },
+                  { num: '06', code: 'NS PAISAF',     name: 'Physical AI & Safety Assurance Framework v1.0' },
+                  { num: '07', code: 'NS AI² SecOps', name: 'AI² Security Operations Framework v1.0' },
+                ].map(f => (
+                  <div key={f.code} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                    <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', fontWeight: 700, color: '#7c3aed', minWidth: '26px', paddingTop: '2px' }}>{f.num}</span>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, color: 'var(--navy)', marginBottom: '2px' }}>{f.code}</div>
+                      <div style={{ fontSize: '15px', color: 'var(--slate)', lineHeight: 1.5 }}>{f.name}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="reveal" style={{ background: '#fff', border: '1px solid var(--line-2)', borderRadius: '16px', overflow: 'hidden' }}>
+              <div style={{ background: 'var(--orange)', padding: '20px 24px' }}>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.75)', display: 'block', marginBottom: '6px' }}>Pillar 03</span>
+                <div style={{ fontSize: '20px', fontWeight: 800, color: '#fff', lineHeight: 1.3 }}>Code Trust &amp; Platform Assurance</div>
+              </div>
+              <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                {[
+                  { num: '08', code: 'NS-SSAF',  name: 'Secure Software Architecture Framework v1.0' },
+                  { num: '09', code: 'NS-CTAF',  name: 'Code Trust Assurance Framework v1.0' },
+                  { num: '10', code: 'NS-SSDOF', name: 'Secure Software Deployment & Operations Framework v1.0' },
+                ].map(f => (
+                  <div key={f.code} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                    <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', fontWeight: 700, color: 'var(--orange)', minWidth: '26px', paddingTop: '2px' }}>{f.num}</span>
+                    <div>
+                      <div style={{ fontFamily: 'var(--mono)', fontSize: '15px', fontWeight: 700, color: 'var(--navy)', marginBottom: '2px' }}>{f.code}</div>
+                      <div style={{ fontSize: '15px', color: 'var(--slate)', lineHeight: 1.5 }}>{f.name}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
